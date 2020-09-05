@@ -1,6 +1,6 @@
 [options]
+linux = true
 backend = ninja
 
 [properties]
-cross_file = ['../arm-none-eabi.ini']
 

@@ -3,11 +3,10 @@ project('KittehWatchOS', 'c')
 cc = meson.get_compiler('c')
 pkg = import('pkgconfig')
 
+
+
 sources = [
 	'src/main.c',
-  'src/FreeRTOS/port.c',
-  'src/FreeRTOS/port_cmsis.c',
-  'src/FreeRTOS/port_cmsis_systick.c',
 ]
 
 includes = [
@@ -15,9 +14,17 @@ includes = [
   include_directories('src'),
   include_directories('src/lvconf'),
   include_directories('deps'),
-  include_directories('src/FreeRTOS'),
 ]
 
+if get_option('linux')
+sources += ['src/platform/Linux/FreeRTOS/port.c', 'src/platform/Linux/FreeRTOS/heap_4.c']
+includes +=  include_directories('src/platform/Linux/FreeRTOS')
+else
+includes += include_directories('src/platform/PineTime/FreeRTOS')
+sources += ['src/platform/PineTime/FreeRTOS/port.c',
+  'src/platform/PineTime/FreeRTOS/port_cmsis.c',
+  'src/platform/PineTime/FreeRTOS/port_cmsis_systick.c']
+endif
 
 cflags = [
   '-Wall',
@@ -26,7 +33,7 @@ cflags = [
 
 
 deps = [
-cc.find_library('nosys', required : false),
+#cc.find_library('nosys', required : false),
 ]
 
 lvgl_sources = [
@@ -147,9 +154,9 @@ lvgl_cflags = [
   '-DLV_CONF_INCLUDE_SIMPLE',
 ]
 
-#sources += lvgl_sources
-#includes += lvgl_includes
-#cflags += lvgl_cflags
+sources += lvgl_sources
+includes += lvgl_includes
+cflags += lvgl_cflags
 
 sdk_sources = [
                 'deps/nRF5_SDK/modules/nrfx/mdk/system_nrf52.c',
@@ -160,14 +167,14 @@ sdk_sources = [
             'deps/nRF5_SDK/modules/nrfx/drivers/src/nrfx_gpiote.c',
             'deps/nRF5_SDK/modules/nrfx/soc/nrfx_atomic.c',
             'deps/nRF5_SDK/modules/nrfx/drivers/src/nrfx_saadc.c',
-      'deps/nRF5_SDK/external/freertos/source/croutine.c',
-      'deps/nRF5_SDK/external/freertos/source/event_groups.c',
-      'deps/nRF5_SDK/external/freertos/source/portable/MemMang/heap_1.c',
-      'deps/nRF5_SDK/external/freertos/source/list.c',
-      'deps/nRF5_SDK/external/freertos/source/queue.c',
-      'deps/nRF5_SDK/external/freertos/source/stream_buffer.c',
-      'deps/nRF5_SDK/external/freertos/source/tasks.c',
-      'deps/nRF5_SDK/external/freertos/source/timers.c',
+#      'deps/nRF5_SDK/external/freertos/source/croutine.c',
+#      'deps/nRF5_SDK/external/freertos/source/event_groups.c',
+#      'deps/nRF5_SDK/external/freertos/source/portable/MemMang/heap_1.c',
+#      'deps/nRF5_SDK/external/freertos/source/list.c',
+#      'deps/nRF5_SDK/external/freertos/source/queue.c',
+#      'deps/nRF5_SDK/external/freertos/source/stream_buffer.c',
+#      'deps/nRF5_SDK/external/freertos/source/tasks.c',
+#      'deps/nRF5_SDK/external/freertos/source/timers.c',
       'deps/nRF5_SDK/components/libraries/timer/app_timer_freertos.c',
             'deps/nRF5_SDK/components/libraries/atomic/nrf_atomic.c',
             'deps/nRF5_SDK/components/libraries/balloc/nrf_balloc.c',
@@ -228,7 +235,6 @@ sdk_includes = [
             'deps/nRF5_SDK/modules/nrfx/drivers/include',
             'deps/nRF5_SDK/modules/nrfx/hal',
             'deps/nRF5_SDK/modules/nrfx/mdk',
-      'deps/nRF5_SDK/external/freertos/source/include',
             'deps/nRF5_SDK/components/toolchain/cmsis/include',
             'deps/nRF5_SDK/components/libraries/atomic',
             'deps/nRF5_SDK/components/libraries/atomic_fifo',
@@ -315,16 +321,51 @@ sdk_cflags = [
 ]
 
 
+if not get_option('linux')
 sources += sdk_sources
 includes += sdk_includes
 cflags += sdk_cflags
+endif
 
+if get_option('linux')
+deps += cc.find_library('pthread', required : true)
+deps += cc.find_library('rt', required : true)
+
+endif
+
+
+freertos_sources = [
+    'deps/FreeRTOS/list.c',
+    'deps/FreeRTOS/stream_buffer.c',
+    'deps/FreeRTOS/tasks.c',
+    'deps/FreeRTOS/queue.c',
+    'deps/FreeRTOS/croutine.c',
+    'deps/FreeRTOS/timers.c',
+    'deps/FreeRTOS/event_groups.c',
+]
+
+freertos_includes = [
+    'deps/FreeRTOS/include',
+]
+
+sources += freertos_sources
+includes += freertos_includes
+
+
+link_args = [
+
+]
+
+
+if not get_option('linux')
+link_args += ['-Tgcc_nrf52.ld', '-L..', '-L../deps/nRF5_SDK/modules/nrfx/mdk']
+endif
 
 executable('KittehWatchOS',
 	name_prefix: '',
 	install: false,
 	c_args: cflags,
-  link_args: ['-Tgcc_nrf52.ld', '-L..', '-L../deps/nRF5_SDK/modules/nrfx/mdk'],
+  link_args: link_args,
 	sources: sources,
 	include_directories: includes,
 	dependencies: deps)

@@ -1,21 +1,21 @@
-Build started at 2020-09-03T14:54:43.412895
+Build started at 2020-09-05T11:41:08.455940
 Main binary: /usr/bin/python
-Build Options: -Dbackend=ninja
+Build Options: -Dlinux=true -Dbackend=ninja
 Python system: Linux
 The Meson build system
 Version: 0.55.1
-Source dir: /home/kitteh/lvgltest
-Build dir: /home/kitteh/lvgltest/build
-Build type: cross build
-None of 'PKG_CONFIG_PATH_FOR_BUILD' are defined in the environment, not changing global flags.
+Source dir: /home/kitteh/KittehWatchOS
+Build dir: /home/kitteh/KittehWatchOS/build
+Build type: native build
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
 None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
 Project name: KittehWatchOS
 Project version: undefined
 C compiler for the build machine: ccache cc (gcc 10.2.0 "cc (GCC) 10.2.0")
 C linker for the build machine: cc ld.bfd 2.35
-None of 'AR_FOR_BUILD' are defined in the environment, not changing global flags.
-C compiler for the host machine: arm-none-eabi-gcc (gcc 10.2.0 "arm-none-eabi-gcc (Arch Repository) 10.2.0")
-C linker for the host machine: arm-none-eabi-gcc ld.bfd 2.34
+None of 'AR' are defined in the environment, not changing global flags.
+C compiler for the host machine: ccache cc (gcc 10.2.0 "cc (GCC) 10.2.0")
+C linker for the host machine: cc ld.bfd 2.35
 None of 'AR' are defined in the environment, not changing global flags.
 Build machine cpu family: aarch64
 Build machine cpu: aarch64
@@ -25,8 +25,8 @@ Target machine cpu family: aarch64
 Target machine cpu: aarch64
 None of 'CC_LD' are defined in the environment, not changing global flags.
 Running compile:
-Working directory:  /home/kitteh/lvgltest/build/meson-private/tmplqbep1fb
-Command line:  arm-none-eabi-gcc /home/kitteh/lvgltest/build/meson-private/tmplqbep1fb/testfile.c -o /home/kitteh/lvgltest/build/meson-private/tmplqbep1fb/output.exe -pipe -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lnosys -Wl,--allow-shlib-undefined -Wl,--gc-sections --specs=nano.specs --specs=nosys.specs -lc -lm -Wl,--end-group 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp8edqy1yr
+Command line:  ccache cc /home/kitteh/KittehWatchOS/build/meson-private/tmp8edqy1yr/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp8edqy1yr/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lpthread -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -35,20 +35,35 @@ Compiler stdout:
  
 Compiler stderr:
  
-Library nosys found: YES
+Library pthread found: YES
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp16f0bg86
+Command line:  ccache cc /home/kitteh/KittehWatchOS/build/meson-private/tmp16f0bg86/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp16f0bg86/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lrt -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library rt found: YES
 Build targets in project: 1
 
 Found ninja-1.10.1 at /usr/bin/ninja
 Running compile:
-Working directory:  /home/kitteh/lvgltest/build/meson-private/tmp905xfwcb
-Command line:  arm-none-eabi-gcc /home/kitteh/lvgltest/build/meson-private/tmp905xfwcb/testfile.c -o /home/kitteh/lvgltest/build/meson-private/tmp905xfwcb/output.obj -pipe -c -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp9cp02idz
+Command line:  ccache cc /home/kitteh/KittehWatchOS/build/meson-private/tmp9cp02idz/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp9cp02idz/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
 
 Code:
  
 Compiler stdout:
- install: /usr/lib/gcc/arm-none-eabi/10.2.0/
-programs: =/usr/lib/gcc/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/bin/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/bin/
-libraries: =/usr/lib/gcc/arm-none-eabi/10.2.0/thumb/v7e-m+fp/hard/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/arm-none-eabi/10.2.0/thumb/v7e-m+fp/hard/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/arm-none-eabi/lib/arm-none-eabi/10.2.0/thumb/v7e-m+fp/hard/:/usr/arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/arm-none-eabi/usr/lib/arm-none-eabi/10.2.0/thumb/v7e-m+fp/hard/:/usr/arm-none-eabi/usr/lib/thumb/v7e-m+fp/hard/:/usr/lib/gcc/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/:/usr/arm-none-eabi/lib/arm-none-eabi/10.2.0/:/usr/arm-none-eabi/lib/:/usr/arm-none-eabi/usr/lib/arm-none-eabi/10.2.0/:/usr/arm-none-eabi/usr/lib/
+ install: /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/
+programs: =/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../aarch64-unknown-linux-gnu/bin/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../aarch64-unknown-linux-gnu/bin/
+libraries: =/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../aarch64-unknown-linux-gnu/lib/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../aarch64-unknown-linux-gnu/lib/../lib/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../lib/:/lib/aarch64-unknown-linux-gnu/10.2.0/:/lib/../lib/:/usr/lib/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../aarch64-unknown-linux-gnu/lib/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/
 
 Compiler stderr:
  
+None of 'STRIP' are defined in the environment, not changing global flags.
+None of 'STRIP' are defined in the environment, not changing global flags.
