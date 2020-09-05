@@ -4,6 +4,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "timers.h"
+#include "mpu_wrappers.h"
 #ifndef __linux__
 #include "app_error.h"
 #include "bsp.h"
@@ -83,9 +84,8 @@ int main(void) {
 
   /* Create task for LED0 blinking with priority set to 2 */
   xTaskCreate(led_toggle_task_function, "LED0",
-                              configMINIMAL_STACK_SIZE + 200, NULL, 2,
+                              configMINIMAL_STACK_SIZE + 200, NULL, 1,
                               &led_toggle_task_handle);
-
   xTimerStart(led_toggle_timer_handle, 0);
 
 #ifndef __linux__

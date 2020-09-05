@@ -28,6 +28,7 @@
 #ifndef MPU_WRAPPERS_H
 #define MPU_WRAPPERS_H
 
+
 /* This file redefines API functions to be called through a wrapper macro, but
 only for ports that are using the MPU. */
 #ifdef portUSING_MPU_WRAPPERS
