@@ -9,7 +9,7 @@ void platform_initBacklight()
 	nrf_gpio_cfg_output(pinLcdBacklight1);
 	nrf_gpio_cfg_output(pinLcdBacklight2);
 	nrf_gpio_cfg_output(pinLcdBacklight3);
-  platform_setBacklight(3);
+	platform_setBacklight(3);
 }
 
 void platform_setBacklight(short level)
