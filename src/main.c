@@ -30,8 +30,11 @@ void vApplicationIdleHook(void)
 static void lv_handle_task_function(void *pvParameter)
 {
 	while (true) {
+
+    lv_tick_inc(5);
+    vTaskDelay(50 / portTICK_PERIOD_MS);
 		lv_task_handler();
-		vTaskDelay(5 / portTICK_PERIOD_MS);
+		vTaskDelay(50 / portTICK_PERIOD_MS);
 	}
 }
 
@@ -39,7 +42,7 @@ static void lv_tick_task_function(void *pvParameter)
 {
 	while (true) {
 		lv_tick_inc(5);
-		vTaskDelay(5 / portTICK_PERIOD_MS);
+		vTaskDelay(50 / portTICK_PERIOD_MS);
 	}
 }
 
@@ -107,13 +110,13 @@ int main(void)
 	lv_obj_align(label, slider, LV_ALIGN_OUT_BOTTOM_MID, 0,
 		     20); /*Align below the slider*/
 
-	/* Create task for LED0 blinking with priority set to 2 */
+	/* Create task for LED0 blinking with priority set to 2 
 	xTaskCreate(led_toggle_task_function, "LED0",
 		    configMINIMAL_STACK_SIZE + 200, NULL, 3,
-		    &led_toggle_task_handle);
+		    &led_toggle_task_handle);*/
 
 	xTaskCreate(lv_handle_task_function, "lvhand",
-		    configMINIMAL_STACK_SIZE + 200, NULL, 1,
+		    configMINIMAL_STACK_SIZE + 200, NULL, 2,
 		    &lv_handle_task_handle);
 
 	xTaskCreate(lv_tick_task_function, "lvtick",
@@ -125,6 +128,7 @@ int main(void)
 	SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
 #endif
 
+lv_task_handler();
 	/* Start FreeRTOS scheduler. */
 	//vTaskStartScheduler();
 
