@@ -26,11 +26,9 @@
  * 1 tab == 4 spaces!
  */
 
-
 #ifndef PORTMACRO_H
 #define PORTMACRO_H
 
 #include "portmacro_cmsis.h"
 
 #endif /* PORTMACRO_H */
-

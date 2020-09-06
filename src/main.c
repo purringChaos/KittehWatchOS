@@ -1,10 +1,11 @@
-#include <stdbool.h>
 #include <stdint.h>
+#include "lvgl/lvgl.h"
+#include <time.h>
 
 #include "FreeRTOS.h"
+#include "mpu_wrappers.h"
 #include "task.h"
 #include "timers.h"
-#include "mpu_wrappers.h"
 #ifndef __linux__
 #include "app_error.h"
 #include "bsp.h"
@@ -15,89 +16,96 @@
 #include <nrf_log_ctrl_internal.h>
 #include <nrfx_log.h>
 #endif
-
+#include <pthread.h>
 #include <stdbool.h>
+#include <stdio.h>
 
-void vApplicationIdleHook(void) {}
+#include "platform/includes/backlight.h"
+#include "platform/includes/display.h"
 
-uint8_t pinLcdBacklight1 = 14;
-uint8_t pinLcdBacklight2 = 22;
-uint8_t pinLcdBacklight3 = 23;
 
-#define TASK_DELAY 1000 /**< Task delay. Delays a LED0 task for 200 ms */
-#define TIMER_PERIOD                                                           \
-  3000 /**< Timer period. LED1 timer will expire after 1000 ms */
+void vApplicationIdleHook(void)
+{
+lv_task_handler();
+
+}
+
+
+
+#define TASK_DELAY 1000 
 
 TaskHandle_t
-    led_toggle_task_handle; /**< Reference to LED0 toggling FreeRTOS task. */
+	led_toggle_task_handle; 
 TimerHandle_t
-    led_toggle_timer_handle; /**< Reference to LED1 toggling FreeRTOS timer. */
+	led_toggle_timer_handle; 
 
+static lv_obj_t * label;
 
-void toggleLED(bool x) {
-#ifndef __linux__
-    if (x) {
-      nrf_gpio_pin_clear(pinLcdBacklight1);
-      nrf_gpio_pin_clear(pinLcdBacklight2);
-      nrf_gpio_pin_clear(pinLcdBacklight3);
-    } else {
-      nrf_gpio_pin_set(pinLcdBacklight1);
-      nrf_gpio_pin_set(pinLcdBacklight2);
-      nrf_gpio_pin_set(pinLcdBacklight3);
+static void slider_event_cb(lv_obj_t * slider, lv_event_t event)
+{
+    if(event == LV_EVENT_VALUE_CHANGED) {
+        /*Refresh the text*/
+        lv_label_set_text_fmt(label, "%d", lv_slider_get_value(slider));
     }
-#else
-printf(x ? "true\n" : "false\n");
-#endif
-    return !x;
 }
 
-
-static void led_toggle_task_function(void *pvParameter) {
-  bool x = true;
-  while (true) {
-    x = toggleLED;
-    vTaskDelay(TASK_DELAY);
-  }
+bool toggleLED(bool x) {
+	if (x) {
+		platform_setBacklight(0);
+	} else {
+		platform_setBacklight(3);
+	}
+	return !x;
 }
 
+static void led_toggle_task_function(void *pvParameter)
+{
+	bool x = true;
+	while (true) {
+		x = toggleLED(x);
+    lv_tick_inc(TASK_DELAY);
+		vTaskDelay(TASK_DELAY);
+	}
+}
 
-
-
-
-
-int main(void) {
+int main(void)
+{
 #ifndef __linux__
-  ret_code_t err_code;
-
-  nrf_gpio_cfg_output(pinLcdBacklight1);
-  nrf_gpio_cfg_output(pinLcdBacklight2);
-  nrf_gpio_cfg_output(pinLcdBacklight3);
-
-  /* Initialize clock driver for better time accuracy in FREERTOS */
-  err_code = nrf_drv_clock_init();
-  APP_ERROR_CHECK(err_code);
-
-  /* Configure LED-pins as outputs */
-  bsp_board_init(BSP_INIT_LEDS);
-
+	ret_code_t err_code;
+	/* Initialize clock driver for better time accuracy in FREERTOS */
+	err_code = nrf_drv_clock_init();
+	APP_ERROR_CHECK(err_code);
 #endif
 
-  /* Create task for LED0 blinking with priority set to 2 */
-  xTaskCreate(led_toggle_task_function, "LED0",
-                              configMINIMAL_STACK_SIZE + 200, NULL, 1,
-                              &led_toggle_task_handle);
-  xTimerStart(led_toggle_timer_handle, 0);
+	platform_initBacklight();
+  platform_initDisplay();
+
+    lv_obj_t * slider = lv_slider_create(lv_scr_act(), NULL);
+    lv_obj_set_width(slider, 200);                        /*Set the width*/
+    lv_obj_align(slider, NULL, LV_ALIGN_CENTER, 0, 0);    /*Align to the center of the parent (screen)*/
+    lv_obj_set_event_cb(slider, slider_event_cb);         /*Assign an event function*/
+
+    /* Create a label below the slider */
+    label = lv_label_create(lv_scr_act(), NULL);
+    lv_label_set_text(label, "0");
+    lv_obj_set_auto_realign(slider, true);                          /*To keep center alignment when the width of the text changes*/
+    lv_obj_align(label, slider, LV_ALIGN_OUT_BOTTOM_MID, 0, 20);    /*Align below the slider*/
+
+	/* Create task for LED0 blinking with priority set to 2 */
+	xTaskCreate(led_toggle_task_function, "LED0",
+		    configMINIMAL_STACK_SIZE + 200, NULL, 1,
+		    &led_toggle_task_handle);
 
 #ifndef __linux__
-  /* Activate deep sleep mode */
-  SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+	/* Activate deep sleep mode */
+	SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
 #endif
 
-  /* Start FreeRTOS scheduler. */
-  vTaskStartScheduler();
+	/* Start FreeRTOS scheduler. */
+	vTaskStartScheduler();
 
-  while (true) {
-    /* FreeRTOS should not be here... FreeRTOS goes back to the start of stack
-     * in vTaskStartScheduler function. */
-  }
+
+
+	while (true) {
+	}
 }

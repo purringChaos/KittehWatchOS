@@ -10,7 +10,6 @@
  * which are specified at the end of this file and/or a separate license file.
  */
 
-
 #ifndef PORTMACRO_H
 #define PORTMACRO_H
 
@@ -25,50 +24,50 @@ extern "C" {
  * signal handler must be installed for them. Blocking those signals ist done by
  * vPortEarlyInit().
  */
-#define portSIGTIMER    (SIGRTMIN + 1)
-#define portSIGSUSPEND  (SIGRTMIN + 2)
-#define portSIGRESUME   (SIGRTMIN + 3)
+#define portSIGTIMER (SIGRTMIN + 1)
+#define portSIGSUSPEND (SIGRTMIN + 2)
+#define portSIGRESUME (SIGRTMIN + 3)
 #define portSIGSCHEDULE (SIGRTMIN + 4)
 /*-----------------------------------------------------------*/
 
 /* Type definitions. */
-#define portSTACK_TYPE	uint32_t
+#define portSTACK_TYPE uint32_t
 typedef portSTACK_TYPE StackType_t;
 typedef long BaseType_t;
 typedef unsigned long UBaseType_t;
 
-#if( configUSE_16_BIT_TICKS == 1 )
-	typedef uint16_t TickType_t;
-	#define portMAX_DELAY ( TickType_t ) 0xffff
+#if (configUSE_16_BIT_TICKS == 1)
+typedef uint16_t TickType_t;
+#define portMAX_DELAY (TickType_t)0xffff
 #else
-	typedef uint32_t TickType_t;
-	#define portMAX_DELAY ( TickType_t ) 0xffffffffUL
+typedef uint32_t TickType_t;
+#define portMAX_DELAY (TickType_t)0xffffffffUL
 
-    #if defined(__i386__)
-	/* 32-bit tick type on a 32-bit architecture, so reads of the tick count do
+#if defined(__i386__)
+/* 32-bit tick type on a 32-bit architecture, so reads of the tick count do
 	not need to be guarded with a critical section. */
-	#define portTICK_TYPE_IS_ATOMIC 1
-    #endif
+#define portTICK_TYPE_IS_ATOMIC 1
+#endif
 #endif
 
-#if defined( __x86_64__)
-    #define portPOINTER_SIZE_TYPE  uint64_t
-#elif defined( __i386__ )
-    #define portPOINTER_SIZE_TYPE  uint32_t
-#elif defined( __aarch64__ )
-    #define portPOINTER_SIZE_TYPE  uint32_t
-#elif 
+#if defined(__x86_64__)
+#define portPOINTER_SIZE_TYPE uint64_t
+#elif defined(__i386__)
+#define portPOINTER_SIZE_TYPE uint32_t
+#elif defined(__aarch64__)
+#define portPOINTER_SIZE_TYPE uint32_t
+#elif
 
 #else
-    #error "Pointer size type unknown"
+#error "Pointer size type unknown"
 #endif
 
 /*-----------------------------------------------------------*/
 
 /* Architecture specifics. */
-#define portSTACK_GROWTH			( -1 )
-#define portTICK_PERIOD_MS			( ( TickType_t ) 1000 / configTICK_RATE_HZ )
-#define portBYTE_ALIGNMENT			( 8 )
+#define portSTACK_GROWTH (-1)
+#define portTICK_PERIOD_MS ((TickType_t)1000 / configTICK_RATE_HZ)
+#define portBYTE_ALIGNMENT (8)
 /*-----------------------------------------------------------*/
 
 /* Early Initialization
@@ -78,10 +77,9 @@ typedef unsigned long UBaseType_t;
  * @retval 0        Initialized
  * @retval (other)  Error
  */
-int vPortEarlyInit( void );
+int vPortEarlyInit(void);
 
-
-#if ( configPORT_USE_REINIT != 0 )
+#if (configPORT_USE_REINIT != 0)
 /* Reinitialize static variables of FreeRTOS
  *
  * May be useful to get a clean state at runtime (e.g. when running multiple,
@@ -91,18 +89,19 @@ int vPortEarlyInit( void );
  * commented out at the end of the file mpu_wrappers.h
  */
 void vPortReinitFreeRtos(void);
-#define PRIVILEGED_DATA __attribute__((section ("free_rtos")))
+#define PRIVILEGED_DATA __attribute__((section("free_rtos")))
 
 #endif /* configPORT_USE_REINIT */
 
-
 /* Scheduler utilities. */
-extern void vPortYield( void );
+extern void vPortYield(void);
 #define portYIELD() vPortYield()
-#define portEND_SWITCHING_ISR( xSwitchRequired ) if( xSwitchRequired != pdFALSE ) portYIELD()
-#define portYIELD_FROM_ISR( x ) portEND_SWITCHING_ISR( x )
+#define portEND_SWITCHING_ISR(xSwitchRequired)                                 \
+	if (xSwitchRequired != pdFALSE)                                        \
+	portYIELD()
+#define portYIELD_FROM_ISR(x) portEND_SWITCHING_ISR(x)
 
-extern void vPortYieldWithinAPI( void );
+extern void vPortYieldWithinAPI(void);
 #define portYIELD_WITHIN_API() vPortYieldWithinAPI()
 
 /*
@@ -112,22 +111,22 @@ extern void vPortYieldWithinAPI( void );
  * NOTE: If the scheduler hasn't been started, this function will block until it
  *       is.
  */
-extern void vPortPause( void );
+extern void vPortPause(void);
 
 /*
  * Resumes task execution and systick handling after vPortPause()
  */
-extern void vPortResume ( void );
+extern void vPortResume(void);
 /*-----------------------------------------------------------*/
 
 /* Critical section management. */
-#define portSET_INTERRUPT_MASK_FROM_ISR()       0
-#define portCLEAR_INTERRUPT_MASK_FROM_ISR(x)    (void)(x)
+#define portSET_INTERRUPT_MASK_FROM_ISR() 0
+#define portCLEAR_INTERRUPT_MASK_FROM_ISR(x) (void)(x)
 #define portDISABLE_INTERRUPTS()
 #define portENABLE_INTERRUPTS()
 
-extern void vPortEnterCritical( void );
-extern void vPortExitCritical( void );
+extern void vPortEnterCritical(void);
+extern void vPortExitCritical(void);
 #define portENTER_CRITICAL() vPortEnterCritical()
 #define portEXIT_CRITICAL() vPortExitCritical()
 /*-----------------------------------------------------------*/
@@ -135,25 +134,25 @@ extern void vPortExitCritical( void );
 /* Task function macros as described on the FreeRTOS.org WEB site.  These are
 not necessary for to use this port.  They are defined so the common demo files
 (which build with all the ports) will build. */
-#define portTASK_FUNCTION_PROTO( vFunction, pvParameters ) void vFunction( void *pvParameters )
-#define portTASK_FUNCTION( vFunction, pvParameters ) void vFunction( void *pvParameters )
+#define portTASK_FUNCTION_PROTO(vFunction, pvParameters)                       \
+	void vFunction(void *pvParameters)
+#define portTASK_FUNCTION(vFunction, pvParameters)                             \
+	void vFunction(void *pvParameters)
 /*-----------------------------------------------------------*/
 
 /* Task creation hook. Passes the task handle */
-void vPortSetupTCB(void * pvTaskHandle);
-#define portSETUP_TCB(pxTCB)    vPortSetupTCB((void*)pxTCB)
+void vPortSetupTCB(void *pvTaskHandle);
+#define portSETUP_TCB(pxTCB) vPortSetupTCB((void *)pxTCB)
 /*-----------------------------------------------------------*/
 
-void vPortCleanUpTCB(void * pvTaskHandle);
-#define portCLEAN_UP_TCB(pxTCB) vPortCleanUpTCB((void*) pxTCB)
+void vPortCleanUpTCB(void *pvTaskHandle);
+#define portCLEAN_UP_TCB(pxTCB) vPortCleanUpTCB((void *)pxTCB)
 
 #ifdef __cplusplus
 }
 #endif
 
 #endif /* PORTMACRO_H */
-
-
 
 /* License notice ----------------------------------------------------------- */
 

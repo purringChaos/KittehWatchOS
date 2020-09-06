@@ -16,14 +16,43 @@ includes = [
   include_directories('deps'),
 ]
 
-if get_option('linux')
-sources += ['src/platform/Linux/FreeRTOS/port.c', 'src/platform/Linux/FreeRTOS/heap_4.c']
-includes +=  include_directories('src/platform/Linux/FreeRTOS')
-else
-includes += include_directories('src/platform/PineTime/FreeRTOS')
-sources += ['src/platform/PineTime/FreeRTOS/port.c',
+
+sources_platform_pinetime = [
+  'src/platform/PineTime/FreeRTOS/port.c',
   'src/platform/PineTime/FreeRTOS/port_cmsis.c',
-  'src/platform/PineTime/FreeRTOS/port_cmsis_systick.c']
+  'src/platform/PineTime/FreeRTOS/port_cmsis_systick.c',
+  'src/platform/PineTime/backlight/backlight.c',
+
+]
+
+includes_platform_pinetime = [
+  include_directories('src/platform/PineTime/FreeRTOS'),
+  include_directories('src/platform/PineTime'),
+]
+
+
+sources_platform_linux = [
+  'src/platform/Linux/FreeRTOS/port.c',
+  'src/platform/Linux/FreeRTOS/heap_4.c',
+  'src/platform/Linux/backlight/backlight.c',
+  'src/platform/Linux/display/display.c',
+  'deps/lv_drivers/display/monitor.c',
+  'deps/lv_drivers/indev/mouse.c',
+]
+
+includes_platform_linux = [
+  include_directories('src/platform/Linux/FreeRTOS'),
+  include_directories('src/platform/Linux'),
+
+]
+
+
+if get_option('linux')
+sources += sources_platform_linux
+includes += includes_platform_linux
+else
+sources += sources_platform_pinetime
+includes += includes_platform_pinetime
 endif
 
 cflags = [
@@ -330,6 +359,7 @@ endif
 if get_option('linux')
 deps += cc.find_library('pthread', required : true)
 deps += cc.find_library('rt', required : true)
+deps += cc.find_library('SDL2', required : true)
 
 endif
 
