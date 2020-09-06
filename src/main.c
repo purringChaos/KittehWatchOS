@@ -26,18 +26,34 @@
 
 void vApplicationIdleHook(void)
 {
-lv_task_handler();
 
 }
 
+static void lv_handle_task_function(void *pvParameter)
+{
+  while (true) {
+    lv_task_handler();
+    vTaskDelay(5);
+  }
+}
 
+
+static void lv_tick_task_function(void *pvParameter)
+{
+  while (true) {
+    lv_tick_inc(5);
+    vTaskDelay(5);
+  }
+}
 
 #define TASK_DELAY 1000 
 
 TaskHandle_t
 	led_toggle_task_handle; 
 TimerHandle_t
-	led_toggle_timer_handle; 
+  lv_handle_task_handle;
+TimerHandle_t
+  lv_tick_task_handle; 
 
 static lv_obj_t * label;
 
@@ -57,7 +73,8 @@ bool toggleLED(bool x) {
 	}
 	return !x;
 }
-
+TimerHandle_t
+  lv_handle_task_handle;
 static void led_toggle_task_function(void *pvParameter)
 {
 	bool x = true;
@@ -93,8 +110,18 @@ int main(void)
 
 	/* Create task for LED0 blinking with priority set to 2 */
 	xTaskCreate(led_toggle_task_function, "LED0",
-		    configMINIMAL_STACK_SIZE + 200, NULL, 1,
+		    configMINIMAL_STACK_SIZE + 200, NULL, 3,
 		    &led_toggle_task_handle);
+
+
+  xTaskCreate(lv_handle_task_function, "lvhand",
+        configMINIMAL_STACK_SIZE + 200, NULL, 1,
+        &lv_handle_task_handle);
+
+  xTaskCreate(lv_tick_task_function, "lvtick",
+        configMINIMAL_STACK_SIZE + 200, NULL, 1,
+        &lv_tick_task_handle);
+
 
 #ifndef __linux__
 	/* Activate deep sleep mode */
@@ -102,9 +129,10 @@ int main(void)
 #endif
 
 	/* Start FreeRTOS scheduler. */
-	vTaskStartScheduler();
+	//vTaskStartScheduler();
 
 
+  vTaskStartScheduler();
 
 	while (true) {
 	}
