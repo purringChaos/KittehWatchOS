@@ -19,9 +19,9 @@
  *********************/
 #define LV_DRV_DELAY_INCLUDE <stdint.h> /*Dummy include by default*/
 #define LV_DRV_DELAY_US(                                                       \
-	us) /*delay_us(us)*/ /*Delay the given number of microseconds*/
+    us) /*delay_us(us)*/ /*Delay the given number of microseconds*/
 #define LV_DRV_DELAY_MS(                                                       \
-	ms) /*delay_ms(ms)*/ /*Delay the given number of milliseconds*/
+    ms) /*delay_ms(ms)*/ /*Delay the given number of milliseconds*/
 
 /*********************
  * DISPLAY INTERFACE
@@ -32,32 +32,33 @@
  *------------*/
 #define LV_DRV_DISP_INCLUDE <stdint.h> /*Dummy include by default*/
 #define LV_DRV_DISP_CMD_DATA(                                                  \
-	val) /*pin_x_set(val)*/ /*Set the command/data pin to 'val'*/
+    val) /*pin_x_set(val)*/ /*Set the command/data pin to 'val'*/
 #define LV_DRV_DISP_RST(val) /*pin_x_set(val)*/ /*Set the reset pin to 'val'*/
 
 /*---------
  *  SPI
  *---------*/
 #define LV_DRV_DISP_SPI_CS(                                                    \
-	val) /*spi_cs_set(val)*/ /*Set the SPI's Chip select to 'val'*/
+    val) /*spi_cs_set(val)*/ /*Set the SPI's Chip select to 'val'*/
 #define LV_DRV_DISP_SPI_WR_BYTE(                                               \
-	data) /*spi_wr(data)*/ /*Write a byte the SPI bus*/
+    data) /*spi_wr(data)*/ /*Write a byte the SPI bus*/
 #define LV_DRV_DISP_SPI_WR_ARRAY(                                              \
-	adr,                                                                   \
-	n) /*spi_wr_mem(adr, n)*/ /*Write 'n' bytes to SPI bus from 'adr'*/
+    adr, n) /*spi_wr_mem(adr, n)*/ /*Write 'n' bytes to SPI bus from 'adr'*/
 
 /*------------------
  *  Parallel port
  *-----------------*/
 #define LV_DRV_DISP_PAR_CS(                                                    \
-	val) /*par_cs_set(val)*/ /*Set the Parallel port's Chip select to 'val'*/
-#define LV_DRV_DISP_PAR_SLOW /*par_slow()*/ /*Set low speed on the parallel port*/
-#define LV_DRV_DISP_PAR_FAST /*par_fast()*/ /*Set high speed on the parallel port*/
+    val) /*par_cs_set(val)*/ /*Set the Parallel port's Chip select to 'val'*/
+#define LV_DRV_DISP_PAR_SLOW /*par_slow()*/ /*Set low speed on the parallel    \
+                                               port*/
+#define LV_DRV_DISP_PAR_FAST /*par_fast()*/ /*Set high speed on the parallel   \
+                                               port*/
 #define LV_DRV_DISP_PAR_WR_WORD(                                               \
-	data) /*par_wr(data)*/ /*Write a word to the parallel port*/
+    data) /*par_wr(data)*/ /*Write a word to the parallel port*/
 #define LV_DRV_DISP_PAR_WR_ARRAY(                                              \
-	adr,                                                                   \
-	n) /*par_wr_mem(adr,n)*/ /*Write 'n' bytes to Parallel ports from 'adr'*/
+    adr,                                                                       \
+    n) /*par_wr_mem(adr,n)*/ /*Write 'n' bytes to Parallel ports from 'adr'*/
 
 /***************************
  * INPUT DEVICE INTERFACE
@@ -66,28 +67,29 @@
 /*----------
  *  Common
  *----------*/
-#define LV_DRV_INDEV_INCLUDE <stdint.h> /*Dummy include by default*/
-#define LV_DRV_INDEV_RST(val) /*pin_x_set(val)*/ /*Set the reset pin to 'val'*/
-#define LV_DRV_INDEV_IRQ_READ 0 /*pn_x_read()*/ /*Read the IRQ pin*/
+#define LV_DRV_INDEV_INCLUDE <stdint.h>          /*Dummy include by default*/
+#define LV_DRV_INDEV_RST(val) /*pin_x_set(val)*/ /*Set the reset pin to        \
+                                                    'val'*/
+#define LV_DRV_INDEV_IRQ_READ 0 /*pn_x_read()*/  /*Read the IRQ pin*/
 
 /*---------
  *  SPI
  *---------*/
 #define LV_DRV_INDEV_SPI_CS(                                                   \
-	val) /*spi_cs_set(val)*/ /*Set the SPI's Chip select to 'val'*/
+    val) /*spi_cs_set(val)*/ /*Set the SPI's Chip select to 'val'*/
 #define LV_DRV_INDEV_SPI_XCHG_BYTE(data)                                       \
-	0 /*spi_xchg(val)*/ /*Write 'val' to SPI and give the read value*/
+  0 /*spi_xchg(val)*/ /*Write 'val' to SPI and give the read value*/
 
 /*---------
  *  I2C
  *---------*/
-#define LV_DRV_INDEV_I2C_START /*i2c_start()*/ /*Make an I2C start*/
-#define LV_DRV_INDEV_I2C_STOP /*i2c_stop()*/ /*Make an I2C stop*/
+#define LV_DRV_INDEV_I2C_START /*i2c_start()*/     /*Make an I2C start*/
+#define LV_DRV_INDEV_I2C_STOP /*i2c_stop()*/       /*Make an I2C stop*/
 #define LV_DRV_INDEV_I2C_RESTART /*i2c_restart()*/ /*Make an I2C restart*/
 #define LV_DRV_INDEV_I2C_WR(                                                   \
-	data) /*i2c_wr(data)*/ /*Write a byte to the I1C bus*/
+    data) /*i2c_wr(data)*/ /*Write a byte to the I1C bus*/
 #define LV_DRV_INDEV_I2C_READ(last_read)                                       \
-	0 /*i2c_rd()*/ /*Read a byte from the I2C bud*/
+  0 /*i2c_rd()*/ /*Read a byte from the I2C bud*/
 
 /*********************
  *  DISPLAY DRIVERS
@@ -108,7 +110,8 @@
 #define MONITOR_ZOOM 1
 
 /* Used to test true double buffering with only address changing.
- * Set LV_VDB_SIZE = (LV_HOR_RES * LV_VER_RES) and  LV_VDB_DOUBLE = 1 and LV_COLOR_DEPTH = 32" */
+ * Set LV_VDB_SIZE = (LV_HOR_RES * LV_VER_RES) and  LV_VDB_DOUBLE = 1 and
+ * LV_COLOR_DEPTH = 32" */
 #define MONITOR_DOUBLE_BUFFERED 0
 
 /*Eclipse: <SDL2/SDL.h>    Visual Studio: <SDL.h>*/
@@ -157,7 +160,7 @@
 #define SSD1963_VPW 10
 #define SSD1963_HS_NEG 0 /*Negative hsync*/
 #define SSD1963_VS_NEG 0 /*Negative vsync*/
-#define SSD1963_ORI 0 /*0, 90, 180, 270*/
+#define SSD1963_ORI 0    /*0, 90, 180, 270*/
 #define SSD1963_COLOR_DEPTH 16
 #endif
 
@@ -171,17 +174,17 @@
 #if USE_R61581
 #define R61581_HOR_RES LV_HOR_RES
 #define R61581_VER_RES LV_VER_RES
-#define R61581_HSPL 0 /*HSYNC signal polarity*/
-#define R61581_HSL 10 /*HSYNC length (Not Implemented)*/
-#define R61581_HFP 10 /*Horitontal Front poarch (Not Implemented)*/
-#define R61581_HBP 10 /*Horitontal Back poarch (Not Implemented */
-#define R61581_VSPL 0 /*VSYNC signal polarity*/
-#define R61581_VSL 10 /*VSYNC length (Not Implemented)*/
-#define R61581_VFP 8 /*Vertical Front poarch*/
-#define R61581_VBP 8 /*Vertical Back poarch */
-#define R61581_DPL 0 /*DCLK signal polarity*/
-#define R61581_EPL 1 /*ENABLE signal polarity*/
-#define R61581_ORI 0 /*0, 180*/
+#define R61581_HSPL 0            /*HSYNC signal polarity*/
+#define R61581_HSL 10            /*HSYNC length (Not Implemented)*/
+#define R61581_HFP 10            /*Horitontal Front poarch (Not Implemented)*/
+#define R61581_HBP 10            /*Horitontal Back poarch (Not Implemented */
+#define R61581_VSPL 0            /*VSYNC signal polarity*/
+#define R61581_VSL 10            /*VSYNC length (Not Implemented)*/
+#define R61581_VFP 8             /*Vertical Front poarch*/
+#define R61581_VBP 8             /*Vertical Back poarch */
+#define R61581_DPL 0             /*DCLK signal polarity*/
+#define R61581_EPL 1             /*ENABLE signal polarity*/
+#define R61581_ORI 0             /*0, 180*/
 #define R61581_LV_COLOR_DEPTH 16 /*Fix 16 bit*/
 #endif
 
@@ -209,9 +212,9 @@
 #define UC1610_VER_RES LV_VER_RES
 #define UC1610_INIT_CONTRAST 33 /* init contrast, values in [%] */
 #define UC1610_INIT_HARD_RST                                                   \
-	0 /* 1 : hardware reset at init, 0 : software reset */
+  0                       /* 1 : hardware reset at init, 0 : software reset */
 #define UC1610_TOP_VIEW 0 /* 0 : Bottom View, 1 : Top View */
-#endif /*USE_UC1610*/
+#endif                    /*USE_UC1610*/
 
 /*-------------------------------------------------
  *  SHARP memory in pixel monochrome display series
@@ -231,8 +234,9 @@
 #define SHARP_MIP_VER_RES LV_VER_RES
 #define SHARP_MIP_SOFT_COM_INVERSION 0
 #define SHARP_MIP_REV_BYTE(                                                    \
-	b) /*((uint8_t) __REV(__RBIT(b)))*/ /*Architecture / compiler dependent byte bits order reverse*/
-#endif /*USE_SHARP_MIP*/
+    b) /*((uint8_t) __REV(__RBIT(b)))*/ /*Architecture / compiler dependent    \
+                                           byte bits order reverse*/
+#endif                                  /*USE_SHARP_MIP*/
 
 /*-----------------------------------------
  *  Linux frame buffer device (/dev/fbx)
@@ -333,8 +337,9 @@
 
 #if USE_LIBINPUT
 #define LIBINPUT_NAME                                                          \
-	"/dev/input/event0" /*You can use the "evtest" Linux tool to get the list of devices and test them*/
-#endif /*USE_LIBINPUT*/
+  "/dev/input/event0" /*You can use the "evtest" Linux tool to get the list of \
+                         devices and test them*/
+#endif                /*USE_LIBINPUT*/
 
 /*-------------------------------------------------
  * Mouse or touchpad as evdev interface (for Linux based systems)
@@ -349,16 +354,18 @@
 
 #if USE_EVDEV || USE_BSD_EVDEV
 #define EVDEV_NAME                                                             \
-	"/dev/input/event0" /*You can use the "evtest" Linux tool to get the list of devices and test them*/
+  "/dev/input/event0" /*You can use the "evtest" Linux tool to get the list of \
+                         devices and test them*/
 #define EVDEV_SWAP_AXES 0 /*Swap the x and y axes of the touchscreen*/
 
 #define EVDEV_CALIBRATE                                                        \
-	0 /*Scale and offset the touchscreen coordinates by using maximum and minimum values for each axis*/
+  0 /*Scale and offset the touchscreen coordinates by using maximum and        \
+       minimum values for each axis*/
 
 #if EVDEV_CALIBRATE
 #define EVDEV_HOR_MIN 0 /*to invert axis swap EVDEV_XXX_MIN by EVDEV_XXX_MAX*/
 #define EVDEV_HOR_MAX                                                          \
-	4096 /*"evtest" Linux tool can help to get the correct calibraion values>*/
+  4096 /*"evtest" Linux tool can help to get the correct calibraion values>*/
 #define EVDEV_VER_MIN 0
 #define EVDEV_VER_MAX 4096
 #endif /*EVDEV_CALIBRATE*/

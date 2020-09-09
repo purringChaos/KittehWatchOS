@@ -2,23 +2,25 @@
  * FreeRTOS Kernel V10.0.0
  * Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of
- * this software and associated documentation files (the "Software"), to deal in
- * the Software without restriction, including without limitation the rights to
- * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
- * the Software, and to permit persons to whom the Software is furnished to do so,
- * subject to the following conditions:
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software. If you wish to use our Amazon
- * FreeRTOS name, please do so in a fair use way that does not cause confusion.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software. If you wish to use our
+ * Amazon FreeRTOS name, please do so in a fair use way that does not cause
+ * confusion.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
- * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
- * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
- * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  *
  * http://www.FreeRTOS.org
  * http://aws.amazon.com/freertos
@@ -37,7 +39,7 @@
 /*-----------------------------------------------------------
  * Possible configurations for system timer
  */
-#define FREERTOS_USE_RTC 0 /**< Use real time clock for the system */
+#define FREERTOS_USE_RTC 0     /**< Use real time clock for the system */
 #define FREERTOS_USE_SYSTICK 1 /**< Use SysTick timer for system */
 
 /*-----------------------------------------------------------
@@ -58,7 +60,7 @@
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION 1
 #define configUSE_TICKLESS_IDLE 1
 #define configUSE_TICKLESS_IDLE_SIMPLE_DEBUG                                   \
-	0 /* See into vPortSuppressTicksAndSleep source code for explanation */
+  0 /* See into vPortSuppressTicksAndSleep source code for explanation */
 #define configCPU_CLOCK_HZ (SystemCoreClock)
 #define configTICK_RATE_HZ 1024
 #define configMAX_PRIORITIES (3)
@@ -145,7 +147,7 @@ to all Cortex-M ports, and do not rely on any particular library functions. */
 /* !!!! configMAX_SYSCALL_INTERRUPT_PRIORITY must not be set to zero !!!!
 See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 #define configMAX_SYSCALL_INTERRUPT_PRIORITY                                   \
-	configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY
+  configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY
 
 /* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS
 standard names - or at least those used in the unmodified vector table. */
@@ -158,8 +160,8 @@ standard names - or at least those used in the unmodified vector table. */
  * basing on the settings above
  */
 #if (configTICK_SOURCE == FREERTOS_USE_SYSTICK)
-// do not define configSYSTICK_CLOCK_HZ for SysTick to be configured automatically
-// to CPU clock source
+// do not define configSYSTICK_CLOCK_HZ for SysTick to be configured
+// automatically to CPU clock source
 #define xPortSysTickHandler SysTick_Handler
 #elif (configTICK_SOURCE == FREERTOS_USE_RTC)
 #define configSYSTICK_CLOCK_HZ (32768UL)
@@ -173,7 +175,8 @@ standard names - or at least those used in the unmodified vector table. */
 #include "nrf.h"
 #include "nrf_assert.h"
 
-/* This part of definitions may be problematic in assembly - it uses definitions from files that are not assembly compatible. */
+/* This part of definitions may be problematic in assembly - it uses definitions
+ * from files that are not assembly compatible. */
 /* Cortex-M specific definitions. */
 #ifdef __NVIC_PRIO_BITS
 /* __BVIC_PRIO_BITS will be specified when CMSIS is being used. */
@@ -182,24 +185,30 @@ standard names - or at least those used in the unmodified vector table. */
 #error "This port requires __NVIC_PRIO_BITS to be defined"
 #endif
 
-/* Access to current system core clock is required only if we are ticking the system by systimer */
+/* Access to current system core clock is required only if we are ticking the
+ * system by systimer */
 #if (configTICK_SOURCE == FREERTOS_USE_SYSTICK)
 #include <stdint.h>
 extern uint32_t SystemCoreClock;
 #endif
 #endif /* !assembler */
 
-/** Implementation note:  Use this with caution and set this to 1 ONLY for debugging
+/** Implementation note:  Use this with caution and set this to 1 ONLY for
+ * debugging
  * ----------------------------------------------------------
-     * Set the value of configUSE_DISABLE_TICK_AUTO_CORRECTION_DEBUG to below for enabling or disabling RTOS tick auto correction:
-     * 0. This is default. If the RTC tick interrupt is masked for more than 1 tick by higher priority interrupts, then most likely
-     *    one or more RTC ticks are lost. The tick interrupt inside RTOS will detect this and make a correction needed. This is needed
-     *    for the RTOS internal timers to be more accurate.
-     * 1. The auto correction for RTOS tick is disabled even though few RTC tick interrupts were lost. This feature is desirable when debugging
-     *    the RTOS application and stepping though the code. After stepping when the application is continued in debug mode, the auto-corrections of
-     *    RTOS tick might cause asserts. Setting configUSE_DISABLE_TICK_AUTO_CORRECTION_DEBUG to 1 will make RTC and RTOS go out of sync but could be
-     *    convenient for debugging.
-     */
+ * Set the value of configUSE_DISABLE_TICK_AUTO_CORRECTION_DEBUG to below for
+ * enabling or disabling RTOS tick auto correction: 0. This is default. If the
+ * RTC tick interrupt is masked for more than 1 tick by higher priority
+ * interrupts, then most likely one or more RTC ticks are lost. The tick
+ * interrupt inside RTOS will detect this and make a correction needed. This is
+ * needed for the RTOS internal timers to be more accurate.
+ * 1. The auto correction for RTOS tick is disabled even though few RTC tick
+ * interrupts were lost. This feature is desirable when debugging the RTOS
+ * application and stepping though the code. After stepping when the application
+ * is continued in debug mode, the auto-corrections of RTOS tick might cause
+ * asserts. Setting configUSE_DISABLE_TICK_AUTO_CORRECTION_DEBUG to 1 will make
+ * RTC and RTOS go out of sync but could be convenient for debugging.
+ */
 #define configUSE_DISABLE_TICK_AUTO_CORRECTION_DEBUG 0
 
 #endif /* FREERTOS_CONFIG_H */

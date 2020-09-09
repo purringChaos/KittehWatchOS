@@ -7,13 +7,17 @@ pkg = import('pkgconfig')
 
 sources = [
 	'src/main.c',
+  'src/apps/appmenu/appmenu.c',
+  'src/apps/clock/clock.c',
+
+  'src/displaymanager/displaymanager.c',
 ]
 
 includes = [
   include_directories('.'),
   include_directories('src'),
-  include_directories('src/lvconf'),
   include_directories('deps'),
+
 ]
 
 
@@ -36,6 +40,7 @@ sources_platform_linux = [
   'src/platform/Linux/FreeRTOS/heap_4.c',
   'src/platform/Linux/backlight/backlight.c',
   'src/platform/Linux/display/display.c',
+  'src/platform/Linux/thread/thread.c',
   'deps/lv_drivers/display/monitor.c',
   'deps/lv_drivers/indev/mouse.c',
 ]

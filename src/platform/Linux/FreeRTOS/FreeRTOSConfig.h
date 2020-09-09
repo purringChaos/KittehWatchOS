@@ -62,9 +62,9 @@
 /* Interrupt nesting behaviour configuration. */
 #define configKERNEL_INTERRUPT_PRIORITY [dependent of processor]
 #define configMAX_SYSCALL_INTERRUPT_PRIORITY                                   \
-	[dependent on processor and application]
+  [dependent on processor and application]
 #define configMAX_API_CALL_INTERRUPT_PRIORITY                                  \
-	[dependent on processor and application]
+  [dependent on processor and application]
 
 /* Define to trap errors during development. */
 #define configASSERT(x) assert(x)

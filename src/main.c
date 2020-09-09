@@ -2,10 +2,6 @@
 #include <stdint.h>
 #include <time.h>
 
-#include "FreeRTOS.h"
-#include "mpu_wrappers.h"
-#include "task.h"
-#include "timers.h"
 #ifndef __linux__
 #include "app_error.h"
 #include "bsp.h"
@@ -20,120 +16,84 @@
 #include <stdbool.h>
 #include <stdio.h>
 
+#include "displaymanager/displaymanager.h"
 #include "platform/includes/backlight.h"
 #include "platform/includes/display.h"
+#include "platform/includes/thread.h"
 
-void vApplicationIdleHook(void)
-{
+THREAD_TYPE lv_tick_task_handle;
+THREAD_TYPE lv_handle_task_handle;
+THREAD_TYPE led_toggle_task_handle;
+
+void vApplicationIdleHook(void) { lv_tick_inc(1); }
+
+static void lv_handle_task_function(void *pvParameter) {
+  platform_setThreadName("lv_handle\0");
+  while (true) {
+    platform_sleep(5);
+    lv_task_handler();
+  }
 }
 
-static void lv_handle_task_function(void *pvParameter)
-{
-	while (true) {
-
+static void lv_tick_task_function(void *pvParameter) {
+  platform_setThreadName("lv_tick\0");
+  while (true) {
     lv_tick_inc(5);
-    vTaskDelay(50 / portTICK_PERIOD_MS);
-		lv_task_handler();
-		vTaskDelay(50 / portTICK_PERIOD_MS);
-	}
+    platform_sleep(5);
+  }
+}
+static void memory_monitor(lv_task_t *param) {
+  (void)param; /*Unused*/
+
+  lv_mem_monitor_t mon;
+  lv_mem_monitor(&mon);
+  printf("used: %6d (%3d %%), frag: %3d %%, biggest free: %6d\n",
+         (int)mon.total_size - mon.free_size, mon.used_pct, mon.frag_pct,
+         (int)mon.free_biggest_size);
 }
 
-static void lv_tick_task_function(void *pvParameter)
-{
-	while (true) {
-		lv_tick_inc(5);
-		vTaskDelay(50 / portTICK_PERIOD_MS);
-	}
-}
-
-#define TASK_DELAY 1000
-
-TaskHandle_t led_toggle_task_handle;
-TimerHandle_t lv_handle_task_handle;
-TimerHandle_t lv_tick_task_handle;
-
-static lv_obj_t *label;
-
-static void slider_event_cb(lv_obj_t *slider, lv_event_t event)
-{
-	if (event == LV_EVENT_VALUE_CHANGED) {
-		/*Refresh the text*/
-		lv_label_set_text_fmt(label, "%d", lv_slider_get_value(slider));
-	}
-}
-
-bool toggleLED(bool x)
-{
-	if (x) {
-		platform_setBacklight(0);
-	} else {
-		platform_setBacklight(3);
-	}
-	return !x;
-}
-TimerHandle_t lv_handle_task_handle;
-static void led_toggle_task_function(void *pvParameter)
-{
-	bool x = true;
-	while (true) {
-		x = toggleLED(x);
-		lv_tick_inc(TASK_DELAY);
-		vTaskDelay(TASK_DELAY);
-	}
-}
-
-int main(void)
-{
+int main(void) {
 #ifndef __linux__
-	ret_code_t err_code;
-	/* Initialize clock driver for better time accuracy in FREERTOS */
-	err_code = nrf_drv_clock_init();
-	APP_ERROR_CHECK(err_code);
+  ret_code_t err_code;
+  /* Initialize clock driver for better time accuracy in FREERTOS */
+  err_code = nrf_drv_clock_init();
+  APP_ERROR_CHECK(err_code);
 #endif
 
-	platform_initBacklight();
-	platform_initDisplay();
+  platform_initThreading();
+  platform_initBacklight();
+  platform_initDisplay();
 
-	lv_obj_t *slider = lv_slider_create(lv_scr_act(), NULL);
-	lv_obj_set_width(slider, 200); /*Set the width*/
-	lv_obj_align(slider, NULL, LV_ALIGN_CENTER, 0,
-		     0); /*Align to the center of the parent (screen)*/
-	lv_obj_set_event_cb(slider,
-			    slider_event_cb); /*Assign an event function*/
+  displaymanager_start();
 
-	/* Create a label below the slider */
-	label = lv_label_create(lv_scr_act(), NULL);
-	lv_label_set_text(label, "0");
-	lv_obj_set_auto_realign(
-		slider,
-		true); /*To keep center alignment when the width of the text changes*/
-	lv_obj_align(label, slider, LV_ALIGN_OUT_BOTTOM_MID, 0,
-		     20); /*Align below the slider*/
+  lv_task_create(memory_monitor, 500, LV_TASK_PRIO_MID, NULL);
 
-	/* Create task for LED0 blinking with priority set to 2 
-	xTaskCreate(led_toggle_task_function, "LED0",
-		    configMINIMAL_STACK_SIZE + 200, NULL, 3,
-		    &led_toggle_task_handle);*/
-
-	xTaskCreate(lv_handle_task_function, "lvhand",
-		    configMINIMAL_STACK_SIZE + 200, NULL, 2,
-		    &lv_handle_task_handle);
-
-	xTaskCreate(lv_tick_task_function, "lvtick",
-		    configMINIMAL_STACK_SIZE + 200, NULL, 1,
-		    &lv_tick_task_handle);
-
-#ifndef __linux__
-	/* Activate deep sleep mode */
-	SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+#ifdef __linux__
+  platform_createThread(&lv_tick_task_handle, 1, "lv_tick",
+                        lv_tick_task_function, NULL);
+#else
+  platform_createThread(&lv_handle_task_handle, 2, "lv_handle",
+                        lv_handle_task_function, NULL);
 #endif
 
-lv_task_handler();
-	/* Start FreeRTOS scheduler. */
-	//vTaskStartScheduler();
+#ifndef __linux__
+  /* Activate deep sleep mode */
+  SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+#endif
 
-	vTaskStartScheduler();
+#ifdef __linux__
+  const struct timespec period = {
+      .tv_sec = 0,
+      .tv_nsec = 5000000UL,
+  };
 
-	while (true) {
-	}
+  struct timespec remaining;
+
+  while (1) {
+    lv_task_handler();
+    nanosleep(&period, &remaining); // trigger every 5ms.
+  }
+#else
+  platform_startAllThreads();
+#endif
 }

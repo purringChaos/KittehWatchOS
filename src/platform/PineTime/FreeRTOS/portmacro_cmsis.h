@@ -2,23 +2,25 @@
  * FreeRTOS Kernel V10.0.0
  * Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of
- * this software and associated documentation files (the "Software"), to deal in
- * the Software without restriction, including without limitation the rights to
- * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
- * the Software, and to permit persons to whom the Software is furnished to do so,
- * subject to the following conditions:
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software. If you wish to use our Amazon
- * FreeRTOS name, please do so in a fair use way that does not cause confusion.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software. If you wish to use our
+ * Amazon FreeRTOS name, please do so in a fair use way that does not cause
+ * confusion.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
- * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
- * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
- * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  *
  * http://www.FreeRTOS.org
  * http://aws.amazon.com/freertos
@@ -81,27 +83,26 @@ typedef uint32_t TickType_t;
 #define portNRF_RTC_IRQn RTC1_IRQn
 /* Constants required to manipulate the NVIC. */
 #define portNRF_RTC_PRESCALER                                                  \
-	((uint32_t)(ROUNDED_DIV(configSYSTICK_CLOCK_HZ, configTICK_RATE_HZ) -  \
-		    1))
+  ((uint32_t)(ROUNDED_DIV(configSYSTICK_CLOCK_HZ, configTICK_RATE_HZ) - 1))
 /* Maximum RTC ticks */
 #define portNRF_RTC_MAXTICKS ((1U << 24) - 1U)
 /*-----------------------------------------------------------*/
 
 /* Scheduler utilities. */
-#define portYIELD()                                                                           \
-	do {                                                                                  \
-		/* Set a PendSV to request a context switch. */                               \
-		SCB->ICSR = SCB_ICSR_PENDSVSET_Msk;                                           \
-		__SEV();                                                                      \
-		/* Barriers are normally not required but do ensure the code is completely  \
-    within the specified behaviour for the architecture. */ \
-		__DSB();                                                                      \
-		__ISB();                                                                      \
-	} while (0)
+#define portYIELD()                                                            \
+  do {                                                                         \
+    /* Set a PendSV to request a context switch. */                            \
+    SCB->ICSR = SCB_ICSR_PENDSVSET_Msk;                                        \
+    __SEV();                                                                   \
+    /* Barriers are normally not required but do ensure the code is completely \
+within the specified behaviour for the architecture. */                        \
+    __DSB();                                                                   \
+    __ISB();                                                                   \
+  } while (0)
 
 #define portEND_SWITCHING_ISR(xSwitchRequired)                                 \
-	if ((xSwitchRequired) != pdFALSE)                                      \
-	portYIELD()
+  if ((xSwitchRequired) != pdFALSE)                                            \
+  portYIELD()
 #define portYIELD_FROM_ISR(x) portEND_SWITCHING_ISR(x)
 /*-----------------------------------------------------------*/
 
@@ -121,16 +122,16 @@ extern void vPortExitCritical(void);
 not necessary for to use this port.  They are defined so the common demo files
 (which build with all the ports) will build. */
 #define portTASK_FUNCTION_PROTO(vFunction, pvParameters)                       \
-	void vFunction(void *pvParameters)
+  void vFunction(void *pvParameters)
 #define portTASK_FUNCTION(vFunction, pvParameters)                             \
-	void vFunction(void *pvParameters)
+  void vFunction(void *pvParameters)
 /*-----------------------------------------------------------*/
 
 /* Tickless idle/low power functionality. */
 #ifndef portSUPPRESS_TICKS_AND_SLEEP
 extern void vPortSuppressTicksAndSleep(TickType_t xExpectedIdleTime);
 #define portSUPPRESS_TICKS_AND_SLEEP(xExpectedIdleTime)                        \
-	vPortSuppressTicksAndSleep(xExpectedIdleTime)
+  vPortSuppressTicksAndSleep(xExpectedIdleTime)
 #endif
 /*-----------------------------------------------------------*/
 
@@ -151,14 +152,14 @@ extern void vPortSuppressTicksAndSleep(TickType_t xExpectedIdleTime);
 
 /* Store/clear the ready priorities in a bit map. */
 #define portRECORD_READY_PRIORITY(uxPriority, uxReadyPriorities)               \
-	(uxReadyPriorities) |= (1UL << (uxPriority))
+  (uxReadyPriorities) |= (1UL << (uxPriority))
 #define portRESET_READY_PRIORITY(uxPriority, uxReadyPriorities)                \
-	(uxReadyPriorities) &= ~(1UL << (uxPriority))
+  (uxReadyPriorities) &= ~(1UL << (uxPriority))
 
 /*-----------------------------------------------------------*/
 
 #define portGET_HIGHEST_PRIORITY(uxTopPriority, uxReadyPriorities)             \
-	uxTopPriority = (31 - ucPortCountLeadingZeros((uxReadyPriorities)))
+  uxTopPriority = (31 - ucPortCountLeadingZeros((uxReadyPriorities)))
 
 #endif /* configUSE_PORT_OPTIMISED_TASK_SELECTION */
 
@@ -167,7 +168,7 @@ extern void vPortSuppressTicksAndSleep(TickType_t xExpectedIdleTime);
 #ifdef configASSERT
 void vPortValidateInterruptPriority(void);
 #define portASSERT_IF_INTERRUPT_PRIORITY_INVALID()                             \
-	vPortValidateInterruptPriority()
+  vPortValidateInterruptPriority()
 #endif
 
 /*-----------------------------------------------------------*/
@@ -177,16 +178,14 @@ void vPortValidateInterruptPriority(void);
 /*-----------------------------------------------------------*/
 
 #define vPortRaiseBASEPRI()                                                    \
-	vPortSetBASEPRI(configMAX_SYSCALL_INTERRUPT_PRIORITY                   \
-			<< (8 - configPRIO_BITS))
+  vPortSetBASEPRI(configMAX_SYSCALL_INTERRUPT_PRIORITY << (8 - configPRIO_BITS))
 
 /*-----------------------------------------------------------*/
 
-__STATIC_INLINE uint32_t ulPortRaiseBASEPRI(void)
-{
-	uint32_t ulOriginalBASEPRI = __get_BASEPRI();
-	vPortRaiseBASEPRI();
-	return ulOriginalBASEPRI;
+__STATIC_INLINE uint32_t ulPortRaiseBASEPRI(void) {
+  uint32_t ulOriginalBASEPRI = __get_BASEPRI();
+  vPortRaiseBASEPRI();
+  return ulOriginalBASEPRI;
 }
 
 /*-----------------------------------------------------------*/

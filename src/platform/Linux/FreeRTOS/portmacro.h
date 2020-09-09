@@ -45,7 +45,7 @@ typedef uint32_t TickType_t;
 
 #if defined(__i386__)
 /* 32-bit tick type on a 32-bit architecture, so reads of the tick count do
-	not need to be guarded with a critical section. */
+        not need to be guarded with a critical section. */
 #define portTICK_TYPE_IS_ATOMIC 1
 #endif
 #endif
@@ -97,8 +97,8 @@ void vPortReinitFreeRtos(void);
 extern void vPortYield(void);
 #define portYIELD() vPortYield()
 #define portEND_SWITCHING_ISR(xSwitchRequired)                                 \
-	if (xSwitchRequired != pdFALSE)                                        \
-	portYIELD()
+  if (xSwitchRequired != pdFALSE)                                              \
+  portYIELD()
 #define portYIELD_FROM_ISR(x) portEND_SWITCHING_ISR(x)
 
 extern void vPortYieldWithinAPI(void);
@@ -135,9 +135,9 @@ extern void vPortExitCritical(void);
 not necessary for to use this port.  They are defined so the common demo files
 (which build with all the ports) will build. */
 #define portTASK_FUNCTION_PROTO(vFunction, pvParameters)                       \
-	void vFunction(void *pvParameters)
+  void vFunction(void *pvParameters)
 #define portTASK_FUNCTION(vFunction, pvParameters)                             \
-	void vFunction(void *pvParameters)
+  void vFunction(void *pvParameters)
 /*-----------------------------------------------------------*/
 
 /* Task creation hook. Passes the task handle */

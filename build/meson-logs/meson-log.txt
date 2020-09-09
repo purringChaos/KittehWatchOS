@@ -1,4 +1,4 @@
-Build started at 2020-09-06T15:05:36.612310
+Build started at 2020-09-09T12:09:39.154371
 Main binary: /usr/bin/python
 Build Options: -Dlinux=true -Dbackend=ninja
 Python system: Linux
@@ -11,10 +11,10 @@ None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global fl
 None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
 Project name: KittehWatchOS
 Project version: undefined
-C compiler for the build machine: ccache cc (gcc 10.2.0 "cc (GCC) 10.2.0")
+C compiler for the build machine: cc (gcc 10.2.0 "cc (GCC) 10.2.0")
 C linker for the build machine: cc ld.bfd 2.35
 None of 'AR' are defined in the environment, not changing global flags.
-C compiler for the host machine: ccache cc (gcc 10.2.0 "cc (GCC) 10.2.0")
+C compiler for the host machine: cc (gcc 10.2.0 "cc (GCC) 10.2.0")
 C linker for the host machine: cc ld.bfd 2.35
 None of 'AR' are defined in the environment, not changing global flags.
 Build machine cpu family: aarch64
@@ -25,8 +25,8 @@ Target machine cpu family: aarch64
 Target machine cpu: aarch64
 None of 'CC_LD' are defined in the environment, not changing global flags.
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpz3al_df5
-Command line:  ccache cc /home/kitteh/KittehWatchOS/build/meson-private/tmpz3al_df5/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpz3al_df5/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lpthread -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpjj3gnm1n
+Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmpjj3gnm1n/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpjj3gnm1n/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lpthread -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -38,8 +38,8 @@ Compiler stderr:
 Library pthread found: YES
 None of 'CC_LD' are defined in the environment, not changing global flags.
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpsq6w46pq
-Command line:  ccache cc /home/kitteh/KittehWatchOS/build/meson-private/tmpsq6w46pq/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpsq6w46pq/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lrt -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpt3zivw7b
+Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmpt3zivw7b/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpt3zivw7b/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lrt -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -51,8 +51,8 @@ Compiler stderr:
 Library rt found: YES
 None of 'CC_LD' are defined in the environment, not changing global flags.
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpchkkaxfj
-Command line:  ccache cc /home/kitteh/KittehWatchOS/build/meson-private/tmpchkkaxfj/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpchkkaxfj/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lSDL2 -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp_lekrjf9
+Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmp_lekrjf9/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp_lekrjf9/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lSDL2 -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -66,8 +66,8 @@ Build targets in project: 1
 
 Found ninja-1.10.1 at /usr/bin/ninja
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpia148m5g
-Command line:  ccache cc /home/kitteh/KittehWatchOS/build/meson-private/tmpia148m5g/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpia148m5g/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpelxyd32t
+Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmpelxyd32t/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpelxyd32t/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
 
 Code:
  
