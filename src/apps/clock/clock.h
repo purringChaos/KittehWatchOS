@@ -1,5 +1,5 @@
-#ifndef DEMO_H
-#define DEMO_H
+#ifndef CLOCK_H
+#define CLOCK_H
 
 extern const char *apps_clock_name();
 extern void apps_clock_init();

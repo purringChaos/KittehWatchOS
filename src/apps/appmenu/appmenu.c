@@ -15,7 +15,7 @@ static void appmenu_on_click_app(lv_obj_t *obj, lv_event_t event) {
   }
 }
 
-static const char *appsList[] = {"AppMenu", "\n", "Clock", "\n", "AppMenu", ""};
+static const char *appsList[] = {"AppMenu", "\n", "Clock", "\n", "Test", ""};
 
 void apps_appmenu_init() {
   printf("Starting AppMenu!\n");

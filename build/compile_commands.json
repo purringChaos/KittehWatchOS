@@ -19,6 +19,12 @@
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_apps_test_test.c.o -MF KittehWatchOS.p/src_apps_test_test.c.o.d -o KittehWatchOS.p/src_apps_test_test.c.o -c ../src/apps/test/test.c",
+    "file": "../src/apps/test/test.c",
+    "output": "KittehWatchOS.p/src_apps_test_test.c.o"
+  },
+  {
+    "directory": "/home/kitteh/KittehWatchOS/build",
     "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_displaymanager_displaymanager.c.o -MF KittehWatchOS.p/src_displaymanager_displaymanager.c.o.d -o KittehWatchOS.p/src_displaymanager_displaymanager.c.o -c ../src/displaymanager/displaymanager.c",
     "file": "../src/displaymanager/displaymanager.c",
     "output": "KittehWatchOS.p/src_displaymanager_displaymanager.c.o"

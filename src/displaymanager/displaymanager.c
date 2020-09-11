@@ -1,7 +1,7 @@
 #include "lvgl/lvgl.h"
 #include "platform/includes/thread.h"
 #include "types/app.h"
-#include <stdio.h>
+#include <stdio.h>DEMO_H
 
 #include "platform/includes/thread.h"
 
@@ -9,13 +9,14 @@
 
 #include "apps/appmenu/appmenu.h"
 #include "apps/clock/clock.h"
+#include "apps/test/test.h"
 
 typedef struct {
   unsigned int size;
   Application apps[];
 } APPLIST;
 
-static APPLIST displaymanager_apps = {2,
+static APPLIST displaymanager_apps = {3,
                                       {
                                           {.valid = true,
                                            .name = apps_appmenu_name,
@@ -28,7 +29,11 @@ static APPLIST displaymanager_apps = {2,
                                            .init = apps_clock_init,
                                            .refresh = apps_clock_refresh,
                                            .deinit = apps_clock_deinit},
-
+                                          {.valid = true,
+                                           .name = apps_test_name,
+                                           .init = apps_test_init,
+                                           .refresh = apps_test_refresh,
+                                           .deinit = apps_test_deinit},
                                       }};
 
 Application current_application = {.valid = false};

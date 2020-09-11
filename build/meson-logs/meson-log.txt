@@ -1,4 +1,4 @@
-Build started at 2020-09-11T12:39:33.330286
+Build started at 2020-09-11T13:14:45.936437
 Main binary: /usr/bin/python
 Build Options: -Dlinux=true -Dbackend=ninja
 Python system: Linux
@@ -25,8 +25,8 @@ Target machine cpu family: aarch64
 Target machine cpu: aarch64
 None of 'CC_LD' are defined in the environment, not changing global flags.
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp5llttbqn
-Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmp5llttbqn/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp5llttbqn/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lpthread -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpc6zp_amp
+Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmpc6zp_amp/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpc6zp_amp/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lpthread -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -38,8 +38,8 @@ Compiler stderr:
 Library pthread found: YES
 None of 'CC_LD' are defined in the environment, not changing global flags.
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp1qihqo4b
-Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmp1qihqo4b/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp1qihqo4b/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lrt -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpi1j8b9a0
+Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmpi1j8b9a0/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpi1j8b9a0/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lrt -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -51,8 +51,8 @@ Compiler stderr:
 Library rt found: YES
 None of 'CC_LD' are defined in the environment, not changing global flags.
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp6cfc_73i
-Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmp6cfc_73i/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp6cfc_73i/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lSDL2 -Wl,--end-group -Wl,--allow-shlib-undefined 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp976t3uo1
+Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmp976t3uo1/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp976t3uo1/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lSDL2 -Wl,--end-group -Wl,--allow-shlib-undefined 
 
 Code:
  int main(void) { return 0; }
@@ -66,8 +66,8 @@ Build targets in project: 1
 
 Found ninja-1.10.1 at /usr/bin/ninja
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpmddaw1_m
-Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmpmddaw1_m/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpmddaw1_m/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp0amaut5t
+Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmp0amaut5t/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp0amaut5t/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
 
 Code:
  

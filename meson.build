@@ -9,6 +9,7 @@ sources = [
 	'src/main.c',
   'src/apps/appmenu/appmenu.c',
   'src/apps/clock/clock.c',
+  'src/apps/test/test.c',
 
   'src/displaymanager/displaymanager.c',
 ]
