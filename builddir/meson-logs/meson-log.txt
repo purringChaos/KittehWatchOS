@@ -1,9 +1,9 @@
-Build started at 2020-09-09T12:07:58.036987
+Build started at 2020-09-11T11:19:00.738500
 Main binary: /usr/bin/python
 Build Options: -Dbuildtype=debug -Dbackend=ninja
 Python system: Linux
 The Meson build system
-Version: 0.55.1
+Version: 0.55.2
 Source dir: /home/kitteh/KittehWatchOS
 Build dir: /home/kitteh/KittehWatchOS/builddir
 Build type: native build
@@ -27,8 +27,8 @@ Build targets in project: 1
 
 Found ninja-1.10.1 at /usr/bin/ninja
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/builddir/meson-private/tmpc_kshzl7
-Command line:  ccache cc /home/kitteh/KittehWatchOS/builddir/meson-private/tmpc_kshzl7/testfile.c -o /home/kitteh/KittehWatchOS/builddir/meson-private/tmpc_kshzl7/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+Working directory:  /home/kitteh/KittehWatchOS/builddir/meson-private/tmpdop8rxcr
+Command line:  ccache cc /home/kitteh/KittehWatchOS/builddir/meson-private/tmpdop8rxcr/testfile.c -o /home/kitteh/KittehWatchOS/builddir/meson-private/tmpdop8rxcr/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
 
 Code:
  

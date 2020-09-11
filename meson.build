@@ -36,17 +36,16 @@ includes_platform_pinetime = [
 
 
 sources_platform_linux = [
-  'src/platform/Linux/FreeRTOS/port.c',
-  'src/platform/Linux/FreeRTOS/heap_4.c',
   'src/platform/Linux/backlight/backlight.c',
   'src/platform/Linux/display/display.c',
   'src/platform/Linux/thread/thread.c',
+  'src/platform/Linux/time/time.c',
+
   'deps/lv_drivers/display/monitor.c',
   'deps/lv_drivers/indev/mouse.c',
 ]
 
 includes_platform_linux = [
-  include_directories('src/platform/Linux/FreeRTOS'),
   include_directories('src/platform/Linux'),
 
 ]
@@ -383,9 +382,11 @@ freertos_includes = [
     'deps/FreeRTOS/include',
 ]
 
+if not get_option('linux')
+
 sources += freertos_sources
 includes += freertos_includes
-
+endif
 
 link_args = [
 

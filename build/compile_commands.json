@@ -1,740 +1,692 @@
 [
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_main.c.o -MF KittehWatchOS.p/src_main.c.o.d -o KittehWatchOS.p/src_main.c.o -c ../src/main.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_main.c.o -MF KittehWatchOS.p/src_main.c.o.d -o KittehWatchOS.p/src_main.c.o -c ../src/main.c",
     "file": "../src/main.c",
     "output": "KittehWatchOS.p/src_main.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_apps_appmenu_appmenu.c.o -MF KittehWatchOS.p/src_apps_appmenu_appmenu.c.o.d -o KittehWatchOS.p/src_apps_appmenu_appmenu.c.o -c ../src/apps/appmenu/appmenu.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_apps_appmenu_appmenu.c.o -MF KittehWatchOS.p/src_apps_appmenu_appmenu.c.o.d -o KittehWatchOS.p/src_apps_appmenu_appmenu.c.o -c ../src/apps/appmenu/appmenu.c",
     "file": "../src/apps/appmenu/appmenu.c",
     "output": "KittehWatchOS.p/src_apps_appmenu_appmenu.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_apps_clock_clock.c.o -MF KittehWatchOS.p/src_apps_clock_clock.c.o.d -o KittehWatchOS.p/src_apps_clock_clock.c.o -c ../src/apps/clock/clock.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_apps_clock_clock.c.o -MF KittehWatchOS.p/src_apps_clock_clock.c.o.d -o KittehWatchOS.p/src_apps_clock_clock.c.o -c ../src/apps/clock/clock.c",
     "file": "../src/apps/clock/clock.c",
     "output": "KittehWatchOS.p/src_apps_clock_clock.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_displaymanager_displaymanager.c.o -MF KittehWatchOS.p/src_displaymanager_displaymanager.c.o.d -o KittehWatchOS.p/src_displaymanager_displaymanager.c.o -c ../src/displaymanager/displaymanager.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_displaymanager_displaymanager.c.o -MF KittehWatchOS.p/src_displaymanager_displaymanager.c.o.d -o KittehWatchOS.p/src_displaymanager_displaymanager.c.o -c ../src/displaymanager/displaymanager.c",
     "file": "../src/displaymanager/displaymanager.c",
     "output": "KittehWatchOS.p/src_displaymanager_displaymanager.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_platform_Linux_FreeRTOS_port.c.o -MF KittehWatchOS.p/src_platform_Linux_FreeRTOS_port.c.o.d -o KittehWatchOS.p/src_platform_Linux_FreeRTOS_port.c.o -c ../src/platform/Linux/FreeRTOS/port.c",
-    "file": "../src/platform/Linux/FreeRTOS/port.c",
-    "output": "KittehWatchOS.p/src_platform_Linux_FreeRTOS_port.c.o"
-  },
-  {
-    "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_platform_Linux_FreeRTOS_heap_4.c.o -MF KittehWatchOS.p/src_platform_Linux_FreeRTOS_heap_4.c.o.d -o KittehWatchOS.p/src_platform_Linux_FreeRTOS_heap_4.c.o -c ../src/platform/Linux/FreeRTOS/heap_4.c",
-    "file": "../src/platform/Linux/FreeRTOS/heap_4.c",
-    "output": "KittehWatchOS.p/src_platform_Linux_FreeRTOS_heap_4.c.o"
-  },
-  {
-    "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_platform_Linux_backlight_backlight.c.o -MF KittehWatchOS.p/src_platform_Linux_backlight_backlight.c.o.d -o KittehWatchOS.p/src_platform_Linux_backlight_backlight.c.o -c ../src/platform/Linux/backlight/backlight.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_platform_Linux_backlight_backlight.c.o -MF KittehWatchOS.p/src_platform_Linux_backlight_backlight.c.o.d -o KittehWatchOS.p/src_platform_Linux_backlight_backlight.c.o -c ../src/platform/Linux/backlight/backlight.c",
     "file": "../src/platform/Linux/backlight/backlight.c",
     "output": "KittehWatchOS.p/src_platform_Linux_backlight_backlight.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_platform_Linux_display_display.c.o -MF KittehWatchOS.p/src_platform_Linux_display_display.c.o.d -o KittehWatchOS.p/src_platform_Linux_display_display.c.o -c ../src/platform/Linux/display/display.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_platform_Linux_display_display.c.o -MF KittehWatchOS.p/src_platform_Linux_display_display.c.o.d -o KittehWatchOS.p/src_platform_Linux_display_display.c.o -c ../src/platform/Linux/display/display.c",
     "file": "../src/platform/Linux/display/display.c",
     "output": "KittehWatchOS.p/src_platform_Linux_display_display.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_platform_Linux_thread_thread.c.o -MF KittehWatchOS.p/src_platform_Linux_thread_thread.c.o.d -o KittehWatchOS.p/src_platform_Linux_thread_thread.c.o -c ../src/platform/Linux/thread/thread.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_platform_Linux_thread_thread.c.o -MF KittehWatchOS.p/src_platform_Linux_thread_thread.c.o.d -o KittehWatchOS.p/src_platform_Linux_thread_thread.c.o -c ../src/platform/Linux/thread/thread.c",
     "file": "../src/platform/Linux/thread/thread.c",
     "output": "KittehWatchOS.p/src_platform_Linux_thread_thread.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lv_drivers_display_monitor.c.o -MF KittehWatchOS.p/deps_lv_drivers_display_monitor.c.o.d -o KittehWatchOS.p/deps_lv_drivers_display_monitor.c.o -c ../deps/lv_drivers/display/monitor.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/src_platform_Linux_time_time.c.o -MF KittehWatchOS.p/src_platform_Linux_time_time.c.o.d -o KittehWatchOS.p/src_platform_Linux_time_time.c.o -c ../src/platform/Linux/time/time.c",
+    "file": "../src/platform/Linux/time/time.c",
+    "output": "KittehWatchOS.p/src_platform_Linux_time_time.c.o"
+  },
+  {
+    "directory": "/home/kitteh/KittehWatchOS/build",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lv_drivers_display_monitor.c.o -MF KittehWatchOS.p/deps_lv_drivers_display_monitor.c.o.d -o KittehWatchOS.p/deps_lv_drivers_display_monitor.c.o -c ../deps/lv_drivers/display/monitor.c",
     "file": "../deps/lv_drivers/display/monitor.c",
     "output": "KittehWatchOS.p/deps_lv_drivers_display_monitor.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lv_drivers_indev_mouse.c.o -MF KittehWatchOS.p/deps_lv_drivers_indev_mouse.c.o.d -o KittehWatchOS.p/deps_lv_drivers_indev_mouse.c.o -c ../deps/lv_drivers/indev/mouse.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lv_drivers_indev_mouse.c.o -MF KittehWatchOS.p/deps_lv_drivers_indev_mouse.c.o.d -o KittehWatchOS.p/deps_lv_drivers_indev_mouse.c.o -c ../deps/lv_drivers/indev/mouse.c",
     "file": "../deps/lv_drivers/indev/mouse.c",
     "output": "KittehWatchOS.p/deps_lv_drivers_indev_mouse.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_bidi.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_bidi.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_bidi.c.o -c ../deps/lvgl/src/lv_misc/lv_bidi.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_bidi.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_bidi.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_bidi.c.o -c ../deps/lvgl/src/lv_misc/lv_bidi.c",
     "file": "../deps/lvgl/src/lv_misc/lv_bidi.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_bidi.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_area.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_area.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_area.c.o -c ../deps/lvgl/src/lv_misc/lv_area.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_area.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_area.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_area.c.o -c ../deps/lvgl/src/lv_misc/lv_area.c",
     "file": "../deps/lvgl/src/lv_misc/lv_area.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_area.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_ll.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_ll.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_ll.c.o -c ../deps/lvgl/src/lv_misc/lv_ll.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_ll.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_ll.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_ll.c.o -c ../deps/lvgl/src/lv_misc/lv_ll.c",
     "file": "../deps/lvgl/src/lv_misc/lv_ll.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_ll.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_async.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_async.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_async.c.o -c ../deps/lvgl/src/lv_misc/lv_async.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_async.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_async.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_async.c.o -c ../deps/lvgl/src/lv_misc/lv_async.c",
     "file": "../deps/lvgl/src/lv_misc/lv_async.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_async.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt.c.o -c ../deps/lvgl/src/lv_misc/lv_txt.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt.c.o -c ../deps/lvgl/src/lv_misc/lv_txt.c",
     "file": "../deps/lvgl/src/lv_misc/lv_txt.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_utils.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_utils.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_utils.c.o -c ../deps/lvgl/src/lv_misc/lv_utils.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_utils.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_utils.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_utils.c.o -c ../deps/lvgl/src/lv_misc/lv_utils.c",
     "file": "../deps/lvgl/src/lv_misc/lv_utils.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_utils.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_templ.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_templ.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_templ.c.o -c ../deps/lvgl/src/lv_misc/lv_templ.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_templ.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_templ.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_templ.c.o -c ../deps/lvgl/src/lv_misc/lv_templ.c",
     "file": "../deps/lvgl/src/lv_misc/lv_templ.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_templ.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt_ap.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt_ap.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt_ap.c.o -c ../deps/lvgl/src/lv_misc/lv_txt_ap.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt_ap.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt_ap.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt_ap.c.o -c ../deps/lvgl/src/lv_misc/lv_txt_ap.c",
     "file": "../deps/lvgl/src/lv_misc/lv_txt_ap.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_txt_ap.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_gc.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_gc.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_gc.c.o -c ../deps/lvgl/src/lv_misc/lv_gc.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_gc.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_gc.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_gc.c.o -c ../deps/lvgl/src/lv_misc/lv_gc.c",
     "file": "../deps/lvgl/src/lv_misc/lv_gc.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_gc.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_math.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_math.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_math.c.o -c ../deps/lvgl/src/lv_misc/lv_math.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_math.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_math.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_math.c.o -c ../deps/lvgl/src/lv_misc/lv_math.c",
     "file": "../deps/lvgl/src/lv_misc/lv_math.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_math.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_mem.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_mem.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_mem.c.o -c ../deps/lvgl/src/lv_misc/lv_mem.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_mem.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_mem.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_mem.c.o -c ../deps/lvgl/src/lv_misc/lv_mem.c",
     "file": "../deps/lvgl/src/lv_misc/lv_mem.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_mem.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_task.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_task.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_task.c.o -c ../deps/lvgl/src/lv_misc/lv_task.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_task.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_task.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_task.c.o -c ../deps/lvgl/src/lv_misc/lv_task.c",
     "file": "../deps/lvgl/src/lv_misc/lv_task.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_task.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_fs.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_fs.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_fs.c.o -c ../deps/lvgl/src/lv_misc/lv_fs.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_fs.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_fs.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_fs.c.o -c ../deps/lvgl/src/lv_misc/lv_fs.c",
     "file": "../deps/lvgl/src/lv_misc/lv_fs.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_fs.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_printf.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_printf.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_printf.c.o -c ../deps/lvgl/src/lv_misc/lv_printf.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_printf.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_printf.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_printf.c.o -c ../deps/lvgl/src/lv_misc/lv_printf.c",
     "file": "../deps/lvgl/src/lv_misc/lv_printf.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_printf.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_log.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_log.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_log.c.o -c ../deps/lvgl/src/lv_misc/lv_log.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_log.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_log.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_log.c.o -c ../deps/lvgl/src/lv_misc/lv_log.c",
     "file": "../deps/lvgl/src/lv_misc/lv_log.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_log.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_debug.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_debug.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_debug.c.o -c ../deps/lvgl/src/lv_misc/lv_debug.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_debug.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_debug.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_debug.c.o -c ../deps/lvgl/src/lv_misc/lv_debug.c",
     "file": "../deps/lvgl/src/lv_misc/lv_debug.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_debug.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_color.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_color.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_color.c.o -c ../deps/lvgl/src/lv_misc/lv_color.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_color.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_color.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_color.c.o -c ../deps/lvgl/src/lv_misc/lv_color.c",
     "file": "../deps/lvgl/src/lv_misc/lv_color.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_color.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_anim.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_anim.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_anim.c.o -c ../deps/lvgl/src/lv_misc/lv_anim.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_anim.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_anim.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_anim.c.o -c ../deps/lvgl/src/lv_misc/lv_anim.c",
     "file": "../deps/lvgl/src/lv_misc/lv_anim.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_misc_lv_anim.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_gpu_lv_gpu_stm32_dma2d.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_gpu_lv_gpu_stm32_dma2d.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_gpu_lv_gpu_stm32_dma2d.c.o -c ../deps/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_gpu_lv_gpu_stm32_dma2d.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_gpu_lv_gpu_stm32_dma2d.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_gpu_lv_gpu_stm32_dma2d.c.o -c ../deps/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c",
     "file": "../deps/lvgl/src/lv_gpu/lv_gpu_stm32_dma2d.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_gpu_lv_gpu_stm32_dma2d.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_arc.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_arc.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_arc.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_arc.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_arc.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_arc.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_arc.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_arc.c",
     "file": "../deps/lvgl/src/lv_draw/lv_draw_arc.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_arc.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_triangle.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_triangle.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_triangle.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_triangle.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_triangle.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_triangle.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_triangle.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_triangle.c",
     "file": "../deps/lvgl/src/lv_draw/lv_draw_triangle.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_triangle.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_decoder.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_decoder.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_decoder.c.o -c ../deps/lvgl/src/lv_draw/lv_img_decoder.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_decoder.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_decoder.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_decoder.c.o -c ../deps/lvgl/src/lv_draw/lv_img_decoder.c",
     "file": "../deps/lvgl/src/lv_draw/lv_img_decoder.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_decoder.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_line.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_line.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_line.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_line.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_line.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_line.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_line.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_line.c",
     "file": "../deps/lvgl/src/lv_draw/lv_draw_line.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_line.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_blend.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_blend.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_blend.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_blend.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_blend.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_blend.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_blend.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_blend.c",
     "file": "../deps/lvgl/src/lv_draw/lv_draw_blend.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_blend.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_rect.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_rect.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_rect.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_rect.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_rect.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_rect.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_rect.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_rect.c",
     "file": "../deps/lvgl/src/lv_draw/lv_draw_rect.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_rect.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_buf.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_buf.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_buf.c.o -c ../deps/lvgl/src/lv_draw/lv_img_buf.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_buf.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_buf.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_buf.c.o -c ../deps/lvgl/src/lv_draw/lv_img_buf.c",
     "file": "../deps/lvgl/src/lv_draw/lv_img_buf.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_buf.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_cache.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_cache.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_cache.c.o -c ../deps/lvgl/src/lv_draw/lv_img_cache.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_cache.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_cache.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_cache.c.o -c ../deps/lvgl/src/lv_draw/lv_img_cache.c",
     "file": "../deps/lvgl/src/lv_draw/lv_img_cache.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_img_cache.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_img.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_img.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_img.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_img.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_img.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_img.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_img.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_img.c",
     "file": "../deps/lvgl/src/lv_draw/lv_draw_img.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_img.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_label.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_label.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_label.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_label.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_label.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_label.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_label.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_label.c",
     "file": "../deps/lvgl/src/lv_draw/lv_draw_label.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_label.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_mask.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_mask.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_mask.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_mask.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_mask.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_mask.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_mask.c.o -c ../deps/lvgl/src/lv_draw/lv_draw_mask.c",
     "file": "../deps/lvgl/src/lv_draw/lv_draw_mask.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_draw_lv_draw_mask.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_group.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_group.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_group.c.o -c ../deps/lvgl/src/lv_core/lv_group.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_group.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_group.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_group.c.o -c ../deps/lvgl/src/lv_core/lv_group.c",
     "file": "../deps/lvgl/src/lv_core/lv_group.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_core_lv_group.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_obj.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_obj.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_obj.c.o -c ../deps/lvgl/src/lv_core/lv_obj.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_obj.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_obj.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_obj.c.o -c ../deps/lvgl/src/lv_core/lv_obj.c",
     "file": "../deps/lvgl/src/lv_core/lv_obj.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_core_lv_obj.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_disp.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_disp.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_disp.c.o -c ../deps/lvgl/src/lv_core/lv_disp.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_disp.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_disp.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_disp.c.o -c ../deps/lvgl/src/lv_core/lv_disp.c",
     "file": "../deps/lvgl/src/lv_core/lv_disp.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_core_lv_disp.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_style.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_style.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_style.c.o -c ../deps/lvgl/src/lv_core/lv_style.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_style.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_style.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_style.c.o -c ../deps/lvgl/src/lv_core/lv_style.c",
     "file": "../deps/lvgl/src/lv_core/lv_style.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_core_lv_style.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_refr.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_refr.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_refr.c.o -c ../deps/lvgl/src/lv_core/lv_refr.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_refr.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_refr.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_refr.c.o -c ../deps/lvgl/src/lv_core/lv_refr.c",
     "file": "../deps/lvgl/src/lv_core/lv_refr.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_core_lv_refr.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_indev.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_indev.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_indev.c.o -c ../deps/lvgl/src/lv_core/lv_indev.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_core_lv_indev.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_core_lv_indev.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_core_lv_indev.c.o -c ../deps/lvgl/src/lv_core/lv_indev.c",
     "file": "../deps/lvgl/src/lv_core/lv_indev.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_core_lv_indev.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_mono.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_mono.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_mono.c.o -c ../deps/lvgl/src/lv_themes/lv_theme_mono.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_mono.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_mono.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_mono.c.o -c ../deps/lvgl/src/lv_themes/lv_theme_mono.c",
     "file": "../deps/lvgl/src/lv_themes/lv_theme_mono.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_mono.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_template.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_template.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_template.c.o -c ../deps/lvgl/src/lv_themes/lv_theme_template.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_template.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_template.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_template.c.o -c ../deps/lvgl/src/lv_themes/lv_theme_template.c",
     "file": "../deps/lvgl/src/lv_themes/lv_theme_template.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_template.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_empty.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_empty.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_empty.c.o -c ../deps/lvgl/src/lv_themes/lv_theme_empty.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_empty.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_empty.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_empty.c.o -c ../deps/lvgl/src/lv_themes/lv_theme_empty.c",
     "file": "../deps/lvgl/src/lv_themes/lv_theme_empty.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_empty.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_material.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_material.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_material.c.o -c ../deps/lvgl/src/lv_themes/lv_theme_material.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_material.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_material.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_material.c.o -c ../deps/lvgl/src/lv_themes/lv_theme_material.c",
     "file": "../deps/lvgl/src/lv_themes/lv_theme_material.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme_material.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme.c.o -c ../deps/lvgl/src/lv_themes/lv_theme.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme.c.o -c ../deps/lvgl/src/lv_themes/lv_theme.c",
     "file": "../deps/lvgl/src/lv_themes/lv_theme.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_themes_lv_theme.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_40.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_40.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_40.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_40.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_40.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_40.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_40.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_40.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_40.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_40.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12_subpx.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12_subpx.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12_subpx.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12_subpx.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12_subpx.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12_subpx.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_12_subpx.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12_subpx.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_simsun_16_cjk.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_simsun_16_cjk.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_simsun_16_cjk.c.o -c ../deps/lvgl/src/lv_font/lv_font_simsun_16_cjk.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_simsun_16_cjk.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_simsun_16_cjk.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_simsun_16_cjk.c.o -c ../deps/lvgl/src/lv_font/lv_font_simsun_16_cjk.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_simsun_16_cjk.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_simsun_16_cjk.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_16.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_16.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_16.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_16.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_16.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_16.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_16.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_16.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_16.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_16.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_26.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_26.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_26.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_26.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_26.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_26.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_26.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_26.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_26.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_26.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_24.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_24.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_24.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_24.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_24.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_24.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_24.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_24.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_24.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_24.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_18.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_18.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_18.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_18.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_18.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_18.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_18.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_18.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_18.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_18.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_30.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_30.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_30.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_30.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_30.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_30.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_30.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_30.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_30.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_30.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_28.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_28.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_28.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_46.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_46.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_46.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_46.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_46.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_46.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_46.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_46.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_46.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_46.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_48.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_48.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_48.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_48.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_48.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_48.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_48.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_48.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_48.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_48.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_36.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_36.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_36.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_36.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_36.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_36.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_36.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_36.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_36.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_36.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_34.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_34.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_34.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_34.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_34.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_34.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_34.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_34.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_34.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_34.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_fmt_txt.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_fmt_txt.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_fmt_txt.c.o -c ../deps/lvgl/src/lv_font/lv_font_fmt_txt.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_fmt_txt.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_fmt_txt.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_fmt_txt.c.o -c ../deps/lvgl/src/lv_font/lv_font_fmt_txt.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_fmt_txt.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_fmt_txt.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_32.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_32.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_32.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_32.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_32.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_32.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_32.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_32.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_32.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_32.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_14.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_14.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_14.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_14.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_14.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_14.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_14.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_14.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_14.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_14.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_22.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_22.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_22.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_22.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_22.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_22.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_22.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_22.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_22.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_22.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_unscii_8.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_unscii_8.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_unscii_8.c.o -c ../deps/lvgl/src/lv_font/lv_font_unscii_8.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_unscii_8.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_unscii_8.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_unscii_8.c.o -c ../deps/lvgl/src/lv_font/lv_font_unscii_8.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_unscii_8.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_unscii_8.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_loader.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_loader.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_loader.c.o -c ../deps/lvgl/src/lv_font/lv_font_loader.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_loader.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_loader.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_loader.c.o -c ../deps/lvgl/src/lv_font/lv_font_loader.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_loader.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_loader.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_38.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_38.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_38.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_38.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_38.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_38.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_38.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_38.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_38.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_38.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28_compressed.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28_compressed.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28_compressed.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28_compressed.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28_compressed.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28_compressed.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_28_compressed.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_28_compressed.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_44.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_44.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_44.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_44.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_44.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_44.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_44.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_44.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_44.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_44.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_dejavu_16_persian_hebrew.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_dejavu_16_persian_hebrew.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_dejavu_16_persian_hebrew.c.o -c ../deps/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_dejavu_16_persian_hebrew.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_dejavu_16_persian_hebrew.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_dejavu_16_persian_hebrew.c.o -c ../deps/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_dejavu_16_persian_hebrew.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_dejavu_16_persian_hebrew.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font.c.o -c ../deps/lvgl/src/lv_font/lv_font.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font.c.o -c ../deps/lvgl/src/lv_font/lv_font.c",
     "file": "../deps/lvgl/src/lv_font/lv_font.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_20.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_20.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_20.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_20.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_20.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_20.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_20.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_20.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_20.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_20.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_42.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_42.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_42.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_42.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_42.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_42.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_42.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_42.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_42.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_42.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_12.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12.c.o -c ../deps/lvgl/src/lv_font/lv_font_montserrat_12.c",
     "file": "../deps/lvgl/src/lv_font/lv_font_montserrat_12.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_font_lv_font_montserrat_12.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_keyboard.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_keyboard.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_keyboard.c.o -c ../deps/lvgl/src/lv_widgets/lv_keyboard.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_keyboard.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_keyboard.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_keyboard.c.o -c ../deps/lvgl/src/lv_widgets/lv_keyboard.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_keyboard.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_keyboard.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objmask.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objmask.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objmask.c.o -c ../deps/lvgl/src/lv_widgets/lv_objmask.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objmask.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objmask.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objmask.c.o -c ../deps/lvgl/src/lv_widgets/lv_objmask.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_objmask.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objmask.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tabview.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tabview.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tabview.c.o -c ../deps/lvgl/src/lv_widgets/lv_tabview.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tabview.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tabview.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tabview.c.o -c ../deps/lvgl/src/lv_widgets/lv_tabview.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_tabview.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tabview.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objx_templ.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objx_templ.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objx_templ.c.o -c ../deps/lvgl/src/lv_widgets/lv_objx_templ.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objx_templ.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objx_templ.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objx_templ.c.o -c ../deps/lvgl/src/lv_widgets/lv_objx_templ.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_objx_templ.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_objx_templ.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_dropdown.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_dropdown.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_dropdown.c.o -c ../deps/lvgl/src/lv_widgets/lv_dropdown.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_dropdown.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_dropdown.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_dropdown.c.o -c ../deps/lvgl/src/lv_widgets/lv_dropdown.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_dropdown.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_dropdown.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinbox.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinbox.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinbox.c.o -c ../deps/lvgl/src/lv_widgets/lv_spinbox.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinbox.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinbox.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinbox.c.o -c ../deps/lvgl/src/lv_widgets/lv_spinbox.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_spinbox.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinbox.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_checkbox.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_checkbox.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_checkbox.c.o -c ../deps/lvgl/src/lv_widgets/lv_checkbox.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_checkbox.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_checkbox.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_checkbox.c.o -c ../deps/lvgl/src/lv_widgets/lv_checkbox.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_checkbox.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_checkbox.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_table.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_table.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_table.c.o -c ../deps/lvgl/src/lv_widgets/lv_table.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_table.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_table.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_table.c.o -c ../deps/lvgl/src/lv_widgets/lv_table.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_table.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_table.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_roller.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_roller.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_roller.c.o -c ../deps/lvgl/src/lv_widgets/lv_roller.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_roller.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_roller.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_roller.c.o -c ../deps/lvgl/src/lv_widgets/lv_roller.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_roller.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_roller.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_imgbtn.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_imgbtn.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_imgbtn.c.o -c ../deps/lvgl/src/lv_widgets/lv_imgbtn.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_imgbtn.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_imgbtn.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_imgbtn.c.o -c ../deps/lvgl/src/lv_widgets/lv_imgbtn.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_imgbtn.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_imgbtn.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_linemeter.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_linemeter.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_linemeter.c.o -c ../deps/lvgl/src/lv_widgets/lv_linemeter.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_linemeter.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_linemeter.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_linemeter.c.o -c ../deps/lvgl/src/lv_widgets/lv_linemeter.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_linemeter.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_linemeter.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_canvas.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_canvas.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_canvas.c.o -c ../deps/lvgl/src/lv_widgets/lv_canvas.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_canvas.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_canvas.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_canvas.c.o -c ../deps/lvgl/src/lv_widgets/lv_canvas.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_canvas.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_canvas.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_line.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_line.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_line.c.o -c ../deps/lvgl/src/lv_widgets/lv_line.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_line.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_line.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_line.c.o -c ../deps/lvgl/src/lv_widgets/lv_line.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_line.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_line.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_list.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_list.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_list.c.o -c ../deps/lvgl/src/lv_widgets/lv_list.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_list.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_list.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_list.c.o -c ../deps/lvgl/src/lv_widgets/lv_list.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_list.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_list.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_chart.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_chart.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_chart.c.o -c ../deps/lvgl/src/lv_widgets/lv_chart.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_chart.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_chart.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_chart.c.o -c ../deps/lvgl/src/lv_widgets/lv_chart.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_chart.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_chart.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_led.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_led.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_led.c.o -c ../deps/lvgl/src/lv_widgets/lv_led.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_led.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_led.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_led.c.o -c ../deps/lvgl/src/lv_widgets/lv_led.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_led.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_led.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_arc.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_arc.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_arc.c.o -c ../deps/lvgl/src/lv_widgets/lv_arc.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_arc.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_arc.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_arc.c.o -c ../deps/lvgl/src/lv_widgets/lv_arc.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_arc.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_arc.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cpicker.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cpicker.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cpicker.c.o -c ../deps/lvgl/src/lv_widgets/lv_cpicker.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cpicker.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cpicker.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cpicker.c.o -c ../deps/lvgl/src/lv_widgets/lv_cpicker.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_cpicker.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cpicker.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_page.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_page.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_page.c.o -c ../deps/lvgl/src/lv_widgets/lv_page.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_page.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_page.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_page.c.o -c ../deps/lvgl/src/lv_widgets/lv_page.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_page.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_page.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_label.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_label.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_label.c.o -c ../deps/lvgl/src/lv_widgets/lv_label.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_label.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_label.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_label.c.o -c ../deps/lvgl/src/lv_widgets/lv_label.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_label.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_label.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cont.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cont.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cont.c.o -c ../deps/lvgl/src/lv_widgets/lv_cont.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cont.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cont.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cont.c.o -c ../deps/lvgl/src/lv_widgets/lv_cont.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_cont.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_cont.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btnmatrix.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btnmatrix.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btnmatrix.c.o -c ../deps/lvgl/src/lv_widgets/lv_btnmatrix.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btnmatrix.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btnmatrix.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btnmatrix.c.o -c ../deps/lvgl/src/lv_widgets/lv_btnmatrix.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_btnmatrix.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btnmatrix.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_switch.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_switch.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_switch.c.o -c ../deps/lvgl/src/lv_widgets/lv_switch.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_switch.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_switch.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_switch.c.o -c ../deps/lvgl/src/lv_widgets/lv_switch.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_switch.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_switch.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_gauge.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_gauge.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_gauge.c.o -c ../deps/lvgl/src/lv_widgets/lv_gauge.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_gauge.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_gauge.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_gauge.c.o -c ../deps/lvgl/src/lv_widgets/lv_gauge.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_gauge.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_gauge.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_slider.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_slider.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_slider.c.o -c ../deps/lvgl/src/lv_widgets/lv_slider.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_slider.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_slider.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_slider.c.o -c ../deps/lvgl/src/lv_widgets/lv_slider.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_slider.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_slider.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_img.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_img.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_img.c.o -c ../deps/lvgl/src/lv_widgets/lv_img.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_img.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_img.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_img.c.o -c ../deps/lvgl/src/lv_widgets/lv_img.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_img.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_img.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_textarea.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_textarea.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_textarea.c.o -c ../deps/lvgl/src/lv_widgets/lv_textarea.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_textarea.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_textarea.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_textarea.c.o -c ../deps/lvgl/src/lv_widgets/lv_textarea.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_textarea.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_textarea.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_msgbox.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_msgbox.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_msgbox.c.o -c ../deps/lvgl/src/lv_widgets/lv_msgbox.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_msgbox.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_msgbox.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_msgbox.c.o -c ../deps/lvgl/src/lv_widgets/lv_msgbox.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_msgbox.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_msgbox.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_calendar.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_calendar.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_calendar.c.o -c ../deps/lvgl/src/lv_widgets/lv_calendar.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_calendar.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_calendar.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_calendar.c.o -c ../deps/lvgl/src/lv_widgets/lv_calendar.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_calendar.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_calendar.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_bar.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_bar.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_bar.c.o -c ../deps/lvgl/src/lv_widgets/lv_bar.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_bar.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_bar.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_bar.c.o -c ../deps/lvgl/src/lv_widgets/lv_bar.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_bar.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_bar.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinner.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinner.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinner.c.o -c ../deps/lvgl/src/lv_widgets/lv_spinner.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinner.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinner.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinner.c.o -c ../deps/lvgl/src/lv_widgets/lv_spinner.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_spinner.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_spinner.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btn.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btn.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btn.c.o -c ../deps/lvgl/src/lv_widgets/lv_btn.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btn.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btn.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btn.c.o -c ../deps/lvgl/src/lv_widgets/lv_btn.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_btn.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_btn.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_win.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_win.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_win.c.o -c ../deps/lvgl/src/lv_widgets/lv_win.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_win.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_win.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_win.c.o -c ../deps/lvgl/src/lv_widgets/lv_win.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_win.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_win.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tileview.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tileview.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tileview.c.o -c ../deps/lvgl/src/lv_widgets/lv_tileview.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tileview.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tileview.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tileview.c.o -c ../deps/lvgl/src/lv_widgets/lv_tileview.c",
     "file": "../deps/lvgl/src/lv_widgets/lv_tileview.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_widgets_lv_tileview.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_tick.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_tick.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_tick.c.o -c ../deps/lvgl/src/lv_hal/lv_hal_tick.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_tick.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_tick.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_tick.c.o -c ../deps/lvgl/src/lv_hal/lv_hal_tick.c",
     "file": "../deps/lvgl/src/lv_hal/lv_hal_tick.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_tick.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_indev.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_indev.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_indev.c.o -c ../deps/lvgl/src/lv_hal/lv_hal_indev.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_indev.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_indev.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_indev.c.o -c ../deps/lvgl/src/lv_hal/lv_hal_indev.c",
     "file": "../deps/lvgl/src/lv_hal/lv_hal_indev.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_indev.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_disp.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_disp.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_disp.c.o -c ../deps/lvgl/src/lv_hal/lv_hal_disp.c",
+    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_disp.c.o -MF KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_disp.c.o.d -o KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_disp.c.o -c ../deps/lvgl/src/lv_hal/lv_hal_disp.c",
     "file": "../deps/lvgl/src/lv_hal/lv_hal_disp.c",
     "output": "KittehWatchOS.p/deps_lvgl_src_lv_hal_lv_hal_disp.c.o"
-  },
-  {
-    "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_FreeRTOS_list.c.o -MF KittehWatchOS.p/deps_FreeRTOS_list.c.o.d -o KittehWatchOS.p/deps_FreeRTOS_list.c.o -c ../deps/FreeRTOS/list.c",
-    "file": "../deps/FreeRTOS/list.c",
-    "output": "KittehWatchOS.p/deps_FreeRTOS_list.c.o"
-  },
-  {
-    "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_FreeRTOS_stream_buffer.c.o -MF KittehWatchOS.p/deps_FreeRTOS_stream_buffer.c.o.d -o KittehWatchOS.p/deps_FreeRTOS_stream_buffer.c.o -c ../deps/FreeRTOS/stream_buffer.c",
-    "file": "../deps/FreeRTOS/stream_buffer.c",
-    "output": "KittehWatchOS.p/deps_FreeRTOS_stream_buffer.c.o"
-  },
-  {
-    "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_FreeRTOS_tasks.c.o -MF KittehWatchOS.p/deps_FreeRTOS_tasks.c.o.d -o KittehWatchOS.p/deps_FreeRTOS_tasks.c.o -c ../deps/FreeRTOS/tasks.c",
-    "file": "../deps/FreeRTOS/tasks.c",
-    "output": "KittehWatchOS.p/deps_FreeRTOS_tasks.c.o"
-  },
-  {
-    "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_FreeRTOS_queue.c.o -MF KittehWatchOS.p/deps_FreeRTOS_queue.c.o.d -o KittehWatchOS.p/deps_FreeRTOS_queue.c.o -c ../deps/FreeRTOS/queue.c",
-    "file": "../deps/FreeRTOS/queue.c",
-    "output": "KittehWatchOS.p/deps_FreeRTOS_queue.c.o"
-  },
-  {
-    "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_FreeRTOS_croutine.c.o -MF KittehWatchOS.p/deps_FreeRTOS_croutine.c.o.d -o KittehWatchOS.p/deps_FreeRTOS_croutine.c.o -c ../deps/FreeRTOS/croutine.c",
-    "file": "../deps/FreeRTOS/croutine.c",
-    "output": "KittehWatchOS.p/deps_FreeRTOS_croutine.c.o"
-  },
-  {
-    "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_FreeRTOS_timers.c.o -MF KittehWatchOS.p/deps_FreeRTOS_timers.c.o.d -o KittehWatchOS.p/deps_FreeRTOS_timers.c.o -c ../deps/FreeRTOS/timers.c",
-    "file": "../deps/FreeRTOS/timers.c",
-    "output": "KittehWatchOS.p/deps_FreeRTOS_timers.c.o"
-  },
-  {
-    "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "cc -IKittehWatchOS.p -I. -I.. -I../src -I../deps -I../src/platform/Linux/FreeRTOS -I../src/platform/Linux -I../deps/FreeRTOS/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wall -fvisibility=hidden -Wall -fvisibility=hidden -DLV_CONF_INCLUDE_SIMPLE -MD -MQ KittehWatchOS.p/deps_FreeRTOS_event_groups.c.o -MF KittehWatchOS.p/deps_FreeRTOS_event_groups.c.o.d -o KittehWatchOS.p/deps_FreeRTOS_event_groups.c.o -c ../deps/FreeRTOS/event_groups.c",
-    "file": "../deps/FreeRTOS/event_groups.c",
-    "output": "KittehWatchOS.p/deps_FreeRTOS_event_groups.c.o"
   }
 ]

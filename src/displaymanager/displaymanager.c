@@ -54,8 +54,6 @@ void displaymanager_make_top_bar() {
 
   static lv_style_t back_btn_style;
 
-  static lv_style_t close_button_style;
-
   lv_style_init(&back_btn_style);
   lv_style_set_radius(&back_btn_style, LV_STATE_DEFAULT, 0);
   lv_style_set_pad_top(&back_btn_style, LV_STATE_DEFAULT, 4);
