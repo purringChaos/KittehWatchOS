@@ -5,6 +5,8 @@
 #include <pthread.h>
 #define THREAD_TYPE pthread_t
 #else
+#include "FreeRTOS.h"
+#include <task.h>
 #define THREAD_TYPE TaskHandle_t
 #endif
 

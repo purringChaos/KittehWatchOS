@@ -1,4 +1,4 @@
-Build started at 2020-09-11T11:19:00.738500
+Build started at 2020-09-12T12:04:04.188649
 Main binary: /usr/bin/python
 Build Options: -Dbuildtype=debug -Dbackend=ninja
 Python system: Linux
@@ -27,8 +27,8 @@ Build targets in project: 1
 
 Found ninja-1.10.1 at /usr/bin/ninja
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/builddir/meson-private/tmpdop8rxcr
-Command line:  ccache cc /home/kitteh/KittehWatchOS/builddir/meson-private/tmpdop8rxcr/testfile.c -o /home/kitteh/KittehWatchOS/builddir/meson-private/tmpdop8rxcr/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+Working directory:  /home/kitteh/KittehWatchOS/builddir/meson-private/tmpiqo1xkrn
+Command line:  ccache cc /home/kitteh/KittehWatchOS/builddir/meson-private/tmpiqo1xkrn/testfile.c -o /home/kitteh/KittehWatchOS/builddir/meson-private/tmpiqo1xkrn/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
 
 Code:
  

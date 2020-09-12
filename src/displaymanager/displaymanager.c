@@ -84,7 +84,7 @@ void displaymanager_make_top_bar() {
 }
 
 void displaymanager_start() {
-  printf("start display\n");
+  //printf("start display\n");
 
   displaymanager_make_top_bar();
 
@@ -93,19 +93,19 @@ void displaymanager_start() {
 
 void displaymanager_switch_application(const char *name) {
   if (!current_application.valid) {
-    printf("Current App Invalid.\n");
+    //printf("Current App Invalid.\n");
     current_application = displaymanager_apps.apps[0];
   } else {
-    printf("Deinit App.\n");
+    //printf("Deinit App.\n");
 
     current_application.deinit();
 
     int i;
     for (i = 0; i < displaymanager_apps.size; i++) {
-      printf("Apps: %s\n", displaymanager_apps.apps[i].name());
+      //printf("Apps: %s\n", displaymanager_apps.apps[i].name());
 
       if (strcmp(displaymanager_apps.apps[i].name(), name) == 0) {
-        printf("Found it!\n");
+        //printf("Found it!\n");
 
         current_application = displaymanager_apps.apps[i];
       }

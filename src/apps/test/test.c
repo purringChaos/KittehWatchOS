@@ -4,16 +4,38 @@
 #include "platform/includes/time.h"
 #include <stdio.h>
 #include <time.h>
-#include "apps/test/rick.h"
+/*
+#include "gl.h"
+#include "zbuffer.h"
 
+#define CANVAS_WIDTH  200
+#define CANVAS_HEIGHT 200
 
+static void anim(lv_task_t* t);
+static lv_obj_t * canvas;
+static lv_color_t cbuf[LV_IMG_BUF_SIZE_TRUE_COLOR_ALPHA(CANVAS_WIDTH, CANVAS_HEIGHT)];
+*/
 const char *apps_test_name() { return "Test"; }
 
 void apps_test_init() {
   lv_obj_t *titleBar = lv_obj_get_child(lv_layer_top(), NULL);
-    lv_obj_t * img1 = lv_img_create(lv_scr_act(), NULL);
-    lv_img_set_src(img1, &rick);
-    lv_obj_align(img1, titleBar, LV_ALIGN_OUT_BOTTOM_MID, 0, 20);
+
+
+    /*canvas = lv_canvas_create(lv_scr_act(), NULL);
+    lv_canvas_set_buffer(canvas, cbuf, CANVAS_WIDTH, CANVAS_HEIGHT, LV_IMG_CF_TRUE_COLOR);
+    lv_obj_align(canvas, titleBar, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
+
+    gears_init(CANVAS_WIDTH, CANVAS_HEIGHT, 1, cbuf);
+
+    lv_task_create(anim, 30, LV_TASK_PRIO_LOW, NULL);*/
+}
+
+
+
+static void anim(lv_task_t* t)
+{
+/*    gears_update();
+    lv_obj_invalidate(canvas);*/
 }
 
 void apps_test_refresh() {}

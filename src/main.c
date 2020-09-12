@@ -42,15 +42,6 @@ static void lv_tick_task_function(void *pvParameter) {
     platform_sleep(5);
   }
 }
-static void memory_monitor(lv_task_t *param) {
-  (void)param; /*Unused*/
-
-  lv_mem_monitor_t mon;
-  lv_mem_monitor(&mon);
-  printf("used: %6d (%3d %%), frag: %3d %%, biggest free: %6d\n",
-         (int)mon.total_size - mon.free_size, mon.used_pct, mon.frag_pct,
-         (int)mon.free_biggest_size);
-}
 
 int main(void) {
 #ifndef __linux__
@@ -66,7 +57,6 @@ int main(void) {
 
   displaymanager_start();
 
-  lv_task_create(memory_monitor, 500, LV_TASK_PRIO_MID, NULL);
 
 #ifdef __linux__
   platform_createThread(&lv_tick_task_handle, 1, "lv_tick",

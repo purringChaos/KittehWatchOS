@@ -1,21 +1,21 @@
-Build started at 2020-09-11T13:14:45.936437
+Build started at 2020-09-12T14:12:24.952748
 Main binary: /usr/bin/python
-Build Options: -Dlinux=true -Dbackend=ninja
+Build Options: -Dbackend=ninja
 Python system: Linux
 The Meson build system
 Version: 0.55.2
 Source dir: /home/kitteh/KittehWatchOS
 Build dir: /home/kitteh/KittehWatchOS/build
-Build type: native build
-None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Build type: cross build
+None of 'PKG_CONFIG_PATH_FOR_BUILD' are defined in the environment, not changing global flags.
 None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
 Project name: KittehWatchOS
 Project version: undefined
-C compiler for the build machine: cc (gcc 10.2.0 "cc (GCC) 10.2.0")
+C compiler for the build machine: ccache cc (gcc 10.2.0 "cc (GCC) 10.2.0")
 C linker for the build machine: cc ld.bfd 2.35
-None of 'AR' are defined in the environment, not changing global flags.
-C compiler for the host machine: cc (gcc 10.2.0 "cc (GCC) 10.2.0")
-C linker for the host machine: cc ld.bfd 2.35
+None of 'AR_FOR_BUILD' are defined in the environment, not changing global flags.
+C compiler for the host machine: arm-none-eabi-gcc (gcc 10.2.0 "arm-none-eabi-gcc (Arch Repository) 10.2.0")
+C linker for the host machine: arm-none-eabi-gcc ld.bfd 2.34
 None of 'AR' are defined in the environment, not changing global flags.
 Build machine cpu family: aarch64
 Build machine cpu: aarch64
@@ -23,60 +23,19 @@ Host machine cpu family: aarch64
 Host machine cpu: aarch64
 Target machine cpu family: aarch64
 Target machine cpu: aarch64
-None of 'CC_LD' are defined in the environment, not changing global flags.
-Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpc6zp_amp
-Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmpc6zp_amp/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpc6zp_amp/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lpthread -Wl,--end-group -Wl,--allow-shlib-undefined 
-
-Code:
- int main(void) { return 0; }
-
-Compiler stdout:
- 
-Compiler stderr:
- 
-Library pthread found: YES
-None of 'CC_LD' are defined in the environment, not changing global flags.
-Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpi1j8b9a0
-Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmpi1j8b9a0/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpi1j8b9a0/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lrt -Wl,--end-group -Wl,--allow-shlib-undefined 
-
-Code:
- int main(void) { return 0; }
-
-Compiler stdout:
- 
-Compiler stderr:
- 
-Library rt found: YES
-None of 'CC_LD' are defined in the environment, not changing global flags.
-Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp976t3uo1
-Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmp976t3uo1/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp976t3uo1/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lSDL2 -Wl,--end-group -Wl,--allow-shlib-undefined 
-
-Code:
- int main(void) { return 0; }
-
-Compiler stdout:
- 
-Compiler stderr:
- 
-Library SDL2 found: YES
 Build targets in project: 1
 
 Found ninja-1.10.1 at /usr/bin/ninja
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp0amaut5t
-Command line:  cc /home/kitteh/KittehWatchOS/build/meson-private/tmp0amaut5t/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmp0amaut5t/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpt93j8boz
+Command line:  arm-none-eabi-gcc /home/kitteh/KittehWatchOS/build/meson-private/tmpt93j8boz/testfile.c -o /home/kitteh/KittehWatchOS/build/meson-private/tmpt93j8boz/output.obj -pipe -c -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
 
 Code:
  
 Compiler stdout:
- install: /usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/
-programs: =/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../aarch64-unknown-linux-gnu/bin/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../aarch64-unknown-linux-gnu/bin/
-libraries: =/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../aarch64-unknown-linux-gnu/lib/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../aarch64-unknown-linux-gnu/lib/../lib/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../lib/:/lib/aarch64-unknown-linux-gnu/10.2.0/:/lib/../lib/:/usr/lib/aarch64-unknown-linux-gnu/10.2.0/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../../aarch64-unknown-linux-gnu/lib/:/usr/lib/gcc/aarch64-unknown-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/
+ install: /usr/lib/gcc/arm-none-eabi/10.2.0/
+programs: =/usr/lib/gcc/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/bin/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/bin/
+libraries: =/usr/lib/gcc/arm-none-eabi/10.2.0/thumb/v7e-m+fp/hard/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/arm-none-eabi/10.2.0/thumb/v7e-m+fp/hard/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/arm-none-eabi/lib/arm-none-eabi/10.2.0/thumb/v7e-m+fp/hard/:/usr/arm-none-eabi/lib/thumb/v7e-m+fp/hard/:/usr/arm-none-eabi/usr/lib/arm-none-eabi/10.2.0/thumb/v7e-m+fp/hard/:/usr/arm-none-eabi/usr/lib/thumb/v7e-m+fp/hard/:/usr/lib/gcc/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/arm-none-eabi/10.2.0/:/usr/lib/gcc/arm-none-eabi/10.2.0/../../../../arm-none-eabi/lib/:/usr/arm-none-eabi/lib/arm-none-eabi/10.2.0/:/usr/arm-none-eabi/lib/:/usr/arm-none-eabi/usr/lib/arm-none-eabi/10.2.0/:/usr/arm-none-eabi/usr/lib/
 
 Compiler stderr:
  
-None of 'STRIP' are defined in the environment, not changing global flags.
-None of 'STRIP' are defined in the environment, not changing global flags.
