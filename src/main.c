@@ -8,9 +8,7 @@
 #include "nordic_common.h"
 #include "nrf_drv_clock.h"
 #include "sdk_errors.h"
-#include <nrf_log_backend_serial.h>
-#include <nrf_log_ctrl_internal.h>
-#include <nrfx_log.h>
+
 #endif
 #include <pthread.h>
 #include <stdbool.h>
