@@ -21,45 +21,7 @@ const uint8_t SpiMaster_Mode1 = 1;
 const uint8_t SpiMaster_Mode2 = 2;
 const uint8_t SpiMaster_Mode3 = 3;
 
-namespace Pinetime {
-namespace Drivers {
-class SpiMaster {
-public:
-  ;
-
-  SpiMaster(const uint8_t spi, const uint8_t bitOrder, const uint8_t mode,
-            const uint8_t pinSCK, const uint8_t pinMOSI, const uint8_t pinMISO);
-  SpiMaster(const SpiMaster &) = delete;
-  SpiMaster &operator=(const SpiMaster &) = delete;
-  SpiMaster(SpiMaster &&) = delete;
-  SpiMaster &operator=(SpiMaster &&) = delete;
-
-  bool Init();
-  bool Write(uint8_t pinCsn, const uint8_t *data, size_t size);
-  bool Read(uint8_t pinCsn, uint8_t *cmd, size_t cmdSize, uint8_t *data,
-            size_t dataSize);
-
-  bool WriteCmdAndBuffer(uint8_t pinCsn, const uint8_t *cmd, size_t cmdSize,
-                         const uint8_t *data, size_t dataSize);
-
-  void OnStartedEvent();
-  void OnEndEvent();
-
-  void Sleep();
-  void Wakeup();
-
-    void SetupWorkaroundForFtpan58(NRF_SPIM_Type *spim, uint32_t ppi_channel,
-                                 uint32_t gpiote_channel);
-  void DisableWorkaroundForFtpan58(NRF_SPIM_Type *spim, uint32_t ppi_channel,
-                                   uint32_t gpiote_channel);
-  void PrepareTx(const volatile uint32_t bufferAddress,
-                 const volatile size_t size);
-  void PrepareRx(const volatile uint32_t cmdAddress,
-                 const volatile size_t cmdSize,
-                 const volatile uint32_t bufferAddress,
-                 const volatile size_t size);
-
-
+struct SpiMaster {
   NRF_SPIM_Type *spiBaseAddress;
   uint8_t pinCsn;
 
@@ -70,10 +32,41 @@ public:
   uint8_t pinMOSI;
   uint8_t pinMISO;
 
-  volatile uint32_t currentBufferAddr;
-  volatile size_t currentBufferSize;
-  volatile TaskHandle_t taskToNotify;
+  volatile uint32_t currentBufferAddr  = 0;
+  volatile size_t currentBufferSize = 0;
+  volatile TaskHandle_t taskToNotify = NULL;
   SemaphoreHandle_t mutex = NULL;
 };
-} // namespace Drivers
-} // namespace Pinetime
+
+bool SpiMaster_Init(struct SpiMaster *self);
+bool SpiMaster_Write(struct SpiMaster *self, uint8_t pinCsn, const uint8_t *data,
+                     size_t size);
+bool SpiMaster_Read(struct SpiMaster *self, uint8_t pinCsn, uint8_t *cmd,
+                    size_t cmdSize, uint8_t *data, size_t dataSize);
+
+bool SpiMaster_WriteCmdAndBuffer(struct SpiMaster *self, uint8_t pinCsn,
+                                 const uint8_t *cmd, size_t cmdSize,
+                                 const uint8_t *data, size_t dataSize);
+
+void SpiMaster_OnStartedEvent(struct SpiMaster *self);
+void SpiMaster_OnEndEvent(struct SpiMaster *self);
+
+void SpiMaster_Sleep(struct SpiMaster *self);
+void SpiMaster_Wakeup(struct SpiMaster *self);
+
+void SpiMaster_SetupWorkaroundForFtpan58(struct SpiMaster *self,
+                                         NRF_SPIM_Type *spim,
+                                         uint32_t ppi_channel,
+                                         uint32_t gpiote_channel);
+void SpiMaster_DisableWorkaroundForFtpan58(struct SpiMaster *self,
+                                           NRF_SPIM_Type *spim,
+                                           uint32_t ppi_channel,
+                                           uint32_t gpiote_channel);
+void SpiMaster_PrepareTx(struct SpiMaster *self,
+                         const volatile uint32_t bufferAddress,
+                         const volatile size_t size);
+void SpiMaster_PrepareRx(struct SpiMaster *self,
+                         const volatile uint32_t cmdAddress,
+                         const volatile size_t cmdSize,
+                         const volatile uint32_t bufferAddress,
+                         const volatile size_t size);

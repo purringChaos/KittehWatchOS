@@ -31,12 +31,9 @@ static constexpr uint8_t pinSpiFlashCsn = 5;
 static constexpr uint8_t pinLcdCsn = 25;
 static constexpr uint8_t pinLcdDataCommand = 18;
 
-Pinetime::Drivers::SpiMaster spi{
-    SpiMaster_SPI0, SpiMaster_Msb_Lsb, SpiMaster_Mode3,
+struct SpiMaster spi;
 
-    pinSpiSck,      pinSpiMosi,        pinSpiMiso,
-};
-Pinetime::Drivers::Spi lcdSpi{spi, pinLcdCsn};
+Pinetime::Drivers::Spi lcdSpi{&spi, pinLcdCsn};
 Pinetime::Drivers::St7789 lcd{lcdSpi, pinLcdDataCommand};
 
 Pinetime::Components::Gfx gfx{lcd};
@@ -45,13 +42,13 @@ extern "C" {
 void SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler(void) {
   if (((NRF_SPIM0->INTENSET & (1 << 6)) != 0) && NRF_SPIM0->EVENTS_END == 1) {
     NRF_SPIM0->EVENTS_END = 0;
-    spi.OnEndEvent();
+    SpiMaster_OnEndEvent(&spi);
   }
 
   if (((NRF_SPIM0->INTENSET & (1 << 19)) != 0) &&
       NRF_SPIM0->EVENTS_STARTED == 1) {
     NRF_SPIM0->EVENTS_STARTED = 0;
-    spi.OnStartedEvent();
+      SpiMaster_OnStartedEvent(&spi);
   }
 
   if (((NRF_SPIM0->INTENSET & (1 << 1)) != 0) &&
@@ -80,7 +77,20 @@ extern "C" void my_flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area,
 extern "C" void platform_initDisplay() {
   APP_GPIOTE_INIT(2);
 
-  spi.Init();
+  spi.spiBaseAddress = NULL;
+  spi.pinCsn = 0;
+  spi.spi = SpiMaster_SPI0;
+  spi.bitOrder = SpiMaster_Msb_Lsb;
+  spi.mode = SpiMaster_Mode3;
+  spi.pinSCK = 2;
+  spi.pinMOSI = 3;
+  spi.pinMISO = 4;
+  spi.currentBufferAddr = 0;
+  spi.currentBufferSize = 0;
+  spi.taskToNotify = NULL;
+  spi.mutex = NULL;
+
+  SpiMaster_Init(&spi);
   lcd.Init();
   gfx.Init();
 

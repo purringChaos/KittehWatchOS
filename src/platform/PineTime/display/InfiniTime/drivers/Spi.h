@@ -13,7 +13,7 @@ namespace Pinetime {
 namespace Drivers {
 class Spi {
 public:
-  Spi(SpiMaster &spiMaster, uint8_t pinCsn);
+  Spi(SpiMaster *spiMaster, uint8_t pinCsn);
   Spi(const Spi &) = delete;
   Spi &operator=(const Spi &) = delete;
   Spi(Spi &&) = delete;
@@ -28,7 +28,7 @@ public:
   void Wakeup();
 
 private:
-  SpiMaster &spiMaster;
+  SpiMaster *spiMaster;
   uint8_t pinCsn;
 };
 } // namespace Drivers
