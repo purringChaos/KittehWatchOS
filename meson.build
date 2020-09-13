@@ -1,4 +1,4 @@
-project('KittehWatchOS', 'c', 'cpp',  default_options:['c_std=c11', 'cpp_std=c++11'])
+project('KittehWatchOS', 'c',  default_options:['c_std=c11', 'cpp_std=c++11'])
 
 cc = meson.get_compiler('c')
 pkg = import('pkgconfig')
@@ -19,7 +19,7 @@ link_args = [
 
 
 deps = [
-#cc.find_library('nosys', required : false),
+  #cc.find_library('nosys', required : false),
 ]
 link_with = []
 

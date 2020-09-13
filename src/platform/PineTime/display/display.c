@@ -46,14 +46,20 @@ static lv_disp_buf_t disp_buf;
 
 void my_flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area,
                             lv_color_t *color_p) {
+ulTaskNotifyTake(pdTRUE, 500);
 
-  int32_t x, y;
-  for (y = area->y1; y <= area->y2; y++) {
-    for (x = area->x1; x <= area->x2; x++) {
-      St7789_DrawPixel(&lcd, x + 1, y + 1, lv_color_to32(*color_p));
-      color_p++;
-    }
-  }
+  uint16_t x, y, y1, y2, width, height = 0;
+    x = area->x1;
+    width = (area->x2 - area->x1) + 1;
+
+
+    y = area->y1;
+    height = (area->y2 - area->y1) + 1;
+
+
+    St7789_BeginDrawBuffer(&lcd, x, y, width, height);
+    St7789_NextDrawBuffer(&lcd, (const uint8_t *)color_p, width * height*2) ;
+
 
   lv_disp_flush_ready(disp_drv);
 }
@@ -73,7 +79,6 @@ void platform_initDisplay() {
   spi.currentBufferSize = 0;
   spi.taskToNotify = NULL;
   spi.mutex = NULL;
-
   SpiMaster_Init(&spi);
 
 

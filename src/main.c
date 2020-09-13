@@ -60,6 +60,7 @@ static void displayManagerWrapper(void *pvParameter) { displaymanager_start(); }
 int main(void) {
   platform_initThreading();
   platform_initBacklight();
+  lv_init();
 
   printf("Yeet.\n");
   platform_createThread(&display_manager_thread_handle, 1, "disp_man",

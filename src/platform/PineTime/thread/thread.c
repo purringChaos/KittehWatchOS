@@ -24,7 +24,7 @@ void platform_setThreadName(const char *name) {}
 void platform_createThread(TaskHandle_t *thread, int priority,
                            const char *const name, void (*func)(void *),
                            void *arg) {
-  xTaskCreate(func, name, configMINIMAL_STACK_SIZE + 200, arg, priority,
+  xTaskCreate(func, name, configMINIMAL_STACK_SIZE + 2048, arg, priority,
               thread);
 }
 

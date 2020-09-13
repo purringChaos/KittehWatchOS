@@ -8,14 +8,14 @@
 extern "C" {
 #endif
 
-#define SpiMaster_SPI0  (uint8_t)0
-#define SpiMaster_SPI1  (uint8_t)1
-#define SpiMaster_Msb_Lsb  (uint8_t)0
-#define SpiMaster_Lsb_Msb  (uint8_t)1
-#define SpiMaster_Mode0  (uint8_t)0
-#define SpiMaster_Mode1  (uint8_t)1
-#define SpiMaster_Mode2  (uint8_t)2
-#define SpiMaster_Mode3  (uint8_t)3
+#define SpiMaster_SPI0 (uint8_t)0
+#define SpiMaster_SPI1 (uint8_t)1
+#define SpiMaster_Msb_Lsb (uint8_t)0
+#define SpiMaster_Lsb_Msb (uint8_t)1
+#define SpiMaster_Mode0 (uint8_t)0
+#define SpiMaster_Mode1 (uint8_t)1
+#define SpiMaster_Mode2 (uint8_t)2
+#define SpiMaster_Mode3 (uint8_t)3
 
 typedef struct {
   NRF_SPIM_Type *spiBaseAddress;

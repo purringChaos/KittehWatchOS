@@ -54,9 +54,13 @@ void St7789_SoftwareReset(St7789 *self) {
   nrf_delay_ms(150);
 }
 
-void St7789_SleepOut(St7789 *self) { St7789_WriteCommand(self, St7789_Command_SleepOut); }
+void St7789_SleepOut(St7789 *self) {
+  St7789_WriteCommand(self, St7789_Command_SleepOut);
+}
 
-void St7789_SleepIn(St7789 *self) { St7789_WriteCommand(self, St7789_Command_SleepIn); }
+void St7789_SleepIn(St7789 *self) {
+  St7789_WriteCommand(self, St7789_Command_SleepIn);
+}
 
 void St7789_ColMod(St7789 *self) {
   St7789_WriteCommand(self, St7789_Command_ColMod);
@@ -95,9 +99,12 @@ void St7789_NormalModeOn(St7789 *self) {
   nrf_delay_ms(10);
 }
 
-void St7789_DisplayOn(St7789 *self) { St7789_WriteCommand(self,St7789_Command_DisplayOn); }
+void St7789_DisplayOn(St7789 *self) {
+  St7789_WriteCommand(self, St7789_Command_DisplayOn);
+}
 
-void St7789_SetAddrWindow(St7789 *self, uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1) {
+void St7789_SetAddrWindow(St7789 *self, uint16_t x0, uint16_t y0, uint16_t x1,
+                          uint16_t y1) {
   St7789_WriteCommand(self, St7789_Command_ColumnAddressSet);
   St7789_WriteData(self, x0 >> 8);
   St7789_WriteData(self, x0 & 0xff);
@@ -111,7 +118,9 @@ void St7789_SetAddrWindow(St7789 *self, uint16_t x0, uint16_t y0, uint16_t x1, u
   St7789_WriteToRam(self);
 }
 
-void St7789_WriteToRam(St7789 *self) { St7789_WriteCommand(self, St7789_Command_WriteToRam); }
+void St7789_WriteToRam(St7789 *self) {
+  St7789_WriteCommand(self, St7789_Command_WriteToRam);
+}
 
 void St7789_DisplayOff(St7789 *self) {
   St7789_WriteCommand(self, St7789_Command_DisplayOff);
@@ -149,8 +158,8 @@ void St7789_DrawPixel(St7789 *self, uint16_t x, uint16_t y, uint32_t color) {
   St7789_WriteSpi(self, (const uint8_t *)&color, 2);
 }
 
-void St7789_BeginDrawBuffer(St7789 *self, uint16_t x, uint16_t y, uint16_t width,
-                            uint16_t height) {
+void St7789_BeginDrawBuffer(St7789 *self, uint16_t x, uint16_t y,
+                            uint16_t width, uint16_t height) {
   if ((x >= Width) || (y >= Height))
     return;
   if ((x + width - 1) >= Width)
@@ -158,7 +167,8 @@ void St7789_BeginDrawBuffer(St7789 *self, uint16_t x, uint16_t y, uint16_t width
   if ((y + height - 1) >= Height)
     height = Height - y;
 
-  St7789_SetAddrWindow(self, 0 + x, ST7789_ROW_OFFSET + y, x + width - 1, y + height - 1);
+  St7789_SetAddrWindow(self, 0 + x, ST7789_ROW_OFFSET + y, x + width - 1,
+                       y + height - 1);
   nrf_gpio_pin_set(self->pinDataCommand);
 }
 

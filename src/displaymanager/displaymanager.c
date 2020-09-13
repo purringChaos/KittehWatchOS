@@ -129,5 +129,6 @@ void displaymanager_start() {
   while (true) {
     current_application.refresh();
     lv_task_handler();
+    platform_sleep(5);
   }
 };
