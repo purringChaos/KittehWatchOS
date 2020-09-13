@@ -5,11 +5,12 @@
 
 using namespace Pinetime::Drivers;
 
-St7789::St7789(Spi &spi, uint8_t pinDataCommand)
-    : spi{spi}, pinDataCommand{pinDataCommand} {}
+St7789::St7789(SpiMaster *spiMaster, uint8_t pinCsm, uint8_t pinDataCommand)
+    : spiMaster{spiMaster}, pinCsm{pinCsm}, pinDataCommand{pinDataCommand} {}
 
 void St7789::Init() {
-  spi.Init();
+  nrf_gpio_cfg_output(pinCsm);
+  nrf_gpio_pin_set(pinCsm);
   nrf_gpio_cfg_output(pinDataCommand);
   nrf_gpio_cfg_output(26);
   nrf_gpio_pin_set(26);
@@ -36,7 +37,7 @@ void St7789::WriteData(uint8_t data) {
 }
 
 void St7789::WriteSpi(const uint8_t *data, size_t size) {
-  spi.Write(data, size);
+  SpiMaster_Write(spiMaster, pinCsm, data, size);
 }
 
 void St7789::SoftwareReset() {

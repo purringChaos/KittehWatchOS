@@ -31,10 +31,9 @@ static constexpr uint8_t pinSpiFlashCsn = 5;
 static constexpr uint8_t pinLcdCsn = 25;
 static constexpr uint8_t pinLcdDataCommand = 18;
 
-struct SpiMaster spi;
+SpiMaster spi;
 
-Pinetime::Drivers::Spi lcdSpi{&spi, pinLcdCsn};
-Pinetime::Drivers::St7789 lcd{lcdSpi, pinLcdDataCommand};
+Pinetime::Drivers::St7789 lcd{&spi, pinLcdCsn, pinLcdDataCommand};
 
 Pinetime::Components::Gfx gfx{lcd};
 
@@ -48,7 +47,7 @@ void SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler(void) {
   if (((NRF_SPIM0->INTENSET & (1 << 19)) != 0) &&
       NRF_SPIM0->EVENTS_STARTED == 1) {
     NRF_SPIM0->EVENTS_STARTED = 0;
-      SpiMaster_OnStartedEvent(&spi);
+    SpiMaster_OnStartedEvent(&spi);
   }
 
   if (((NRF_SPIM0->INTENSET & (1 << 1)) != 0) &&

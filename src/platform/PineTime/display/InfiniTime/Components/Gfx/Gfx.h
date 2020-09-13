@@ -1,7 +1,6 @@
 #pragma once
 #include <FreeRTOS.h>
 #include <cstdint>
-#include <drivers/BufferProvider.h>
 #include <nrf_font.h>
 #include <task.h>
 
@@ -10,7 +9,7 @@ namespace Drivers {
 class St7789;
 }
 namespace Components {
-class Gfx : public Pinetime::Drivers::BufferProvider {
+class Gfx  {
 public:
   explicit Gfx(Drivers::St7789 &lcd);
   void Init();
@@ -28,7 +27,7 @@ public:
 
   void Sleep();
   void Wakeup();
-  bool GetNextBuffer(uint8_t **buffer, size_t &size) override;
+  bool GetNextBuffer(uint8_t **buffer, size_t &size);
   void pixel_draw(uint8_t x, uint8_t y, uint16_t color);
 
 private:
