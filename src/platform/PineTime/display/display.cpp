@@ -35,7 +35,7 @@ SpiMaster spi;
 
 Pinetime::Drivers::St7789 lcd{&spi, pinLcdCsn, pinLcdDataCommand};
 
-Pinetime::Components::Gfx gfx{lcd};
+//Pinetime::Components::Gfx gfx{lcd};
 
 extern "C" {
 void SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler(void) {
@@ -90,8 +90,9 @@ extern "C" void platform_initDisplay() {
   spi.mutex = NULL;
 
   SpiMaster_Init(&spi);
+
   lcd.Init();
-  gfx.Init();
+  //gfx.Init();
 
   static lv_color_t buffer[240 * 4];
 

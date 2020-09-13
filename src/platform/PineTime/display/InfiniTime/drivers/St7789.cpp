@@ -5,6 +5,22 @@
 
 using namespace Pinetime::Drivers;
 
+
+static uint8_t    St7789_Command_SoftwareReset = 0x01;
+static uint8_t    St7789_Command_SleepIn = 0x10;
+static uint8_t    St7789_Command_SleepOut = 0x11;
+static uint8_t    St7789_Command_NormalModeOn = 0x13;
+static uint8_t    St7789_Command_DisplayInversionOn = 0x21;
+static uint8_t    St7789_Command_DisplayOff = 0x28;
+static uint8_t    St7789_Command_DisplayOn = 0x29;
+static uint8_t    St7789_Command_ColumnAddressSet = 0x2a;
+static uint8_t    St7789_Command_RowAddressSet = 0x2b;
+static uint8_t    St7789_Command_WriteToRam = 0x2c;
+static uint8_t    St7789_Command_MemoryDataAccessControl = 036;
+static uint8_t    St7789_Command_VerticalScrollDefinition = 0x33;
+static uint8_t    St7789_Command_VerticalScrollStartAddress = 0x37;
+static uint8_t    St7789_Command_ColMod = 0x3a;
+
 St7789::St7789(SpiMaster *spiMaster, uint8_t pinCsm, uint8_t pinDataCommand)
     : spiMaster{spiMaster}, pinCsm{pinCsm}, pinDataCommand{pinDataCommand} {}
 
@@ -41,31 +57,31 @@ void St7789::WriteSpi(const uint8_t *data, size_t size) {
 }
 
 void St7789::SoftwareReset() {
-  WriteCommand(static_cast<uint8_t>(Commands::SoftwareReset));
+  WriteCommand(St7789_Command_SoftwareReset);
   nrf_delay_ms(150);
 }
 
 void St7789::SleepOut() {
-  WriteCommand(static_cast<uint8_t>(Commands::SleepOut));
+  WriteCommand(St7789_Command_SleepOut);
 }
 
 void St7789::SleepIn() {
-  WriteCommand(static_cast<uint8_t>(Commands::SleepIn));
+  WriteCommand(St7789_Command_SleepIn);
 }
 
 void St7789::ColMod() {
-  WriteCommand(static_cast<uint8_t>(Commands::ColMod));
+  WriteCommand(St7789_Command_ColMod);
   WriteData(0x55);
   nrf_delay_ms(10);
 }
 
 void St7789::MemoryDataAccessControl() {
-  WriteCommand(static_cast<uint8_t>(Commands::MemoryDataAccessControl));
+  WriteCommand(St7789_Command_MemoryDataAccessControl);
   WriteData(0x00);
 }
 
 void St7789::ColumnAddressSet() {
-  WriteCommand(static_cast<uint8_t>(Commands::ColumnAddressSet));
+  WriteCommand(St7789_Command_ColumnAddressSet);
   WriteData(0x00);
   WriteData(0x00);
   WriteData(Width >> 8u);
@@ -73,7 +89,7 @@ void St7789::ColumnAddressSet() {
 }
 
 void St7789::RowAddressSet() {
-  WriteCommand(static_cast<uint8_t>(Commands::RowAddressSet));
+  WriteCommand(St7789_Command_RowAddressSet);
   WriteData(0x00);
   WriteData(0x00);
   WriteData(320u >> 8u);
@@ -81,27 +97,27 @@ void St7789::RowAddressSet() {
 }
 
 void St7789::DisplayInversionOn() {
-  WriteCommand(static_cast<uint8_t>(Commands::DisplayInversionOn));
+  WriteCommand(St7789_Command_DisplayInversionOn);
   nrf_delay_ms(10);
 }
 
 void St7789::NormalModeOn() {
-  WriteCommand(static_cast<uint8_t>(Commands::NormalModeOn));
+  WriteCommand(St7789_Command_NormalModeOn);
   nrf_delay_ms(10);
 }
 
 void St7789::DisplayOn() {
-  WriteCommand(static_cast<uint8_t>(Commands::DisplayOn));
+  WriteCommand(St7789_Command_DisplayOn);
 }
 
 void St7789::SetAddrWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1) {
-  WriteCommand(static_cast<uint8_t>(Commands::ColumnAddressSet));
+  WriteCommand(St7789_Command_ColumnAddressSet);
   WriteData(x0 >> 8);
   WriteData(x0 & 0xff);
   WriteData(x1 >> 8);
   WriteData(x1 & 0xff);
 
-  WriteCommand(static_cast<uint8_t>(Commands::RowAddressSet));
+  WriteCommand(St7789_Command_RowAddressSet);
   WriteData(y0 >> 8);
   WriteData(y0 & 0xff);
   WriteData(y1 >> 8);
@@ -111,18 +127,18 @@ void St7789::SetAddrWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1) {
 }
 
 void St7789::WriteToRam() {
-  WriteCommand(static_cast<uint8_t>(Commands::WriteToRam));
+  WriteCommand(St7789_Command_WriteToRam);
 }
 
 void St7789::DisplayOff() {
-  WriteCommand(static_cast<uint8_t>(Commands::DisplayOff));
+  WriteCommand(St7789_Command_DisplayOff);
   nrf_delay_ms(500);
 }
 
 void St7789::VerticalScrollDefinition(uint16_t topFixedLines,
                                       uint16_t scrollLines,
                                       uint16_t bottomFixedLines) {
-  WriteCommand(static_cast<uint8_t>(Commands::VerticalScrollDefinition));
+  WriteCommand(St7789_Command_VerticalScrollDefinition);
   WriteData(topFixedLines >> 8u);
   WriteData(topFixedLines & 0x00ffu);
   WriteData(scrollLines >> 8u);
@@ -133,7 +149,7 @@ void St7789::VerticalScrollDefinition(uint16_t topFixedLines,
 
 void St7789::VerticalScrollStartAddress(uint16_t line) {
   verticalScrollingStartAddress = line;
-  WriteCommand(static_cast<uint8_t>(Commands::VerticalScrollStartAddress));
+  WriteCommand(St7789_Command_VerticalScrollStartAddress);
   WriteData(line >> 8u);
   WriteData(line & 0x00ffu);
 }
