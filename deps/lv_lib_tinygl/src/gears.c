@@ -12,7 +12,7 @@
 #include "zbuffer.h"
 
 #ifndef M_PI
-#  define M_PI 3.14159265
+#  define M_PI 3.14159
 #endif
 
 ZBuffer* frameBuffer;
@@ -173,7 +173,7 @@ void draw() {
 
 void initScene() {
 
-	static GLfloat pos[4] = { 5.0, 5.0, 10.0, 0.0 };
+	static GLfloat pos[4] = { 10.0, 10.0, 10.0, 0.0 };
 	static GLfloat red[4] = { 0.1, 0.0, 0.0, 1.0 };
 	static GLfloat green[4] = { 0.0, 0.1, 0.0, 1.0 };
 	static GLfloat blue[4] = { 0.0, 0.0, 1.0, 1.0 };
@@ -204,9 +204,6 @@ void initScene() {
 	glEndList();
 	glEnable(GL_NORMALIZE);
 }
-
-#define WINDOWX 160
-#define WINDOWY 160
 
 void gears_init(int xsize, int ysize, int mode, void* buf) {
 	frameBuffer = ZB_open(xsize, ysize, mode, 0, NULL, NULL, buf);

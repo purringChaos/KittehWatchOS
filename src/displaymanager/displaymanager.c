@@ -1,15 +1,11 @@
-#include "lvgl/lvgl.h"
-#include "platform/includes/thread.h"
-#include "types/app.h"
-#include <stdio.h>DEMO_H
-
-#include "platform/includes/thread.h"
-
 #include "displaymanager/displaymanager.h"
-
 #include "apps/appmenu/appmenu.h"
 #include "apps/clock/clock.h"
 #include "apps/test/test.h"
+#include "lvgl/lvgl.h"
+#include "platform/includes/thread.h"
+#include "types/app.h"
+#include <stdio.h>
 
 typedef struct {
   unsigned int size;
@@ -83,29 +79,21 @@ void displaymanager_make_top_bar() {
   lv_label_set_text(app_title_label, "Current Application");
 }
 
-void displaymanager_start() {
-  //printf("start display\n");
-
-  displaymanager_make_top_bar();
-
-  displaymanager_switch_application("AppMenu");
-};
-
 void displaymanager_switch_application(const char *name) {
   if (!current_application.valid) {
-    //printf("Current App Invalid.\n");
+    // printf("Current App Invalid.\n");
     current_application = displaymanager_apps.apps[0];
   } else {
-    //printf("Deinit App.\n");
+    // printf("Deinit App.\n");
 
     current_application.deinit();
 
     int i;
     for (i = 0; i < displaymanager_apps.size; i++) {
-      //printf("Apps: %s\n", displaymanager_apps.apps[i].name());
+      // printf("Apps: %s\n", displaymanager_apps.apps[i].name());
 
       if (strcmp(displaymanager_apps.apps[i].name(), name) == 0) {
-        //printf("Found it!\n");
+        // printf("Found it!\n");
 
         current_application = displaymanager_apps.apps[i];
       }
@@ -114,3 +102,11 @@ void displaymanager_switch_application(const char *name) {
   lv_label_set_text(app_title_label, current_application.name());
   current_application.init();
 }
+
+void displaymanager_start() {
+  // printf("start display\n");
+
+  displaymanager_make_top_bar();
+
+  displaymanager_switch_application("AppMenu");
+};

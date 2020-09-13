@@ -1,3 +1,4 @@
+#include "platform/includes/backlight.h"
 #include "bsp.h"
 
 uint8_t pinLcdBacklight1 = 14;

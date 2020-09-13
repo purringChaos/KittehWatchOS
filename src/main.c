@@ -1,15 +1,6 @@
 #include "lvgl/lvgl.h"
 #include <stdint.h>
 #include <time.h>
-
-#ifndef __linux__
-#include "app_error.h"
-#include "bsp.h"
-#include "nordic_common.h"
-#include "nrf_drv_clock.h"
-#include "sdk_errors.h"
-
-#endif
 #include <pthread.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -19,13 +10,43 @@
 #include "platform/includes/display.h"
 #include "platform/includes/thread.h"
 
-THREAD_TYPE lv_tick_task_handle;
-THREAD_TYPE lv_handle_task_handle;
-THREAD_TYPE led_toggle_task_handle;
 
+void RADIO_IRQHandler(void){};
+void UARTE0_UART0_IRQHandler(void){};
+void NFCT_IRQHandler(void){};
+void TIMER0_IRQHandler(void){};
+void TIMER1_IRQHandler(void){};
+void TIMER2_IRQHandler(void){};
+void RTC0_IRQHandler(void){};
+void TEMP_IRQHandler(void){};
+void RNG_IRQHandler(void){};
+void ECB_IRQHandler(void){};
+void CCM_AAR_IRQHandler(void){};
+void QDEC_IRQHandler(void){};
+void COMP_LPCOMP_IRQHandler(void){};
+void SWI0_EGU0_IRQHandler(void){};
+void SWI1_EGU1_IRQHandler(void){};
+void SWI2_EGU2_IRQHandler(void){};
+void SWI3_EGU3_IRQHandler(void){};
+void SWI4_EGU4_IRQHandler(void){};
+void SWI5_EGU5_IRQHandler(void){};
+void TIMER3_IRQHandler(void){};
+void TIMER4_IRQHandler(void){};
+void PWM0_IRQHandler(void){};
+void PDM_IRQHandler(void){};
+void MWU_IRQHandler(void){};
+void PWM1_IRQHandler(void){};
+void PWM2_IRQHandler(void){};
+void SPIM2_SPIS2_SPI2_IRQHandler(void){};
+void RTC2_IRQHandler(void){};
+void I2S_IRQHandler(void){};
+void FPU_IRQHandler(void){};
 void vApplicationIdleHook(void) { lv_tick_inc(1); }
 
-static void lv_handle_task_function(void *pvParameter) {
+
+THREAD_TYPE lv_event_handler_thread_handle;
+
+static void lv_event_handler_thread(void *pvParameter) {
   platform_setThreadName("lv_handle\0");
   while (true) {
     platform_sleep(5);
@@ -33,55 +54,31 @@ static void lv_handle_task_function(void *pvParameter) {
   }
 }
 
-static void lv_tick_task_function(void *pvParameter) {
+#ifdef __linux__
+THREAD_TYPE lv_ticker_thread_handle;
+static void lv_ticker_thread(void *pvParameter) {
   platform_setThreadName("lv_tick\0");
   while (true) {
-    lv_tick_inc(5);
-    platform_sleep(5);
+    lv_tick_inc(1);
+    platform_sleep(1);
   }
 }
-
-int main(void) {
-#ifndef __linux__
-  ret_code_t err_code;
-  /* Initialize clock driver for better time accuracy in FREERTOS */
-  err_code = nrf_drv_clock_init();
-  APP_ERROR_CHECK(err_code);
 #endif
 
+
+
+int main(void) {
   platform_initThreading();
   platform_initBacklight();
   platform_initDisplay();
 
   displaymanager_start();
 
-
 #ifdef __linux__
-  platform_createThread(&lv_tick_task_handle, 1, "lv_tick",
-                        lv_tick_task_function, NULL);
+  platform_createThread(&lv_tick_thread_handle, 1, "lv_tick", lv_tick_thread, NULL);
+  lv_event_handler_thread(NULL);
 #else
-  platform_createThread(&lv_handle_task_handle, 2, "lv_handle",
-                        lv_handle_task_function, NULL);
-#endif
-
-#ifndef __linux__
-  /* Activate deep sleep mode */
-  SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
-#endif
-
-#ifdef __linux__
-  const struct timespec period = {
-      .tv_sec = 0,
-      .tv_nsec = 5000000UL,
-  };
-
-  struct timespec remaining;
-
-  while (1) {
-    lv_task_handler();
-    nanosleep(&period, &remaining); // trigger every 5ms.
-  }
-#else
+  platform_createThread(&lv_event_handler_thread_handle, 2, "lv_handle", lv_event_handler_thread, NULL);
   platform_startAllThreads();
 #endif
 }

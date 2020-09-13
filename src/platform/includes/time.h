@@ -3,7 +3,6 @@
 
 #include "types/numbers.h"
 
-
 extern u16 time_year();
 extern u8 time_month();
 extern u8 time_day();

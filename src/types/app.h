@@ -1,5 +1,5 @@
-#ifndef DISPLAYMANAGER_H
-#define DISPLAYMANAGER_H
+#ifndef TYPES_APP_H
+#define TYPES_APP_H
 #include <stdbool.h>
 
 typedef struct Application {

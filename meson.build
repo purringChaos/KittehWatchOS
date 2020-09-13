@@ -1,8 +1,27 @@
-project('KittehWatchOS', 'c')
+project('KittehWatchOS', 'c', 'cpp',  default_options:['c_std=c11', 'cpp_std=c++11'])
 
 cc = meson.get_compiler('c')
 pkg = import('pkgconfig')
 
+c_args = [
+  '-Og', '-g3',
+  '-Wall',
+  '-fvisibility=hidden',
+  '-DLV_CONF_INCLUDE_SIMPLE',
+]
+cpp_args = c_args + [
+  '-Wno-non-virtual-dtor',
+]
+
+link_args = [
+
+]
+
+
+deps = [
+#cc.find_library('nosys', required : false),
+]
+link_with = []
 
 
 sources = [
@@ -17,7 +36,6 @@ includes = [
   include_directories('.'),
   include_directories('src'),
   include_directories('deps'),
-
 ]
 
 
@@ -27,15 +45,20 @@ sources_platform_pinetime = [
   'src/platform/PineTime/FreeRTOS/port_cmsis_systick.c',
   'src/platform/PineTime/backlight/backlight.c',
   'src/platform/PineTime/thread/thread.c',
-    'src/platform/PineTime/time/time.c',
-    'src/platform/PineTime/display/display.c',
-
-
+  'src/platform/PineTime/time/time.c',
+  'src/platform/PineTime/display/display.cpp',
+  'src/platform/PineTime/display/InfiniTime/drivers/St7789.cpp',
+  'src/platform/PineTime/display/InfiniTime/drivers/Spi.cpp',
+  'src/platform/PineTime/display/InfiniTime/drivers/SpiMaster.cpp',
+  'src/platform/PineTime/display/InfiniTime/Components/Gfx/Gfx.cpp',
 ]
 
 includes_platform_pinetime = [
+  includes,
   include_directories('src/platform/PineTime/FreeRTOS'),
   include_directories('src/platform/PineTime'),
+  include_directories('src/platform/PineTime/display/InfiniTime'),
+
 ]
 
 
@@ -50,27 +73,8 @@ sources_platform_linux = [
 ]
 
 includes_platform_linux = [
+  includes,
   include_directories('src/platform/Linux'),
-
-]
-
-
-if get_option('linux')
-sources += sources_platform_linux
-includes += includes_platform_linux
-else
-sources += sources_platform_pinetime
-includes += includes_platform_pinetime
-endif
-
-cflags = [
-  '-Wall',
-  '-fvisibility=hidden',
-]
-
-
-deps = [
-#cc.find_library('nosys', required : false),
 ]
 
 lvgl_sources = [
@@ -182,18 +186,8 @@ lvgl_sources = [
 ]
 
 lvgl_includes = [
-  include_directories('deps'),
+  'deps',
 ]
-
-lvgl_cflags = [
-	'-Wall',
-	'-fvisibility=hidden',
-  '-DLV_CONF_INCLUDE_SIMPLE',
-]
-
-sources += lvgl_sources
-includes += lvgl_includes
-cflags += lvgl_cflags
 
 sdk_sources = [
     'deps/nRF5_SDK/modules/nrfx/mdk/system_nrf52.c',
@@ -237,7 +231,7 @@ sdk_sources = [
     'deps/nRF5_SDK/modules/nrfx/drivers/src/nrfx_twi.c',
     'deps/nRF5_SDK/components/libraries/scheduler/app_scheduler.c',
     'deps/nRF5_SDK/components/libraries/fifo/app_fifo.c',
-    'deps/nRF5_SDK/components/libraries/uart/app_uart_fifo.c',
+    #'deps/nRF5_SDK/components/libraries/uart/app_uart_fifo.c',
     'deps/nRF5_SDK/components/libraries/button/app_button.c',
     'deps/nRF5_SDK/components/libraries/gpiote/app_gpiote.c',
     'deps/nRF5_SDK/components/libraries/bsp/bsp.c',
@@ -346,35 +340,17 @@ sdk_includes = [
 
 ]
 
-sdk_cflags = [
+sdk_c_args = [
     '-DFLOAT_ABI_HARD',
     '-DNRF52832_XXAA',
     '-DSOFTDEVICE_PRESENT',
     '-DS132',
-    '-DNRF_SD_BLE_API_VERSION=6',
-    '-DBLE_STACK_SUPPORT_REQD',
     '-DBOARD_PCA10040',
     '-DFREERTOS',
     '-D__HEAP_SIZE=8192',
     '-D__STACK_SIZE=8192',
 
 ]
-
-
-if not get_option('linux')
-sources += sdk_sources
-includes += sdk_includes
-cflags += sdk_cflags
-endif
-
-if get_option('linux')
-deps += cc.find_library('pthread', required : true)
-deps += cc.find_library('rt', required : true)
-deps += cc.find_library('SDL2', required : true)
-deps += cc.find_library('m', required : true)
-
-endif
-
 
 
 
@@ -413,12 +389,72 @@ tinygl_includes = [
 ]
 
 
-#sources += tinygl_sources
-#includes += tinygl_includes
 
-link_args = [
 
+if not get_option('linux')
+#sources += sdk_sources
+#includes += sdk_includes
+c_args += sdk_c_args
+cpp_args += sdk_c_args
+
+sdk_lib = static_library(
+  'sdk',
+  sources: files(sdk_sources),
+  include_directories: sdk_includes + includes_platform_pinetime,
+  c_args: c_args
+)
+sdk = declare_dependency(link_with : sdk_lib)
+
+platform_lib = static_library(
+  'platform',
+  sources: files(sources_platform_pinetime), 
+  include_directories: sdk_includes + includes_platform_pinetime,
+  c_args: c_args,
+  cpp_args: cpp_args,
+  dependencies: sdk
+)
+platform = declare_dependency(link_with: platform_lib, include_directories: sdk_includes)
+
+
+deps += sdk
+lvgl_includes += includes_platform_pinetime
+endif
+
+if get_option('linux')
+platform_deps = [
+  cc.find_library('pthread', required : true),
+  cc.find_library('rt', required : true),
+  cc.find_library('SDL2', required : true),
+  cc.find_library('m', required : true),
 ]
+
+
+platform_lib = static_library(
+  'platform',
+  sources: files(sources_platform_linux), 
+  include_directories: includes + includes_platform_linux,
+  c_args: c_args,
+  cpp_args: cpp_args,
+  dependencies: platform_deps,
+)
+platform = declare_dependency(link_with: platform_lib, include_directories: includes_platform_linux)
+lvgl_includes += includes_platform_linux
+
+
+
+endif
+
+deps += platform
+
+
+
+lvgl_lib = static_library('lvgl', sources: files(lvgl_sources), include_directories: lvgl_includes, c_args: c_args)
+lvgl = declare_dependency(link_with : lvgl_lib, include_directories : lvgl_includes)
+deps += lvgl
+
+tinygl_lib = static_library('tinygl', sources: files(tinygl_sources), include_directories: tinygl_includes)
+tinygl = declare_dependency(link_with : tinygl_lib, include_directories : tinygl_includes)
+deps += tinygl
 
 
 if not get_option('linux')
@@ -428,8 +464,10 @@ endif
 executable('KittehWatchOS',
 	name_prefix: '',
 	install: false,
-	c_args: cflags,
+	c_args: c_args,
+	cpp_args: cpp_args,
   link_args: link_args,
 	sources: sources,
+  link_with: link_with,
 	include_directories: includes,
 	dependencies: deps)

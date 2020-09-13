@@ -7,7 +7,7 @@ u16 time_year() {
 
   time(&rawtime);
   timeinfo = localtime(&rawtime);
-  return 1900 +  timeinfo->tm_year;
+  return 1900 + timeinfo->tm_year;
 };
 u8 time_month() {
   time_t rawtime;

@@ -11,14 +11,14 @@ static void appmenu_on_click_app(lv_obj_t *obj, lv_event_t event) {
   if (event == LV_EVENT_VALUE_CHANGED) {
     const char *txt = lv_btnmatrix_get_active_btn_text(obj);
     displaymanager_switch_application(txt);
-    //printf("%s was pressed\n", txt);
+    // printf("%s was pressed\n", txt);
   }
 }
 
 static const char *appsList[] = {"AppMenu", "\n", "Clock", "\n", "Test", ""};
 
 void apps_appmenu_init() {
-  //printf("Starting AppMenu!\n");
+  // printf("Starting AppMenu!\n");
 
   lv_obj_t *titleBar = lv_obj_get_child(lv_layer_top(), NULL);
 
