@@ -16,9 +16,7 @@
 
 void WDT_IRQHandler(void) { nrf_wdt_event_clear(NRF_WDT_EVENT_TIMEOUT); }
 
-void platform_initThreading() {
-  nrf_drv_clock_init();
-}
+void platform_initThreading() { nrf_drv_clock_init(); }
 void platform_sleep(int t) { vTaskDelay(t); }
 
 void platform_setThreadName(const char *name) {}

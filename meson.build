@@ -452,7 +452,7 @@ lvgl_lib = static_library('lvgl', sources: files(lvgl_sources), include_director
 lvgl = declare_dependency(link_with : lvgl_lib, include_directories : lvgl_includes)
 deps += lvgl
 
-tinygl_lib = static_library('tinygl', sources: files(tinygl_sources), include_directories: tinygl_includes)
+tinygl_lib = static_library('tinygl', sources: files(tinygl_sources), include_directories: tinygl_includes, c_args: '-w')
 tinygl = declare_dependency(link_with : tinygl_lib, include_directories : tinygl_includes)
 deps += tinygl
 

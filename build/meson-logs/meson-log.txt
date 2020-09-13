@@ -1,4 +1,4 @@
-Build started at 2020-09-13T12:18:22.232478
+Build started at 2020-09-13T13:28:53.697755
 Main binary: /usr/bin/python
 Build Options: -Dbackend=ninja
 Python system: Linux
@@ -31,8 +31,8 @@ Build targets in project: 5
 
 Found ninja-1.10.1 at /usr/bin/ninja
 Running compile:
-Working directory:  /tmp/tmp7bvd0yya
-Command line:  arm-none-eabi-g++ /tmp/tmp7bvd0yya/testfile.cpp -o /tmp/tmp7bvd0yya/output.obj -pipe -D_FILE_OFFSET_BITS=64 -c -std=c++11 
+Working directory:  /tmp/tmpohnbc1p5
+Command line:  arm-none-eabi-g++ /tmp/tmpohnbc1p5/testfile.cpp -o /tmp/tmpohnbc1p5/output.obj -pipe -D_FILE_OFFSET_BITS=64 -c -std=c++11 
 
 Code:
  int i = static_cast<int>(0);
@@ -42,8 +42,8 @@ Compiler stderr:
  
 Compiler accepts -std=c++11: YES
 Running compile:
-Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmp_gn7bwnx
-Command line:  arm-none-eabi-g++ /home/kitteh/KittehWatchOS/build/meson-private/tmp_gn7bwnx/testfile.cpp -o /home/kitteh/KittehWatchOS/build/meson-private/tmp_gn7bwnx/output.obj -pipe -c -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+Working directory:  /home/kitteh/KittehWatchOS/build/meson-private/tmpw60hs1fu
+Command line:  arm-none-eabi-g++ /home/kitteh/KittehWatchOS/build/meson-private/tmpw60hs1fu/testfile.cpp -o /home/kitteh/KittehWatchOS/build/meson-private/tmpw60hs1fu/output.obj -pipe -c -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
 
 Code:
  

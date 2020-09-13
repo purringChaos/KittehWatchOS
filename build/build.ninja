@@ -913,137 +913,137 @@ build liblvgl.a: STATIC_LINKER liblvgl.a.p/deps_lvgl_src_lv_misc_lv_bidi.c.o lib
 build libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/oscontext.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/texture.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/clip.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/zdither.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/zline.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/list.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/gears.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/zbuffer.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/api.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/memory.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/error.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/get.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/select.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/arrays.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/glu.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/specbuf.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/light.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/matrix.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/image_util.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/msghandling.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/vertex.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/triangle.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/zmath.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/ztriangle.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/clear.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/init.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o: c_COMPILER ../deps/lv_lib_tinygl/src/misc.c
  DEPFILE = libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o.d
  DEPFILE_UNQUOTED = libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o.d
- ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC
+ ARGS = -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w
 
 build libtinygl.a: STATIC_LINKER libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o
  LINK_ARGS = csrD

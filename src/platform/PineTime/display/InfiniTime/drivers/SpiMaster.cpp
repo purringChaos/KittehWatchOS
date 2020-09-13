@@ -7,29 +7,31 @@
 
 using namespace Pinetime::Drivers;
 
-SpiMaster::SpiMaster(const SpiMaster::SpiModule spi,
-                     const SpiMaster::Parameters &params)
-    : spi{spi}, params{params} {
-  mutex = xSemaphoreCreateBinary();
-  ASSERT(mutex != NULL);
-}
+SpiMaster::SpiMaster(const uint8_t spi, const uint8_t bitOrder,
+                     const uint8_t mode, const uint8_t pinSCK,
+                     const uint8_t pinMOSI, const uint8_t pinMISO)
+    : spi{spi}, bitOrder{bitOrder}, mode{mode}, pinSCK{pinSCK},
+      pinMOSI{pinMOSI}, pinMISO{pinMISO} {}
 
 bool SpiMaster::Init() {
-  /* Configure GPIO pins used for pselsck, pselmosi, pselmiso and pselss for
-   * SPI0 */
-  nrf_gpio_pin_set(params.pinSCK);
-  nrf_gpio_cfg_output(params.pinSCK);
-  nrf_gpio_pin_clear(params.pinMOSI);
-  nrf_gpio_cfg_output(params.pinMOSI);
-  nrf_gpio_cfg_input(params.pinMISO, NRF_GPIO_PIN_NOPULL);
-  //  nrf_gpio_cfg_output(params.pinCSN);
-  //  pinCsn = params.pinCSN;
+  if (mutex == NULL) {
+    currentBufferAddr = 0;
+    currentBufferSize = 0;
+    mutex = xSemaphoreCreateBinary();
+  }
+  nrf_gpio_pin_set(pinSCK);
+  nrf_gpio_cfg_output(pinSCK);
+  nrf_gpio_pin_clear(pinMOSI);
+  nrf_gpio_cfg_output(pinMOSI);
+  nrf_gpio_cfg_input(pinMISO, NRF_GPIO_PIN_NOPULL);
+  //  nrf_gpio_cfg_output(pinCSN);
+  //  pinCsn = pinCSN;
 
   switch (spi) {
-  case SpiModule::SPI0:
+  case SpiMaster_SPI0:
     spiBaseAddress = NRF_SPIM0;
     break;
-  case SpiModule::SPI1:
+  case SpiMaster_SPI1:
     spiBaseAddress = NRF_SPIM1;
     break;
   default:
@@ -37,39 +39,30 @@ bool SpiMaster::Init() {
   }
 
   /* Configure pins, frequency and mode */
-  spiBaseAddress->PSELSCK = params.pinSCK;
-  spiBaseAddress->PSELMOSI = params.pinMOSI;
-  spiBaseAddress->PSELMISO = params.pinMISO;
-
-  uint32_t frequency;
-  switch (params.Frequency) {
-  case Frequencies::Freq8Mhz:
-    frequency = 0x80000000;
-    break;
-  default:
-    return false;
-  }
-  spiBaseAddress->FREQUENCY = frequency;
+  spiBaseAddress->PSELSCK = pinSCK;
+  spiBaseAddress->PSELMOSI = pinMOSI;
+  spiBaseAddress->PSELMISO = pinMISO;
+  spiBaseAddress->FREQUENCY = 0x80000000;
 
   uint32_t regConfig = 0;
-  switch (params.bitOrder) {
-  case BitOrder::Msb_Lsb:
+  switch (bitOrder) {
+  case SpiMaster_Msb_Lsb:
     break;
-  case BitOrder::Lsb_Msb:
+  case SpiMaster_Lsb_Msb:
     regConfig = 1;
   default:
     return false;
   }
-  switch (params.mode) {
-  case Modes::Mode0:
+  switch (mode) {
+  case SpiMaster_Mode0:
     break;
-  case Modes::Mode1:
+  case SpiMaster_Mode1:
     regConfig |= (0x01 << 1);
     break;
-  case Modes::Mode2:
+  case SpiMaster_Mode2:
     regConfig |= (0x02 << 1);
     break;
-  case Modes::Mode3:
+  case SpiMaster_Mode3:
     regConfig |= (0x03 << 1);
     break;
   default:
@@ -262,9 +255,9 @@ void SpiMaster::Sleep() {
     spiBaseAddress->ENABLE =
         (SPIM_ENABLE_ENABLE_Disabled << SPIM_ENABLE_ENABLE_Pos);
   }
-  nrf_gpio_cfg_default(params.pinSCK);
-  nrf_gpio_cfg_default(params.pinMOSI);
-  nrf_gpio_cfg_default(params.pinMISO);
+  nrf_gpio_cfg_default(pinSCK);
+  nrf_gpio_cfg_default(pinMOSI);
+  nrf_gpio_cfg_default(pinMISO);
 }
 
 void SpiMaster::Wakeup() { Init(); }

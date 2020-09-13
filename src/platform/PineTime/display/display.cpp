@@ -32,13 +32,10 @@ static constexpr uint8_t pinLcdCsn = 25;
 static constexpr uint8_t pinLcdDataCommand = 18;
 
 Pinetime::Drivers::SpiMaster spi{
-    Pinetime::Drivers::SpiMaster::SpiModule::SPI0,
-    {Pinetime::Drivers::SpiMaster::BitOrder::Msb_Lsb,
-     Pinetime::Drivers::SpiMaster::Modes::Mode3,
-     Pinetime::Drivers::SpiMaster::Frequencies::Freq8Mhz, pinSpiSck, pinSpiMosi,
-     pinSpiMiso}};
-Pinetime::Drivers::Spi flashSpi{spi, pinSpiFlashCsn};
+    SpiMaster_SPI0, SpiMaster_Msb_Lsb, SpiMaster_Mode3,
 
+    pinSpiSck,      pinSpiMosi,        pinSpiMiso,
+};
 Pinetime::Drivers::Spi lcdSpi{spi, pinLcdCsn};
 Pinetime::Drivers::St7789 lcd{lcdSpi, pinLcdDataCommand};
 
@@ -87,7 +84,6 @@ extern "C" void platform_initDisplay() {
   lcd.Init();
   gfx.Init();
 
-  lv_init();
   static lv_color_t buffer[240 * 4];
 
   lv_disp_buf_init(&disp_buf, buffer, NULL, 240 * 4);

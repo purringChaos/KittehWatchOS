@@ -10,25 +10,25 @@
 #include "BufferProvider.h"
 #include <semphr.h>
 
+const uint8_t SpiMaster_SPI0 = 0;
+const uint8_t SpiMaster_SPI1 = 1;
+
+const uint8_t SpiMaster_Msb_Lsb = 0;
+const uint8_t SpiMaster_Lsb_Msb = 1;
+
+const uint8_t SpiMaster_Mode0 = 0;
+const uint8_t SpiMaster_Mode1 = 1;
+const uint8_t SpiMaster_Mode2 = 2;
+const uint8_t SpiMaster_Mode3 = 3;
+
 namespace Pinetime {
 namespace Drivers {
 class SpiMaster {
 public:
   ;
-  enum class SpiModule : uint8_t { SPI0, SPI1 };
-  enum class BitOrder : uint8_t { Msb_Lsb, Lsb_Msb };
-  enum class Modes : uint8_t { Mode0, Mode1, Mode2, Mode3 };
-  enum class Frequencies : uint8_t { Freq8Mhz };
-  struct Parameters {
-    BitOrder bitOrder;
-    Modes mode;
-    Frequencies Frequency;
-    uint8_t pinSCK;
-    uint8_t pinMOSI;
-    uint8_t pinMISO;
-  };
 
-  SpiMaster(const SpiModule spi, const Parameters &params);
+  SpiMaster(const uint8_t spi, const uint8_t bitOrder, const uint8_t mode,
+            const uint8_t pinSCK, const uint8_t pinMOSI, const uint8_t pinMISO);
   SpiMaster(const SpiMaster &) = delete;
   SpiMaster &operator=(const SpiMaster &) = delete;
   SpiMaster(SpiMaster &&) = delete;
@@ -48,8 +48,7 @@ public:
   void Sleep();
   void Wakeup();
 
-private:
-  void SetupWorkaroundForFtpan58(NRF_SPIM_Type *spim, uint32_t ppi_channel,
+    void SetupWorkaroundForFtpan58(NRF_SPIM_Type *spim, uint32_t ppi_channel,
                                  uint32_t gpiote_channel);
   void DisableWorkaroundForFtpan58(NRF_SPIM_Type *spim, uint32_t ppi_channel,
                                    uint32_t gpiote_channel);
@@ -60,16 +59,21 @@ private:
                  const volatile uint32_t bufferAddress,
                  const volatile size_t size);
 
+
   NRF_SPIM_Type *spiBaseAddress;
   uint8_t pinCsn;
 
-  SpiMaster::SpiModule spi;
-  SpiMaster::Parameters params;
+  uint8_t spi;
+  uint8_t bitOrder;
+  uint8_t mode;
+  uint8_t pinSCK;
+  uint8_t pinMOSI;
+  uint8_t pinMISO;
 
-  volatile uint32_t currentBufferAddr = 0;
-  volatile size_t currentBufferSize = 0;
+  volatile uint32_t currentBufferAddr;
+  volatile size_t currentBufferSize;
   volatile TaskHandle_t taskToNotify;
-  SemaphoreHandle_t mutex;
+  SemaphoreHandle_t mutex = NULL;
 };
 } // namespace Drivers
 } // namespace Pinetime

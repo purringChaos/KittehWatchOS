@@ -1,15 +1,14 @@
 #include "lvgl/lvgl.h"
-#include <stdint.h>
-#include <time.h>
 #include <pthread.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
+#include <time.h>
 
 #include "displaymanager/displaymanager.h"
 #include "platform/includes/backlight.h"
 #include "platform/includes/display.h"
 #include "platform/includes/thread.h"
-
 
 void RADIO_IRQHandler(void){};
 void UARTE0_UART0_IRQHandler(void){};
@@ -43,9 +42,8 @@ void I2S_IRQHandler(void){};
 void FPU_IRQHandler(void){};
 void vApplicationIdleHook(void) { lv_tick_inc(1); }
 
-
+#ifndef __linux__
 THREAD_TYPE lv_event_handler_thread_handle;
-
 static void lv_event_handler_thread(void *pvParameter) {
   platform_setThreadName("lv_handle\0");
   while (true) {
@@ -53,32 +51,24 @@ static void lv_event_handler_thread(void *pvParameter) {
     lv_task_handler();
   }
 }
-
-#ifdef __linux__
-THREAD_TYPE lv_ticker_thread_handle;
-static void lv_ticker_thread(void *pvParameter) {
-  platform_setThreadName("lv_tick\0");
-  while (true) {
-    lv_tick_inc(1);
-    platform_sleep(1);
-  }
-}
 #endif
 
+THREAD_TYPE display_manager_thread_handle;
 
+static void displayManagerWrapper(void *pvParameter) { displaymanager_start(); }
 
 int main(void) {
   platform_initThreading();
   platform_initBacklight();
-  platform_initDisplay();
 
-  displaymanager_start();
+  printf("Yeet.\n");
+  platform_createThread(&display_manager_thread_handle, 1, "disp_man",
+                        displayManagerWrapper, NULL);
+  printf("Yeets.\n");
 
-#ifdef __linux__
-  platform_createThread(&lv_tick_thread_handle, 1, "lv_tick", lv_tick_thread, NULL);
-  lv_event_handler_thread(NULL);
-#else
-  platform_createThread(&lv_event_handler_thread_handle, 2, "lv_handle", lv_event_handler_thread, NULL);
-  platform_startAllThreads();
+#ifndef __linux__
+  platform_createThread(&lv_event_handler_thread_handle, 2, "lv_handle",
+                        lv_event_handler_thread, NULL);
 #endif
+  platform_startAllThreads();
 }

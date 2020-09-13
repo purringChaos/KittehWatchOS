@@ -1027,163 +1027,163 @@
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o -c ../deps/lv_lib_tinygl/src/oscontext.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o -c ../deps/lv_lib_tinygl/src/oscontext.c",
     "file": "../deps/lv_lib_tinygl/src/oscontext.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_oscontext.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o -c ../deps/lv_lib_tinygl/src/texture.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o -c ../deps/lv_lib_tinygl/src/texture.c",
     "file": "../deps/lv_lib_tinygl/src/texture.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_texture.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o -c ../deps/lv_lib_tinygl/src/clip.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o -c ../deps/lv_lib_tinygl/src/clip.c",
     "file": "../deps/lv_lib_tinygl/src/clip.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_clip.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o -c ../deps/lv_lib_tinygl/src/zdither.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o -c ../deps/lv_lib_tinygl/src/zdither.c",
     "file": "../deps/lv_lib_tinygl/src/zdither.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_zdither.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o -c ../deps/lv_lib_tinygl/src/zline.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o -c ../deps/lv_lib_tinygl/src/zline.c",
     "file": "../deps/lv_lib_tinygl/src/zline.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_zline.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o -c ../deps/lv_lib_tinygl/src/list.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o -c ../deps/lv_lib_tinygl/src/list.c",
     "file": "../deps/lv_lib_tinygl/src/list.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_list.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o -c ../deps/lv_lib_tinygl/src/gears.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o -c ../deps/lv_lib_tinygl/src/gears.c",
     "file": "../deps/lv_lib_tinygl/src/gears.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_gears.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o -c ../deps/lv_lib_tinygl/src/zbuffer.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o -c ../deps/lv_lib_tinygl/src/zbuffer.c",
     "file": "../deps/lv_lib_tinygl/src/zbuffer.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_zbuffer.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o -c ../deps/lv_lib_tinygl/src/api.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o -c ../deps/lv_lib_tinygl/src/api.c",
     "file": "../deps/lv_lib_tinygl/src/api.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_api.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o -c ../deps/lv_lib_tinygl/src/memory.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o -c ../deps/lv_lib_tinygl/src/memory.c",
     "file": "../deps/lv_lib_tinygl/src/memory.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_memory.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o -c ../deps/lv_lib_tinygl/src/error.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o -c ../deps/lv_lib_tinygl/src/error.c",
     "file": "../deps/lv_lib_tinygl/src/error.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_error.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o -c ../deps/lv_lib_tinygl/src/get.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o -c ../deps/lv_lib_tinygl/src/get.c",
     "file": "../deps/lv_lib_tinygl/src/get.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_get.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o -c ../deps/lv_lib_tinygl/src/select.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o -c ../deps/lv_lib_tinygl/src/select.c",
     "file": "../deps/lv_lib_tinygl/src/select.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_select.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o -c ../deps/lv_lib_tinygl/src/arrays.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o -c ../deps/lv_lib_tinygl/src/arrays.c",
     "file": "../deps/lv_lib_tinygl/src/arrays.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_arrays.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o -c ../deps/lv_lib_tinygl/src/glu.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o -c ../deps/lv_lib_tinygl/src/glu.c",
     "file": "../deps/lv_lib_tinygl/src/glu.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_glu.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o -c ../deps/lv_lib_tinygl/src/specbuf.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o -c ../deps/lv_lib_tinygl/src/specbuf.c",
     "file": "../deps/lv_lib_tinygl/src/specbuf.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_specbuf.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o -c ../deps/lv_lib_tinygl/src/light.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o -c ../deps/lv_lib_tinygl/src/light.c",
     "file": "../deps/lv_lib_tinygl/src/light.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_light.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o -c ../deps/lv_lib_tinygl/src/matrix.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o -c ../deps/lv_lib_tinygl/src/matrix.c",
     "file": "../deps/lv_lib_tinygl/src/matrix.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_matrix.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o -c ../deps/lv_lib_tinygl/src/image_util.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o -c ../deps/lv_lib_tinygl/src/image_util.c",
     "file": "../deps/lv_lib_tinygl/src/image_util.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_image_util.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o -c ../deps/lv_lib_tinygl/src/msghandling.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o -c ../deps/lv_lib_tinygl/src/msghandling.c",
     "file": "../deps/lv_lib_tinygl/src/msghandling.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_msghandling.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o -c ../deps/lv_lib_tinygl/src/vertex.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o -c ../deps/lv_lib_tinygl/src/vertex.c",
     "file": "../deps/lv_lib_tinygl/src/vertex.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_vertex.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o -c ../deps/lv_lib_tinygl/src/triangle.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o -c ../deps/lv_lib_tinygl/src/triangle.c",
     "file": "../deps/lv_lib_tinygl/src/triangle.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_triangle.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o -c ../deps/lv_lib_tinygl/src/zmath.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o -c ../deps/lv_lib_tinygl/src/zmath.c",
     "file": "../deps/lv_lib_tinygl/src/zmath.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_zmath.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o -c ../deps/lv_lib_tinygl/src/ztriangle.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o -c ../deps/lv_lib_tinygl/src/ztriangle.c",
     "file": "../deps/lv_lib_tinygl/src/ztriangle.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_ztriangle.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o -c ../deps/lv_lib_tinygl/src/clear.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o -c ../deps/lv_lib_tinygl/src/clear.c",
     "file": "../deps/lv_lib_tinygl/src/clear.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_clear.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o -c ../deps/lv_lib_tinygl/src/init.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o -c ../deps/lv_lib_tinygl/src/init.c",
     "file": "../deps/lv_lib_tinygl/src/init.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_init.c.o"
   },
   {
     "directory": "/home/kitteh/KittehWatchOS/build",
-    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o -c ../deps/lv_lib_tinygl/src/misc.c",
+    "command": "arm-none-eabi-gcc -Ilibtinygl.a.p -I. -I.. -I../deps/lv_lib_tinygl/src -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c11 -g -Og -g3 -mabi=aapcs -mthumb -fdata-sections -ffunction-sections -fno-builtin -fno-strict-aliasing -fshort-enums -Wall -std=c99 -mabi=aapcs -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fPIC -w -MD -MQ libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o -MF libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o.d -o libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o -c ../deps/lv_lib_tinygl/src/misc.c",
     "file": "../deps/lv_lib_tinygl/src/misc.c",
     "output": "libtinygl.a.p/deps_lv_lib_tinygl_src_misc.c.o"
   },

@@ -3,7 +3,9 @@
 #include "apps/clock/clock.h"
 #include "apps/test/test.h"
 #include "lvgl/lvgl.h"
+#include "platform/includes/display.h"
 #include "platform/includes/thread.h"
+
 #include "types/app.h"
 #include <stdio.h>
 
@@ -103,10 +105,29 @@ void displaymanager_switch_application(const char *name) {
   current_application.init();
 }
 
+#ifdef __linux__
+THREAD_TYPE lv_ticker_thread_handle;
+static void lv_ticker_thread(void *pvParameter) {
+  platform_setThreadName("lv_tick\0");
+  while (true) {
+    lv_tick_inc(1);
+    platform_sleep(1);
+  }
+}
+#endif
+
 void displaymanager_start() {
-  // printf("start display\n");
+  platform_initDisplay();
+#ifdef __linux__
+  platform_createThread(&lv_ticker_thread_handle, 1, "lv_tick",
+                        lv_ticker_thread, NULL);
+#endif
 
   displaymanager_make_top_bar();
 
   displaymanager_switch_application("AppMenu");
+  while (true) {
+    current_application.refresh();
+    lv_task_handler();
+  }
 };
