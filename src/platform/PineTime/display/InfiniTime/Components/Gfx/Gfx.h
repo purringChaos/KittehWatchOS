@@ -9,7 +9,7 @@ namespace Drivers {
 class St7789;
 }
 namespace Components {
-class Gfx  {
+class Gfx {
 public:
   explicit Gfx(Drivers::St7789 &lcd);
   void Init();

@@ -46,10 +46,9 @@ sources_platform_pinetime = [
   'src/platform/PineTime/backlight/backlight.c',
   'src/platform/PineTime/thread/thread.c',
   'src/platform/PineTime/time/time.c',
-  'src/platform/PineTime/display/display.cpp',
-  'src/platform/PineTime/display/InfiniTime/drivers/St7789.cpp',
+  'src/platform/PineTime/display/display.c',
+  'src/platform/PineTime/display/InfiniTime/drivers/St7789.c',
   'src/platform/PineTime/display/InfiniTime/drivers/SpiMaster.c',
-  'src/platform/PineTime/display/InfiniTime/Components/Gfx/Gfx.cpp',
 ]
 
 includes_platform_pinetime = [
