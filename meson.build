@@ -48,7 +48,6 @@ sources_platform_pinetime = [
   'src/platform/PineTime/time/time.c',
   'src/platform/PineTime/display/display.cpp',
   'src/platform/PineTime/display/InfiniTime/drivers/St7789.cpp',
-  'src/platform/PineTime/display/InfiniTime/drivers/Spi.cpp',
   'src/platform/PineTime/display/InfiniTime/drivers/SpiMaster.c',
   'src/platform/PineTime/display/InfiniTime/Components/Gfx/Gfx.cpp',
 ]
