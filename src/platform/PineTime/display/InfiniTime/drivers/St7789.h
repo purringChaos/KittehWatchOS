@@ -1,75 +1,53 @@
 #pragma once
-#include <cstddef>
-#include <cstdint>
+#include "SpiMaster.h"
+#include <stdint.h>
 
-namespace Pinetime {
-namespace Drivers {
-class Spi;
-class St7789 {
-public:
-  explicit St7789(Spi &spi, uint8_t pinDataCommand);
-  St7789(const St7789 &) = delete;
-  St7789 &operator=(const St7789 &) = delete;
-  St7789(St7789 &&) = delete;
-  St7789 &operator=(St7789 &&) = delete;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-  void Init();
-  void Uninit();
-  void DrawPixel(uint16_t x, uint16_t y, uint32_t color);
-
-  void VerticalScrollDefinition(uint16_t topFixedLines, uint16_t scrollLines,
-                                uint16_t bottomFixedLines);
-  void VerticalScrollStartAddress(uint16_t line);
-
-  void BeginDrawBuffer(uint16_t x, uint16_t y, uint16_t width, uint16_t height);
-  void NextDrawBuffer(const uint8_t *data, size_t size);
-
-  void DisplayOn();
-  void DisplayOff();
-
-  void Sleep();
-  void Wakeup();
-
-private:
-  Spi &spi;
+typedef struct {
+  SpiMaster *spiMaster;
+  uint8_t pinCsm;
   uint8_t pinDataCommand;
-  uint8_t verticalScrollingStartAddress = 0;
+  uint8_t verticalScrollingStartAddress;
+} St7789;
 
-  void HardwareReset();
-  void SoftwareReset();
-  void SleepOut();
-  void SleepIn();
-  void ColMod();
-  void MemoryDataAccessControl();
-  void DisplayInversionOn();
-  void NormalModeOn();
-  void WriteToRam();
-  void SetAddrWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1);
-  void WriteCommand(uint8_t cmd);
-  void WriteSpi(const uint8_t *data, size_t size);
+void St7789_Init(St7789 *self);
+void St7789_Uninit(St7789 *self);
+void St7789_DrawPixel(St7789 *self, uint16_t x, uint16_t y, uint32_t color);
+void St7789_VerticalScrollDefinition(St7789 *self, uint16_t topFixedLines,
+          uint16_t scrollLines,
+          uint16_t bottomFixedLines);
+void St7789_VerticalScrollStartAddress(St7789 *self, uint16_t line);
+void St7789_BeginDrawBuffer(St7789 *self, uint16_t x, uint16_t y, uint16_t width,
+                            uint16_t height);
+void St7789_NextDrawBuffer(St7789 *self, const uint8_t *data, size_t size);
+void St7789_DisplayOn(St7789 *self);
+void St7789_DisplayOff(St7789 *self);
+void St7789_Sleep(St7789 *self);
+void St7789_Wakeup(St7789 *self);
+void St7789_HardwareReset(St7789 *self);
+void St7789_SoftwareReset(St7789 *self);
+void St7789_SleepOut(St7789 *self);
+void St7789_SleepIn(St7789 *self);
+void St7789_ColMod(St7789 *self);
+void St7789_MemoryDataAccessControl(St7789 *self);
+void St7789_DisplayInversionOn(St7789 *self);
+void St7789_NormalModeOn(St7789 *self);
+void St7789_WriteToRam(St7789 *self);
+void St7789_SetAddrWindow(St7789 *self, uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1);
+void St7789_WriteCommand(St7789 *self, uint8_t cmd);
+void St7789_WriteSpi(St7789 *self, const uint8_t *data, size_t size);
+void St7789_WriteData(St7789 *self, uint8_t data);
+void St7789_ColumnAddressSet(St7789 *self);
+void St7789_RowAddressSet(St7789 *self);
 
-  enum class Commands : uint8_t {
-    SoftwareReset = 0x01,
-    SleepIn = 0x10,
-    SleepOut = 0x11,
-    NormalModeOn = 0x13,
-    DisplayInversionOn = 0x21,
-    DisplayOff = 0x28,
-    DisplayOn = 0x29,
-    ColumnAddressSet = 0x2a,
-    RowAddressSet = 0x2b,
-    WriteToRam = 0x2c,
-    MemoryDataAccessControl = 036,
-    VerticalScrollDefinition = 0x33,
-    VerticalScrollStartAddress = 0x37,
-    ColMod = 0x3a,
-  };
-  void WriteData(uint8_t data);
-  void ColumnAddressSet();
+static uint16_t Width = 240;
+static uint16_t Height = 240;
 
-  static constexpr uint16_t Width = 240;
-  static constexpr uint16_t Height = 320;
-  void RowAddressSet();
-};
-} // namespace Drivers
-} // namespace Pinetime
+
+
+#ifdef __cplusplus
+}
+#endif

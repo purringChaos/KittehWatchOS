@@ -1,11 +1,10 @@
 #include "SpiMaster.h"
 #include <FreeRTOS.h>
-#include <algorithm>
 #include <hal/nrf_gpio.h>
 #include <hal/nrf_spim.h>
 #include <task.h>
 
-bool SpiMaster_Init(struct SpiMaster *self) {
+bool SpiMaster_Init(SpiMaster *self) {
   if (self->mutex == NULL) {
     self->currentBufferAddr = 0;
     self->currentBufferSize = 0;
@@ -79,8 +78,7 @@ bool SpiMaster_Init(struct SpiMaster *self) {
   return true;
 }
 
-void SpiMaster_SetupWorkaroundForFtpan58(struct SpiMaster *self,
-                                         NRF_SPIM_Type *spim,
+void SpiMaster_SetupWorkaroundForFtpan58(SpiMaster *self, NRF_SPIM_Type *spim,
                                          uint32_t ppi_channel,
                                          uint32_t gpiote_channel) {
   // Create an event when SCK toggles.
@@ -102,8 +100,7 @@ void SpiMaster_SetupWorkaroundForFtpan58(struct SpiMaster *self,
   spim->INTENCLR = (1 << 19);
 }
 
-void SpiMaster_DisableWorkaroundForFtpan58(struct SpiMaster *self,
-                                           NRF_SPIM_Type *spim,
+void SpiMaster_DisableWorkaroundForFtpan58(SpiMaster *self, NRF_SPIM_Type *spim,
                                            uint32_t ppi_channel,
                                            uint32_t gpiote_channel) {
   NRF_GPIOTE->CONFIG[gpiote_channel] = 0;
@@ -116,23 +113,21 @@ void SpiMaster_DisableWorkaroundForFtpan58(struct SpiMaster *self,
   spim->INTENSET = (1 << 19);
 }
 
-void SpiMaster_OnEndEvent(struct SpiMaster *self) {
+void SpiMaster_OnEndEvent(SpiMaster *self) {
   if (self->currentBufferAddr == 0) {
     return;
   }
 
-  auto s = self->currentBufferSize;
+  uint32_t s = self->currentBufferSize;
   if (s > 0) {
-    auto currentSize = std::min((size_t)255, s);
+    uint32_t currentSize = (s < (size_t)255) ? (size_t)255 : s;
     SpiMaster_PrepareTx(self, self->currentBufferAddr, currentSize);
     self->currentBufferAddr += currentSize;
     self->currentBufferSize -= currentSize;
 
     self->spiBaseAddress->TASKS_START = 1;
   } else {
-    uint8_t *buffer = nullptr;
-    size_t size = 0;
-    if (self->taskToNotify != nullptr) {
+    if (self->taskToNotify != NULL) {
       BaseType_t xHigherPriorityTaskWoken = pdFALSE;
       vTaskNotifyGiveFromISR(self->taskToNotify, &xHigherPriorityTaskWoken);
       portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
@@ -146,10 +141,9 @@ void SpiMaster_OnEndEvent(struct SpiMaster *self) {
   }
 }
 
-void SpiMaster_OnStartedEvent(struct SpiMaster *self) {}
+void SpiMaster_OnStartedEvent(SpiMaster *self) {}
 
-void SpiMaster_PrepareTx(struct SpiMaster *self,
-                         const volatile uint32_t bufferAddress,
+void SpiMaster_PrepareTx(SpiMaster *self, const volatile uint32_t bufferAddress,
                          const volatile size_t size) {
   self->spiBaseAddress->TXD.PTR = bufferAddress;
   self->spiBaseAddress->TXD.MAXCNT = size;
@@ -160,8 +154,7 @@ void SpiMaster_PrepareTx(struct SpiMaster *self,
   self->spiBaseAddress->EVENTS_END = 0;
 }
 
-void SpiMaster_PrepareRx(struct SpiMaster *self,
-                         const volatile uint32_t cmdAddress,
+void SpiMaster_PrepareRx(SpiMaster *self, const volatile uint32_t cmdAddress,
                          const volatile size_t cmdSize,
                          const volatile uint32_t bufferAddress,
                          const volatile size_t size) {
@@ -174,11 +167,11 @@ void SpiMaster_PrepareRx(struct SpiMaster *self,
   self->spiBaseAddress->EVENTS_END = 0;
 }
 
-bool SpiMaster_Write(struct SpiMaster *self, uint8_t pinCsn, const uint8_t *data,
+bool SpiMaster_Write(SpiMaster *self, uint8_t pinCsn, const uint8_t *data,
                      size_t size) {
-  if (data == nullptr)
+  if (data == NULL)
     return false;
-  auto ok = xSemaphoreTake(self->mutex, portMAX_DELAY);
+  bool ok = xSemaphoreTake(self->mutex, portMAX_DELAY);
   ASSERT(ok == true);
   self->taskToNotify = xTaskGetCurrentTaskHandle();
 
@@ -195,7 +188,9 @@ bool SpiMaster_Write(struct SpiMaster *self, uint8_t pinCsn, const uint8_t *data
   self->currentBufferAddr = (uint32_t)data;
   self->currentBufferSize = size;
 
-  auto currentSize = std::min((size_t)255, (size_t)self->currentBufferSize);
+  uint32_t currentSize = ((size_t)self->currentBufferSize < (size_t)255)
+                             ? (size_t)255
+                             : (size_t)self->currentBufferSize;
   SpiMaster_PrepareTx(self, self->currentBufferAddr, currentSize);
   self->currentBufferSize -= currentSize;
   self->currentBufferAddr += currentSize;
@@ -212,11 +207,11 @@ bool SpiMaster_Write(struct SpiMaster *self, uint8_t pinCsn, const uint8_t *data
   return true;
 }
 
-bool SpiMaster_Read(struct SpiMaster *self, uint8_t pinCsn, uint8_t *cmd,
+bool SpiMaster_Read(SpiMaster *self, uint8_t pinCsn, uint8_t *cmd,
                     size_t cmdSize, uint8_t *data, size_t dataSize) {
   xSemaphoreTake(self->mutex, portMAX_DELAY);
 
-  self->taskToNotify = nullptr;
+  self->taskToNotify = NULL;
 
   self->pinCsn = pinCsn;
   SpiMaster_DisableWorkaroundForFtpan58(self, self->spiBaseAddress, 0, 0);
@@ -246,7 +241,7 @@ bool SpiMaster_Read(struct SpiMaster *self, uint8_t pinCsn, uint8_t *cmd,
   return true;
 }
 
-void SpiMaster_Sleep(struct SpiMaster *self) {
+void SpiMaster_Sleep(SpiMaster *self) {
   while (self->spiBaseAddress->ENABLE != 0) {
     self->spiBaseAddress->ENABLE =
         (SPIM_ENABLE_ENABLE_Disabled << SPIM_ENABLE_ENABLE_Pos);
@@ -256,14 +251,14 @@ void SpiMaster_Sleep(struct SpiMaster *self) {
   nrf_gpio_cfg_default(self->pinMISO);
 }
 
-void SpiMaster_Wakeup(struct SpiMaster *self) { SpiMaster_Init(self); }
+void SpiMaster_Wakeup(SpiMaster *self) { SpiMaster_Init(self); }
 
-bool SpiMaster_WriteCmdAndBuffer(struct SpiMaster *self, uint8_t pinCsn,
+bool SpiMaster_WriteCmdAndBuffer(SpiMaster *self, uint8_t pinCsn,
                                  const uint8_t *cmd, size_t cmdSize,
                                  const uint8_t *data, size_t dataSize) {
   xSemaphoreTake(self->mutex, portMAX_DELAY);
 
-  self->taskToNotify = nullptr;
+  self->taskToNotify = NULL;
 
   self->pinCsn = pinCsn;
   SpiMaster_DisableWorkaroundForFtpan58(self, self->spiBaseAddress, 0, 0);

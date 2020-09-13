@@ -6,7 +6,6 @@
 #include <cstdint>
 #include <task.h>
 
-#include "BufferProvider.h"
 #include "SpiMaster.h"
 
 namespace Pinetime {
