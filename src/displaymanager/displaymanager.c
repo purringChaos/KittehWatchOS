@@ -5,7 +5,6 @@
 #include "lvgl/lvgl.h"
 #include "platform/includes/display.h"
 #include "platform/includes/thread.h"
-
 #include "types/app.h"
 #include <stdio.h>
 
@@ -85,22 +84,21 @@ void displaymanager_switch_application(const char *name) {
   if (!current_application.valid) {
     // printf("Current App Invalid.\n");
     current_application = displaymanager_apps.apps[0];
-  } else {
-    // printf("Deinit App.\n");
+  }
+  // printf("Deinit App.\n");
 
-    current_application.deinit();
+  current_application.deinit();
 
-    int i;
-    for (i = 0; i < displaymanager_apps.size; i++) {
-      // printf("Apps: %s\n", displaymanager_apps.apps[i].name());
+  for (unsigned int i = 0; i < displaymanager_apps.size; i++) {
+    // printf("Apps: %s\n", displaymanager_apps.apps[i].name());
 
-      if (strcmp(displaymanager_apps.apps[i].name(), name) == 0) {
-        // printf("Found it!\n");
+    if (strcmp(displaymanager_apps.apps[i].name(), name) == 0) {
+      // printf("Found it!\n");
 
-        current_application = displaymanager_apps.apps[i];
-      }
+      current_application = displaymanager_apps.apps[i];
     }
   }
+
   lv_label_set_text(app_title_label, current_application.name());
   current_application.init();
 }
@@ -125,7 +123,7 @@ void displaymanager_start() {
 
   displaymanager_make_top_bar();
 
-  displaymanager_switch_application("AppMenu");
+  displaymanager_switch_application("Clock");
   while (true) {
     current_application.refresh();
     lv_task_handler();

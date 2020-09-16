@@ -5,16 +5,22 @@ pkg = import('pkgconfig')
 
 c_args = [
   '-Og', '-g3',
-  '-Wall',
   '-fvisibility=hidden',
   '-DLV_CONF_INCLUDE_SIMPLE',
 ]
+my_c_args = [
+  c_args,
+  '-DANOTHER_BRICK_IN_THE', '-Wall',
+  '-Wextra',
+  '-Wno-unused-parameter',
+]
+
 cpp_args = c_args + [
   '-Wno-non-virtual-dtor',
 ]
 
 link_args = [
-
+'-Wl,-Map=KittehWatchOS.map'
 ]
 
 
@@ -47,16 +53,17 @@ sources_platform_pinetime = [
   'src/platform/PineTime/thread/thread.c',
   'src/platform/PineTime/time/time.c',
   'src/platform/PineTime/display/display.c',
-  'src/platform/PineTime/display/InfiniTime/drivers/St7789.c',
-  'src/platform/PineTime/display/InfiniTime/drivers/SpiMaster.c',
+  'src/platform/PineTime/display/St7789.c',
+  'src/platform/PineTime/display/spi.c',
+  'src/platform/PineTime/display/i2c.c',
+
+    'src/platform/PineTime/misc/misc.c',
 ]
 
 includes_platform_pinetime = [
   includes,
   include_directories('src/platform/PineTime/FreeRTOS'),
   include_directories('src/platform/PineTime'),
-  include_directories('src/platform/PineTime/display/InfiniTime'),
-
 ]
 
 
@@ -65,6 +72,7 @@ sources_platform_linux = [
   'src/platform/Linux/display/display.c',
   'src/platform/Linux/thread/thread.c',
   'src/platform/Linux/time/time.c',
+    'src/platform/Linux/misc/misc.c',
 
   'deps/lv_drivers/display/monitor.c',
   'deps/lv_drivers/indev/mouse.c',
@@ -353,33 +361,33 @@ sdk_c_args = [
 
 
 tinygl_sources = [
-  'deps/lv_lib_tinygl/src/oscontext.c',
-'deps/lv_lib_tinygl/src/texture.c',
-'deps/lv_lib_tinygl/src/clip.c',
-'deps/lv_lib_tinygl/src/zdither.c',
-'deps/lv_lib_tinygl/src/zline.c',
-'deps/lv_lib_tinygl/src/list.c',
-'deps/lv_lib_tinygl/src/gears.c',
-'deps/lv_lib_tinygl/src/zbuffer.c',
-'deps/lv_lib_tinygl/src/api.c',
-'deps/lv_lib_tinygl/src/memory.c',
-'deps/lv_lib_tinygl/src/error.c',
-'deps/lv_lib_tinygl/src/get.c',
-'deps/lv_lib_tinygl/src/select.c',
-'deps/lv_lib_tinygl/src/arrays.c',
-'deps/lv_lib_tinygl/src/glu.c',
-'deps/lv_lib_tinygl/src/specbuf.c',
-'deps/lv_lib_tinygl/src/light.c',
-'deps/lv_lib_tinygl/src/matrix.c',
-'deps/lv_lib_tinygl/src/image_util.c',
-'deps/lv_lib_tinygl/src/msghandling.c',
-'deps/lv_lib_tinygl/src/vertex.c',
-'deps/lv_lib_tinygl/src/triangle.c',
-'deps/lv_lib_tinygl/src/zmath.c',
-'deps/lv_lib_tinygl/src/ztriangle.c',
-'deps/lv_lib_tinygl/src/clear.c',
-'deps/lv_lib_tinygl/src/init.c',
-'deps/lv_lib_tinygl/src/misc.c',
+    'deps/lv_lib_tinygl/src/oscontext.c',
+  'deps/lv_lib_tinygl/src/texture.c',
+  'deps/lv_lib_tinygl/src/clip.c',
+  'deps/lv_lib_tinygl/src/zdither.c',
+  'deps/lv_lib_tinygl/src/zline.c',
+  'deps/lv_lib_tinygl/src/list.c',
+  'deps/lv_lib_tinygl/src/gears.c',
+  'deps/lv_lib_tinygl/src/zbuffer.c',
+  'deps/lv_lib_tinygl/src/api.c',
+  'deps/lv_lib_tinygl/src/memory.c',
+  'deps/lv_lib_tinygl/src/error.c',
+  'deps/lv_lib_tinygl/src/get.c',
+  'deps/lv_lib_tinygl/src/select.c',
+  'deps/lv_lib_tinygl/src/arrays.c',
+  'deps/lv_lib_tinygl/src/glu.c',
+  'deps/lv_lib_tinygl/src/specbuf.c',
+  'deps/lv_lib_tinygl/src/light.c',
+  'deps/lv_lib_tinygl/src/matrix.c',
+  'deps/lv_lib_tinygl/src/image_util.c',
+  'deps/lv_lib_tinygl/src/msghandling.c',
+  'deps/lv_lib_tinygl/src/vertex.c',
+  'deps/lv_lib_tinygl/src/triangle.c',
+  'deps/lv_lib_tinygl/src/zmath.c',
+  'deps/lv_lib_tinygl/src/ztriangle.c',
+  'deps/lv_lib_tinygl/src/clear.c',
+  'deps/lv_lib_tinygl/src/init.c',
+  'deps/lv_lib_tinygl/src/misc.c',
 ]
 
 tinygl_includes = [
@@ -407,8 +415,8 @@ platform_lib = static_library(
   'platform',
   sources: files(sources_platform_pinetime), 
   include_directories: sdk_includes + includes_platform_pinetime,
-  c_args: c_args,
-  cpp_args: cpp_args,
+  c_args: c_args + my_c_args,
+  cpp_args: cpp_args + my_c_args,
   dependencies: sdk
 )
 platform = declare_dependency(link_with: platform_lib, include_directories: sdk_includes)
@@ -431,8 +439,8 @@ platform_lib = static_library(
   'platform',
   sources: files(sources_platform_linux), 
   include_directories: includes + includes_platform_linux,
-  c_args: c_args,
-  cpp_args: cpp_args,
+  c_args: c_args + my_c_args,
+  cpp_args: cpp_args + my_c_args,
   dependencies: platform_deps,
 )
 platform = declare_dependency(link_with: platform_lib, include_directories: includes_platform_linux)
@@ -450,9 +458,9 @@ lvgl_lib = static_library('lvgl', sources: files(lvgl_sources), include_director
 lvgl = declare_dependency(link_with : lvgl_lib, include_directories : lvgl_includes)
 deps += lvgl
 
-tinygl_lib = static_library('tinygl', sources: files(tinygl_sources), include_directories: tinygl_includes, c_args: '-w')
-tinygl = declare_dependency(link_with : tinygl_lib, include_directories : tinygl_includes)
-deps += tinygl
+#tinygl_lib = static_library('tinygl', sources: files(tinygl_sources), include_directories: tinygl_includes, c_args: ['-w'] + c_args)
+#tinygl = declare_dependency(link_with : tinygl_lib, include_directories : tinygl_includes)
+#deps += tinygl
 
 
 if not get_option('linux')
@@ -462,8 +470,8 @@ endif
 executable('KittehWatchOS',
 	name_prefix: '',
 	install: false,
-	c_args: c_args,
-	cpp_args: cpp_args,
+	c_args: c_args + my_c_args,
+	cpp_args: cpp_args + my_c_args,
   link_args: link_args,
 	sources: sources,
   link_with: link_with,

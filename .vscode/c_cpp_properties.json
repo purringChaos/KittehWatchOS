@@ -1,0 +1,15 @@
+{
+  "env": {
+    "myDefaultIncludePath": ["${workspaceFolder}", "${workspaceFolder}/include"],
+    "myCompilerPath": "/usr/bin/arm-none-eabi-gcc"
+  },
+  "configurations": [
+    {
+      "name": "Linux",
+      "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+      "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    }
+  ],
+  "version": 4
+}
+

@@ -1,7 +1,9 @@
+#include "types/numbers.h"
 #include <stdio.h>
+
 void platform_initBacklight() {}
 
-void platform_setBacklight(short level) {
+void platform_setBacklight(u8 level) {
   switch (level) {
   default:
   case 3:
@@ -15,7 +17,6 @@ void platform_setBacklight(short level) {
     break;
   case 0:
     printf("Backlight: Off\n");
-
     break;
   }
 }

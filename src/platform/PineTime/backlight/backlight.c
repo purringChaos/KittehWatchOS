@@ -1,9 +1,10 @@
 #include "platform/includes/backlight.h"
 #include "bsp.h"
+#include "types/numbers.h"
 
-uint8_t pinLcdBacklight1 = 14;
-uint8_t pinLcdBacklight2 = 22;
-uint8_t pinLcdBacklight3 = 23;
+u8 pinLcdBacklight1 = 14;
+u8 pinLcdBacklight2 = 22;
+u8 pinLcdBacklight3 = 23;
 
 void platform_initBacklight() {
   nrf_gpio_cfg_output(pinLcdBacklight1);
@@ -12,7 +13,7 @@ void platform_initBacklight() {
   platform_setBacklight(3);
 }
 
-void platform_setBacklight(short level) {
+void platform_setBacklight(u8 level) {
   switch (level) {
   default:
   case 3:
