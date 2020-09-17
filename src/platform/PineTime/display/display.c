@@ -10,6 +10,8 @@
 #include <legacy/nrf_drv_clock.h>
 #include <softdevice/common/nrf_sdh.h>
 #include <task.h>
+#include <libraries/delay/nrf_delay.h>
+
 static lv_disp_buf_t disp_buf;
 static lv_disp_drv_t disp_drv;
 static lv_indev_drv_t indev_drv;
@@ -52,11 +54,11 @@ void platform_initDisplay() {
 
   nrf_gpio_cfg_output(10);
   nrf_gpio_pin_set(10);
-  vTaskDelay(50);
+  nrf_delay_ms(50);
   nrf_gpio_pin_clear(10);
-  vTaskDelay(5);
+  nrf_delay_ms(5);
   nrf_gpio_pin_set(10);
-  vTaskDelay(50);
+  nrf_delay_ms(50);
 
   // Wake the touchpanel up
   uint8_t dummy;
