@@ -1,4 +1,3 @@
-#include "St7789.h"
 #include "display/St7789.h"
 #include "display/spi.h"
 #include "platform/includes/thread.h"
@@ -7,7 +6,6 @@
 #include <hal/nrf_gpio.h>
 #include <libraries/delay/nrf_delay.h>
 #include <lvgl/lvgl.h>
-#include <task.h>
 
 // Some init stuff was taken from https://github.com/lvgl/lv_port_esp32
 
@@ -67,7 +65,7 @@ void St7789_Init() {
       {0, {0}, 0xff},
   };
 
-  uint16_t cmd = 0;
+  u16 cmd = 0;
   while (st7789_init_cmds[cmd].databytes != 0xff) {
     St7789_WriteCommand(st7789_init_cmds[cmd].cmd);
     St7789_WriteData(st7789_init_cmds[cmd].data,
