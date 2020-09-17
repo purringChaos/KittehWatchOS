@@ -47,7 +47,7 @@ static inline const char *monthToString(u8 month) {
 
 static void update_clock_task(lv_task_t *param) {
   char buffer[512];
-  lv_label_set_recolor(clockTitleLabel, true);
+  //lv_label_set_recolor(clockTitleLabel, true);
   lv_label_set_align(clockTitleLabel, LV_LABEL_ALIGN_CENTER);
   u16 year = time_year();
   u8 month = time_month();

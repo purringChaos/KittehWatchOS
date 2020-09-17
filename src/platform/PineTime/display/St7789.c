@@ -43,7 +43,7 @@ void St7789_Init() {
       {0xC7, {0xBE}, 1},                         // set  CABC control
       {0x36, {0x00}, 1},                         // Memory Address Data Control
       {0x3A, {0x55}, 1},                         // column modifier
-      {0x21, {0}, 0},                            // invert screen
+      //{0x21, {0}, 0},                            // invert screen
       {0xB1, {0x00, 0x1B}, 2},                   // RGB mode
       {0xF2, {0x08}, 1},                         // Unknown
       {0x26, {0x01}, 1},                         // Set Gamma
