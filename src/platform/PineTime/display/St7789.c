@@ -94,6 +94,18 @@ void St7789_WriteData(u8 *data, size_t size) {
 
 void St7789_Flush(lv_disp_drv_t *driver, const lv_area_t *area,
                   lv_color_t *colour_data) {
+
+   assert(area->x1 >= 0); 
+   assert(area->x1 < 240);
+    assert(area->x2 >= 0);
+     assert(area->x2 < 240);
+    assert(area->y1 >= 0);
+    assert(area->y1 < 240);
+    assert(area->y2 >= 0);
+    assert(area->y2 < 240);
+    assert(area->y2 >= area->y1);
+    assert(area->x2 >= area->x1);
+
   ulTaskNotifyTake(pdTRUE, 500);
   u8 data[4] = {0};
   u8 x1 = area->x1;
