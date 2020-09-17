@@ -31,7 +31,7 @@ bool touchpad_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
   } else {
     data->state = LV_INDEV_STATE_REL;
   }
-  // this is not a buffered driver so 
+  // this is not a buffered driver so
   // there is nothing else buffered to read
   return false;
 }
