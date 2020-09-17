@@ -6,6 +6,7 @@
 #include <hal/nrf_gpio.h>
 #include <libraries/delay/nrf_delay.h>
 #include <lvgl/lvgl.h>
+#include <assert.h>
 
 // Some init stuff was taken from https://github.com/lvgl/lv_port_esp32
 
