@@ -26,11 +26,6 @@ SemaphoreHandle_t mutex = NULL;
 #define START_TASKS NRF_SPIM0->TASKS_START = 1;
 #define MINIMUM(x, y) ((y > x) ? x : y)
 
-#define INTERUPT_MASK                                                          \
-  NRF_SPIM_INT_END_MASK | NRF_SPIM_INT_STOPPED_MASK | NRF_SPIM_INT_STARTED_MASK
-
-void FinishedTransferCallback();
-
 void enable_workaround_for_ftpan_58() {
   // Create an event when SCK toggles.
   NRF_GPIOTE->CONFIG[0] =
@@ -43,7 +38,9 @@ void enable_workaround_for_ftpan_58() {
   NRF_PPI->CH[0].TEP = (u32)&NRF_SPIM0->TASKS_STOP;
   NRF_PPI->CHENSET = 1U << 0;
   NRF_SPIM0->EVENTS_END = 0;
-  nrf_spim_int_disable(NRF_SPIM0, INTERUPT_MASK);
+  NRF_SPIM0->INTENCLR = (1 << 6);
+  NRF_SPIM0->INTENCLR = (1 << 1);
+  NRF_SPIM0->INTENCLR = (1 << 19);
 }
 
 void disable_workaround_for_ftpan_58() {
@@ -52,23 +49,22 @@ void disable_workaround_for_ftpan_58() {
   NRF_PPI->CH[0].TEP = 0;
   NRF_PPI->CHENSET = 0;
   NRF_SPIM0->EVENTS_END = 0;
-  nrf_spim_int_enable(NRF_SPIM0, INTERUPT_MASK);
+  NRF_SPIM0->INTENSET = (1 << 6);
+  NRF_SPIM0->INTENSET = (1 << 1);
+  NRF_SPIM0->INTENSET = (1 << 19);
 }
 
 void SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler(void) {
-  if (((NRF_SPIM0->INTENSET & NRF_SPIM_INT_END_MASK) != 0) &&
-      NRF_SPIM0->EVENTS_END == 1) {
+  if (((NRF_SPIM0->INTENSET & 6) != 0) && NRF_SPIM0->EVENTS_END == 1) {
     NRF_SPIM0->EVENTS_END = 0;
     FinishedTransferCallback();
   }
 
-  if (((NRF_SPIM0->INTENSET & NRF_SPIM_INT_STARTED_MASK) != 0) &&
-      NRF_SPIM0->EVENTS_STARTED == 1) {
+  if (((NRF_SPIM0->INTENSET & 1) != 0) && NRF_SPIM0->EVENTS_STARTED == 1) {
     NRF_SPIM0->EVENTS_STARTED = 0;
   }
 
-  if (((NRF_SPIM0->INTENSET & NRF_SPIM_INT_STOPPED_MASK) != 0) &&
-      NRF_SPIM0->EVENTS_STOPPED == 1) {
+  if (((NRF_SPIM0->INTENSET & 19) != 0) && NRF_SPIM0->EVENTS_STOPPED == 1) {
     NRF_SPIM0->EVENTS_STOPPED = 0;
   }
 }
@@ -107,8 +103,9 @@ bool SPI_Init() {
   NRF_SPIM0->EVENTS_END = 0;
 
   // We need IRQs to fire so we know when events stop, start and end.
-  nrf_spim_int_enable(NRF_SPIM0, INTERUPT_MASK);
-
+  NRF_SPIM0->INTENSET = (1 << 6);
+  NRF_SPIM0->INTENSET = (1 << 1);
+  NRF_SPIM0->INTENSET = (1 << 19);
   // We need IRQs to fire so we know when events stop, start and end.
   NRFX_IRQ_PRIORITY_SET(SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQn, 2);
   NRFX_IRQ_ENABLE(SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQn);
@@ -171,8 +168,13 @@ bool SPI_Write(u8 newChipSelectPin, const u8 *data, size_t size) {
   currentDataAddress = (u32)data;
   currentDataSize = size;
   u32 currentSize = MINIMUM(255, currentDataSize);
-  nrf_spim_tx_buffer_set(NRF_SPIM0, (u8 const *)currentDataAddress,
-                         currentSize);
+  NRF_SPIM0->TXD.PTR = currentDataAddress;
+  NRF_SPIM0->TXD.MAXCNT = currentSize;
+  NRF_SPIM0->TXD.LIST = 0;
+  NRF_SPIM0->RXD.PTR = 0;
+  NRF_SPIM0->RXD.MAXCNT = 0;
+  NRF_SPIM0->RXD.LIST = 0;
+  NRF_SPIM0->EVENTS_END = 0;
   currentDataSize -= currentSize;
   currentDataAddress += currentSize;
   START_TASKS
@@ -183,36 +185,6 @@ bool SPI_Write(u8 newChipSelectPin, const u8 *data, size_t size) {
     currentDataAddress = 0;
     xSemaphoreGive(mutex);
   }
-
-  return true;
-}
-
-bool SPI_Read(u8 newChipSelectPin, u8 *cmd, size_t cmdSize, u8 *data,
-              size_t dataSize) {
-  xSemaphoreTake(mutex, portMAX_DELAY);
-
-  currentChipSelectPin = newChipSelectPin;
-
-  disable_workaround_for_ftpan_58();
-  nrf_spim_int_disable(NRF_SPIM0, INTERUPT_MASK);
-
-  nrf_gpio_pin_clear(currentChipSelectPin);
-
-  // When reading we dont need these.
-  currentDataAddress = 0;
-  currentDataSize = 0;
-
-  nrf_spim_tx_buffer_set(NRF_SPIM0, cmd, cmdSize);
-  START_TASKS
-  WAIT_TASK_END
-
-  nrf_spim_tx_buffer_set(NRF_SPIM0, data, dataSize);
-  START_TASKS
-
-  WAIT_TASK_END
-  nrf_gpio_pin_set(currentChipSelectPin);
-
-  xSemaphoreGive(mutex);
 
   return true;
 }

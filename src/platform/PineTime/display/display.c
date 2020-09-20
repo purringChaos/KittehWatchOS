@@ -15,7 +15,7 @@
 static lv_disp_buf_t disp_buf;
 static lv_disp_drv_t disp_drv;
 static lv_indev_drv_t indev_drv;
-
+/*
 bool touchpad_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
   u8 touchData[63];
 
@@ -37,14 +37,15 @@ bool touchpad_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
   // there is nothing else buffered to read
   return false;
 }
-
+*/
 void platform_initDisplay() {
-  I2C_Init();
+  //I2C_Init();
+  
   SPI_Init();
   St7789_Init();
-  static lv_color_t buffer[240 * 8];
-  static lv_color_t buffer2[240 * 8];
-  lv_disp_buf_init(&disp_buf, buffer, buffer2, 240 * 8);
+  static lv_color_t buffer[240 * 2];
+  static lv_color_t buffer2[240 * 2];
+  lv_disp_buf_init(&disp_buf, buffer, buffer2, 240 * 2);
   lv_disp_drv_init(&disp_drv);
   disp_drv.buffer = &disp_buf;
   disp_drv.hor_res = 240;
@@ -52,7 +53,7 @@ void platform_initDisplay() {
   disp_drv.flush_cb = St7789_Flush;
   lv_disp_drv_register(&disp_drv);
 
-  nrf_gpio_cfg_output(10);
+/*  nrf_gpio_cfg_output(10);
   nrf_gpio_pin_set(10);
   nrf_delay_ms(50);
   nrf_gpio_pin_clear(10);
@@ -69,5 +70,5 @@ void platform_initDisplay() {
   lv_indev_drv_init(&indev_drv);
   indev_drv.type = LV_INDEV_TYPE_POINTER;
   indev_drv.read_cb = touchpad_read;
-  lv_indev_drv_register(&indev_drv);
+  lv_indev_drv_register(&indev_drv);*/
 }
