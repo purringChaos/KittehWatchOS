@@ -5,6 +5,8 @@
 #include <hal/nrf_spim.h>
 #include <semphr.h>
 #include <task.h>
+#include <libraries/delay/nrf_delay.h>
+
 
 volatile u8 currentChipSelectPin = 0;
 volatile u32 currentDataAddress = 0;
@@ -21,7 +23,7 @@ SemaphoreHandle_t mutex = NULL;
 // END REF1
 
 #define WAIT_TASK_END                                                          \
-  while (NRF_SPIM0->EVENTS_END == 0)  { platform_setBacklight(0; nrf_delay_ms(200);  platform_setBacklight(3); nrf_delay_ms(200)  }
+  while (NRF_SPIM0->EVENTS_END == 0)  { /*platform_setBacklight(0); nrf_delay_ms(200);  platform_setBacklight(3); nrf_delay_ms(200);*/  }
 #define START_TASKS NRF_SPIM0->TASKS_START = 1;
 #define MINIMUM(x, y) ((y > x) ? x : y)
 
@@ -54,16 +56,16 @@ void disable_workaround_for_ftpan_58() {
 }
 
 void SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler(void) {
-  if (((NRF_SPIM0->INTENSET & 6) != 0) && NRF_SPIM0->EVENTS_END == 1) {
+  if(((NRF_SPIM0->INTENSET & (1<<6)) != 0) && NRF_SPIM0->EVENTS_END == 1) {
     NRF_SPIM0->EVENTS_END = 0;
     FinishedTransferCallback();
   }
 
-  if (((NRF_SPIM0->INTENSET & 1) != 0) && NRF_SPIM0->EVENTS_STARTED == 1) {
+  if(((NRF_SPIM0->INTENSET & (1<<19)) != 0) && NRF_SPIM0->EVENTS_STARTED == 1) {
     NRF_SPIM0->EVENTS_STARTED = 0;
   }
 
-  if (((NRF_SPIM0->INTENSET & 19) != 0) && NRF_SPIM0->EVENTS_STOPPED == 1) {
+  if(((NRF_SPIM0->INTENSET & (1<<1)) != 0) && NRF_SPIM0->EVENTS_STOPPED == 1) {
     NRF_SPIM0->EVENTS_STOPPED = 0;
   }
 }
@@ -118,10 +120,21 @@ bool SPI_Init() {
 }
 
 void FinishedTransferCallback() {
-  if (currentDataAddress == 0) {
-    // This bitch empty. Yeet!
+  if (currentDataSize == 0) {
+    // Now that we don't have any data left in the buffer
+    // We can set the SPI pin back to high waiting for events.
+    // See REF1
+    nrf_gpio_pin_set(currentChipSelectPin);
+    currentDataAddress = 0;
+    // If we were woken up from a higher priority thread, make sure to switch
+    // context back to it quickly. Otherise scheduling can be wack.
+    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+    xSemaphoreGiveFromISR(mutex, &xHigherPriorityTaskWoken);
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
     return;
   }
+  //platform_setBacklight(0); nrf_delay_ms(1000);  platform_setBacklight(3); nrf_delay_ms(1000);
+
   // If we have data in our buffer, we can send it!
   if (currentDataSize > 0) {
     // We can only transfer 255 bytes at a time so,
@@ -133,17 +146,6 @@ void FinishedTransferCallback() {
     currentDataSize -= currentSize;
 
     START_TASKS
-  } else {
-    // Now that we don't have any data left in the buffer
-    // We can set the SPI pin back to high waiting for events.
-    // See REF1
-    nrf_gpio_pin_set(currentChipSelectPin);
-    currentDataAddress = 0;
-    // If we were woken up from a higher priority thread, make sure to switch
-    // context back to it quickly. Otherise scheduling can be wack.
-    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    xSemaphoreGiveFromISR(mutex, &xHigherPriorityTaskWoken);
-    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
   }
 }
 
