@@ -8,9 +8,9 @@
 #include <app_gpiote.h>
 #include <hal/nrf_rtc.h>
 #include <legacy/nrf_drv_clock.h>
+#include <libraries/delay/nrf_delay.h>
 #include <softdevice/common/nrf_sdh.h>
 #include <task.h>
-#include <libraries/delay/nrf_delay.h>
 
 static lv_disp_buf_t disp_buf;
 static lv_disp_drv_t disp_drv;
@@ -39,8 +39,8 @@ bool touchpad_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
 }
 */
 void platform_initDisplay() {
-  //I2C_Init();
-  
+  // I2C_Init();
+
   SPI_Init();
   St7789_Init();
   static lv_color_t buffer[240 * 2];
@@ -53,22 +53,22 @@ void platform_initDisplay() {
   disp_drv.flush_cb = St7789_Flush;
   lv_disp_drv_register(&disp_drv);
 
-/*  nrf_gpio_cfg_output(10);
-  nrf_gpio_pin_set(10);
-  nrf_delay_ms(50);
-  nrf_gpio_pin_clear(10);
-  nrf_delay_ms(5);
-  nrf_gpio_pin_set(10);
-  nrf_delay_ms(50);
+  /*  nrf_gpio_cfg_output(10);
+    nrf_gpio_pin_set(10);
+    nrf_delay_ms(50);
+    nrf_gpio_pin_clear(10);
+    nrf_delay_ms(5);
+    nrf_gpio_pin_set(10);
+    nrf_delay_ms(50);
 
-  // Wake the touchpanel up
-  uint8_t dummy;
-  I2C_Read(0x15, 0x15, &dummy, 1);
-  vTaskDelay(5);
-  I2C_Read(0x15, 0xa7, &dummy, 1);
+    // Wake the touchpanel up
+    uint8_t dummy;
+    I2C_Read(0x15, 0x15, &dummy, 1);
+    vTaskDelay(5);
+    I2C_Read(0x15, 0xa7, &dummy, 1);
 
-  lv_indev_drv_init(&indev_drv);
-  indev_drv.type = LV_INDEV_TYPE_POINTER;
-  indev_drv.read_cb = touchpad_read;
-  lv_indev_drv_register(&indev_drv);*/
+    lv_indev_drv_init(&indev_drv);
+    indev_drv.type = LV_INDEV_TYPE_POINTER;
+    indev_drv.read_cb = touchpad_read;
+    lv_indev_drv_register(&indev_drv);*/
 }

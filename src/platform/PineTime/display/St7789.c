@@ -3,18 +3,18 @@
 #include "platform/includes/thread.h"
 #include "types/numbers.h"
 #include <FreeRTOS.h>
+#include <assert.h>
 #include <hal/nrf_gpio.h>
 #include <libraries/delay/nrf_delay.h>
 #include <lvgl/lvgl.h>
-#include <assert.h>
 
 // Some init stuff was taken from https://github.com/lvgl/lv_port_esp32
 
 typedef struct {
   u8 cmd;
   u8 data[16];
-  u8 databytes; // No of data in data; bit 7 = delay after set; 0xFF = end of
-                // cmds.
+  u8 databytes;
+  bool sleep;
 } lcd_init_cmd_t;
 
 void St7789_Init() {
@@ -27,26 +27,32 @@ void St7789_Init() {
 
   // turn it off and on again
   nrf_gpio_pin_clear(26);
-  nrf_delay_ms(100);
+  nrf_delay_ms(200);
   nrf_gpio_pin_set(26);
-  nrf_delay_ms(100);
 
   lcd_init_cmd_t st7789_init_cmds[] = {
-      {0x3A, {0x55}, 1},                         // colour
-      {0x36, {0x00}, 1},                         // Memory Address Data Control
-      {0x21, {0}, 0},                            // invert screen
-      {0x13, {0}, 0},                   // normal mode
-      {0x29, {0}, 0},                   // yeet on
-      {0, {0}, 0xff},
+      {0x01, {0}, 0, true}, // reset
+      {0x11, {0}, 0, false}, // Sleepn't
+      {0x3A, {0x55}, 1, false},    // colour
+      {0x36, {0x00}, 1, false},    // Memory Address Data Control
+      {0x21, {0}, 0, false},       // invert screen
+      {0x13, {0}, 0, false},       // normal mode
+      {0x29, {0}, 0, false},       // yeet on
+      {0, {0}, 0xff, false},
   };
 
   u16 cmd = 0;
   while (st7789_init_cmds[cmd].databytes != 0xff) {
     St7789_WriteCommand(st7789_init_cmds[cmd].cmd);
-    St7789_WriteData(st7789_init_cmds[cmd].data,
-                     st7789_init_cmds[cmd].databytes & 0x1F);
+    if (st7789_init_cmds[cmd].databytes > 0) {
+      St7789_WriteData(st7789_init_cmds[cmd].data,
+                       st7789_init_cmds[cmd].databytes);
+    }
+
+    if (st7789_init_cmds[cmd].sleep) {
       nrf_delay_ms(100);
-    
+    }
+
     cmd++;
   }
 }
@@ -69,16 +75,16 @@ void St7789_WriteData(u8 *data, size_t size) {
 void St7789_Flush(lv_disp_drv_t *driver, const lv_area_t *area,
                   lv_color_t *colour_data) {
 
-   assert(area->x1 >= 0); 
-   assert(area->x1 < 240);
-    assert(area->x2 >= 0);
-     assert(area->x2 < 240);
-    assert(area->y1 >= 0);
-    assert(area->y1 < 240);
-    assert(area->y2 >= 0);
-    assert(area->y2 < 240);
-    assert(area->y2 >= area->y1);
-    assert(area->x2 >= area->x1);
+  assert(area->x1 >= 0);
+  assert(area->x1 < 240);
+  assert(area->x2 >= 0);
+  assert(area->x2 < 240);
+  assert(area->y1 >= 0);
+  assert(area->y1 < 240);
+  assert(area->y2 >= 0);
+  assert(area->y2 < 240);
+  assert(area->y2 >= area->y1);
+  assert(area->x2 >= area->x1);
 
   ulTaskNotifyTake(pdTRUE, 500);
   u8 data[4] = {0};

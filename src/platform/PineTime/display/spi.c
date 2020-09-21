@@ -21,8 +21,7 @@ SemaphoreHandle_t mutex = NULL;
 // END REF1
 
 #define WAIT_TASK_END                                                          \
-  while (NRF_SPIM0->EVENTS_END == 0)                                           \
-    ;
+  while (NRF_SPIM0->EVENTS_END == 0)  { platform_setBacklight(0; nrf_delay_ms(200);  platform_setBacklight(3); nrf_delay_ms(200)  }
 #define START_TASKS NRF_SPIM0->TASKS_START = 1;
 #define MINIMUM(x, y) ((y > x) ? x : y)
 
@@ -153,6 +152,7 @@ bool SPI_Write(u8 newChipSelectPin, const u8 *data, size_t size) {
     // If you aint got data, why u even here
     return false;
   }
+  
   xSemaphoreTake(mutex, portMAX_DELAY);
 
   currentChipSelectPin = newChipSelectPin;
