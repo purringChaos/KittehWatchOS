@@ -4,7 +4,7 @@ cc = meson.get_compiler('c')
 pkg = import('pkgconfig')
 
 c_args = [
-  '-Og', '-g3',
+  '-O0',
   '-fvisibility=hidden',
   '-DLV_CONF_INCLUDE_SIMPLE',
 ]
