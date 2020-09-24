@@ -256,7 +256,6 @@ sdk_c_args = [
     '-DFREERTOS',
     '-D__HEAP_SIZE=8192',
     '-D__STACK_SIZE=8192',
-
 ]
 
 
