@@ -110,5 +110,5 @@ void St7789_Flush(lv_disp_drv_t *driver, const lv_area_t *area,
   St7789_WriteCommand(0x2c);
   u32 size = lv_area_get_width(area) * lv_area_get_height(area);
   St7789_WriteData((void *)colour_data, size * 2);
-  lv_disp_flush_ready(driver);
+  if(driver != NULL) lv_disp_flush_ready(driver);
 }

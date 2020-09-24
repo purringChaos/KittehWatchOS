@@ -39,11 +39,47 @@ bool touchpad_read(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
 */
 void platform_initDisplay() {
   // I2C_Init();
+  platform_setBacklight(3);
 
   SPI_Init();
   St7789_Init();
-  static lv_color_t buffer[240 * 2];
-  static lv_color_t buffer2[240 * 2];
+ static lv_color_t buffer[240 * 2];
+
+
+
+  //static lv_color_t buffer2[240 * 2];
+
+
+#define BUF_W 50
+#define BUF_H 50
+
+volatile bool h = true;
+lv_color_t buf[BUF_W * BUF_H];
+lv_color_t * buf_p = buf;
+uint16_t x, y;
+for(y = 0; y < BUF_H; y++) {
+    for(x = 0; x < BUF_W; x++){
+        (*buf_p) = LV_COLOR_RED;
+        buf_p++;
+    }
+}
+
+lv_area_t a;
+a.x1 = 0;
+a.y1 = 0;
+a.x2 = a.x1 + BUF_W - 1;
+a.y2 = a.y1 + BUF_H - 1;
+St7789_Flush(NULL, &a, buf);
+
+
+while (true) {
+
+  nrf_delay_ms(50);
+}
+
+
+/*
+
   lv_disp_buf_init(&disp_buf, buffer, buffer2, 240 * 2);
   lv_disp_drv_init(&disp_drv);
   disp_drv.buffer = &disp_buf;
@@ -51,6 +87,13 @@ void platform_initDisplay() {
   disp_drv.ver_res = 240;
   disp_drv.flush_cb = St7789_Flush;
   lv_disp_drv_register(&disp_drv);
+
+
+
+
+*/
+
+
 
   /*  nrf_gpio_cfg_output(10);
     nrf_gpio_pin_set(10);
