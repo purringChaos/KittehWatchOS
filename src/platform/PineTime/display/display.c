@@ -66,11 +66,10 @@ for(y = 0; y < BUF_H; y++) {
 
 lv_area_t a;
 a.x1 = 50;
-a.y1 = 50;
+a.y1 = 5;
 a.x2 = a.x1 + BUF_W - 1;
 a.y2 = a.y1 + BUF_H - 1;
 St7789_Flush(NULL, &a, buf);
-
 
 
 /*

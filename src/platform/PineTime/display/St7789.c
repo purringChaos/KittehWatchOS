@@ -85,6 +85,7 @@ void St7789_Flush(lv_disp_drv_t *driver, const lv_area_t *area,
   assert(area->y2 < 240);
   assert(area->y2 >= area->y1);
   assert(area->x2 >= area->x1);
+  u32 size = lv_area_get_width(area) * lv_area_get_height(area);
 
   ulTaskNotifyTake(pdTRUE, 500);
   u8 data[4] = {0};
@@ -93,22 +94,21 @@ void St7789_Flush(lv_disp_drv_t *driver, const lv_area_t *area,
   u8 y1 = area->y1;
   u8 y2 = area->y2;
   // Set Columns
-  St7789_WriteCommand(0x2a);
   data[0] = (x1 >> 8) & 0xFF;
   data[1] = x1 & 0xFF;
   data[2] = (x2 >> 8) & 0xFF;
   data[3] = x2 & 0xFF;
+  St7789_WriteCommand(0x2a);
   St7789_WriteData(data, 4);
   // Set Rows
-  St7789_WriteCommand(0x2b);
   data[0] = (y1 >> 8) & 0xFF;
   data[1] = y1 & 0xFF;
   data[2] = (y2 >> 8) & 0xFF;
   data[3] = y2 & 0xFF;
+  St7789_WriteCommand(0x2b);
   St7789_WriteData(data, 4);
   // Sending colour data.
   St7789_WriteCommand(0x2c);
-  u32 size = lv_area_get_width(area) * lv_area_get_height(area);
   St7789_WriteData((void *)colour_data, size * 2);
   if(driver != NULL) lv_disp_flush_ready(driver);
 }
