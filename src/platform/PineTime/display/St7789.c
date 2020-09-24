@@ -103,7 +103,7 @@ void St7789_Flush(lv_disp_drv_t *driver, const lv_area_t *area,
   St7789_WriteCommand(0x2b);
   data[0] = (y1 >> 8) & 0xFF;
   data[1] = y1 & 0xFF;
-  data[2] = (2 >> 8) & 0xFF;
+  data[2] = (y2 >> 8) & 0xFF;
   data[3] = y2 & 0xFF;
   St7789_WriteData(data, 4);
   // Sending colour data.
