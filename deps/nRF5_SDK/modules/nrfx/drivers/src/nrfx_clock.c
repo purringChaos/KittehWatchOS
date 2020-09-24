@@ -44,9 +44,6 @@
 
 #include <nrfx_clock.h>
 
-#define NRFX_LOG_MODULE CLOCK
-#include <nrfx_log.h>
-
 #if NRFX_CHECK(NRFX_POWER_ENABLED)
 extern bool nrfx_power_irq_enabled;
 #endif
@@ -176,7 +173,6 @@ nrfx_err_t nrfx_clock_init(nrfx_clock_event_handler_t event_handler)
 #endif
     }
 
-    NRFX_LOG_INFO("Function: %s, error code: %s.", __func__, NRFX_LOG_ERROR_STRING_GET(err_code));
     return err_code;
 }
 
@@ -190,7 +186,6 @@ void nrfx_clock_enable(void)
     nrfx_clock_irq_enabled = true;
 #endif
 
-    NRFX_LOG_INFO("Module enabled.");
 }
 
 void nrfx_clock_disable(void)
@@ -213,7 +208,6 @@ void nrfx_clock_disable(void)
 #if NRFX_CHECK(NRFX_POWER_ENABLED)
     nrfx_clock_irq_enabled = false;
 #endif
-    NRFX_LOG_INFO("Module disabled.");
 }
 
 void nrfx_clock_uninit(void)
@@ -222,7 +216,6 @@ void nrfx_clock_uninit(void)
     nrfx_clock_lfclk_stop();
     nrfx_clock_hfclk_stop();
     m_clock_cb.module_initialized = false;
-    NRFX_LOG_INFO("Uninitialized.");
 }
 
 void nrfx_clock_lfclk_start(void)
@@ -296,9 +289,6 @@ nrfx_err_t nrfx_clock_calibration_start(void)
     }
 #endif // NRFX_CHECK(NRFX_CLOCK_CONFIG_LF_CAL_ENABLED)
 
-    NRFX_LOG_WARNING("Function: %s, error code: %s.",
-                     __func__,
-                     NRFX_LOG_ERROR_STRING_GET(err_code));
     return err_code;
 }
 
@@ -336,7 +326,6 @@ void nrfx_clock_irq_handler(void)
     if (nrf_clock_event_check(NRF_CLOCK_EVENT_HFCLKSTARTED))
     {
         nrf_clock_event_clear(NRF_CLOCK_EVENT_HFCLKSTARTED);
-        NRFX_LOG_DEBUG("Event: %s.", EVT_TO_STR(NRF_CLOCK_EVENT_HFCLKSTARTED));
         nrf_clock_int_disable(NRF_CLOCK_INT_HF_STARTED_MASK);
 
 #if defined(USE_WORKAROUND_FOR_ANOMALY_201)
@@ -352,7 +341,6 @@ void nrfx_clock_irq_handler(void)
     if (nrf_clock_event_check(NRF_CLOCK_EVENT_LFCLKSTARTED))
     {
         nrf_clock_event_clear(NRF_CLOCK_EVENT_LFCLKSTARTED);
-        NRFX_LOG_DEBUG("Event: %s.", EVT_TO_STR(NRF_CLOCK_EVENT_LFCLKSTARTED));
         nrf_clock_int_disable(NRF_CLOCK_INT_LF_STARTED_MASK);
 
         m_clock_cb.event_handler(NRFX_CLOCK_EVT_LFCLK_STARTED);
@@ -362,7 +350,6 @@ void nrfx_clock_irq_handler(void)
     if (nrf_clock_event_check(NRF_CLOCK_EVENT_CTTO))
     {
         nrf_clock_event_clear(NRF_CLOCK_EVENT_CTTO);
-        NRFX_LOG_DEBUG("Event: %s.", EVT_TO_STR(NRF_CLOCK_EVENT_CTTO));
         nrf_clock_int_disable(NRF_CLOCK_INT_CTTO_MASK);
 
         m_clock_cb.event_handler(NRFX_CLOCK_EVT_CTTO);
@@ -374,7 +361,6 @@ void nrfx_clock_irq_handler(void)
         *(volatile uint32_t *)0x40000C34 = 0x00000000;
 #endif
         nrf_clock_event_clear(NRF_CLOCK_EVENT_DONE);
-        NRFX_LOG_DEBUG("Event: %s.", EVT_TO_STR(NRF_CLOCK_EVENT_DONE));
         nrf_clock_int_disable(NRF_CLOCK_INT_DONE_MASK);
         m_clock_cb.cal_state = CAL_STATE_IDLE;
         m_clock_cb.event_handler(NRFX_CLOCK_EVT_CAL_DONE);

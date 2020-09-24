@@ -31,13 +31,13 @@ void St7789_Init() {
   nrf_gpio_pin_set(26);
 
   lcd_init_cmd_t st7789_init_cmds[] = {
-      {0x01, {0}, 0, true}, // reset
-      {0x11, {0}, 0, false}, // Sleepn't
-      {0x3A, {0x55}, 1, false},    // colour
-      {0x36, {0x00}, 1, false},    // Memory Address Data Control
-      {0x21, {0}, 0, false},       // invert screen
-      {0x13, {0}, 0, false},       // normal mode
-      {0x29, {0}, 0, false},       // yeet on
+      {0x01, {0}, 0, true},     // reset
+      {0x11, {0}, 0, false},    // Sleepn't
+      {0x3A, {0x55}, 1, false}, // colour
+      {0x36, {0x00}, 1, false}, // Memory Address Data Control
+      {0x21, {0}, 0, false},    // invert screen
+      {0x13, {0}, 0, false},    // normal mode
+      {0x29, {0}, 0, false},    // yeet on
       {0, {0}, 0xff, false},
   };
 

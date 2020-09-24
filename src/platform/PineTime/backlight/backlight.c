@@ -1,6 +1,6 @@
 #include "platform/includes/backlight.h"
-#include "bsp.h"
 #include "types/numbers.h"
+#include <hal/nrf_gpio.h>
 
 u8 pinLcdBacklight1 = 14;
 u8 pinLcdBacklight2 = 22;

@@ -9,7 +9,6 @@
 #include "FreeRTOS.h"
 #include "FreeRTOS/FreeRTOSConfig.h"
 #include "app_error.h"
-#include "bsp.h"
 #include "nordic_common.h"
 #include "nrf_drv_clock.h"
 #include <hal/nrf_wdt.h>

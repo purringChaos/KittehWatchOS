@@ -48,16 +48,7 @@
 #include "nrf_sdh_soc.h"
 #endif
 
-#define NRF_LOG_MODULE_NAME clock
-#if CLOCK_CONFIG_LOG_ENABLED
-    #define NRF_LOG_LEVEL       CLOCK_CONFIG_LOG_LEVEL
-    #define NRF_LOG_INFO_COLOR  CLOCK_CONFIG_INFO_COLOR
-    #define NRF_LOG_DEBUG_COLOR CLOCK_CONFIG_DEBUG_COLOR
-#else //CLOCK_CONFIG_LOG_ENABLED
-    #define NRF_LOG_LEVEL       0
-#endif //CLOCK_CONFIG_LOG_ENABLED
-#include "nrf_log.h"
-NRF_LOG_MODULE_REGISTER();
+#undef CLOCK_CONFIG_LOG_ENABLED
 
 #define EVT_TO_STR(event)                                                     \
     (event == NRF_CLOCK_EVENT_HFCLKSTARTED ? "NRF_CLOCK_EVENT_HFCLKSTARTED" : \
@@ -185,10 +176,6 @@ ret_code_t nrf_drv_clock_init(void)
 
         m_clock_cb.module_initialized = true;
     }
-
-    NRF_LOG_INFO("Function: %s, error code: %s.",
-                 (uint32_t)__func__,
-                 (uint32_t)NRF_LOG_ERROR_STRING_GET(err_code));
     return err_code;
 }
 
@@ -403,17 +390,12 @@ ret_code_t nrf_drv_clock_calibration_start(uint8_t interval, nrf_drv_clock_event
     {
         err_code = NRF_ERROR_BUSY;
     }
-    NRF_LOG_WARNING("Function: %s, error code: %s.",
-                    (uint32_t)__func__,
-                    (uint32_t)NRF_LOG_ERROR_STRING_GET(err_code));
+
     return err_code;
 #else
     UNUSED_PARAMETER(interval);
     UNUSED_PARAMETER(handler);
     err_code = NRF_ERROR_FORBIDDEN;
-    NRF_LOG_WARNING("Function: %s, error code: %s.",
-                    (uint32_t)__func__,
-                    (uint32_t)NRF_LOG_ERROR_STRING_GET(err_code));
     return err_code;
 #endif // CALIBRATION_SUPPORT
 }
@@ -442,16 +424,9 @@ ret_code_t nrf_drv_clock_calibration_abort(void)
         break;
     }
     CRITICAL_REGION_EXIT();
-
-    NRF_LOG_INFO("Function: %s, error code: %s.",
-                  (uint32_t)__func__,
-                  (uint32_t)NRF_LOG_ERROR_STRING_GET(err_code));
     return err_code;
 #else
     err_code = NRF_ERROR_FORBIDDEN;
-    NRF_LOG_WARNING("Function: %s, error code: %s.",
-                    (uint32_t)__func__,
-                    (uint32_t)NRF_LOG_ERROR_STRING_GET(err_code));
     return err_code;
 #endif // CALIBRATION_SUPPORT
 }
@@ -462,16 +437,10 @@ ret_code_t nrf_drv_clock_is_calibrating(bool * p_is_calibrating)
 #if CALIBRATION_SUPPORT
     ASSERT(m_clock_cb.module_initialized);
     *p_is_calibrating = (m_clock_cb.cal_state != CAL_STATE_IDLE);
-    NRF_LOG_INFO("Function: %s, error code: %s.",
-                  (uint32_t)__func__,
-                  (uint32_t)NRF_LOG_ERROR_STRING_GET(err_code));
     return err_code;
 #else
     UNUSED_PARAMETER(p_is_calibrating);
     err_code = NRF_ERROR_FORBIDDEN;
-    NRF_LOG_WARNING("Function: %s, error code: %s.",
-                    (uint32_t)__func__,
-                    (uint32_t)NRF_LOG_ERROR_STRING_GET(err_code));
     return err_code;
 #endif // CALIBRATION_SUPPORT
 }

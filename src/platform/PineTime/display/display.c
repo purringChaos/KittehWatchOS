@@ -5,7 +5,6 @@
 #include "display/i2c.h"
 #include "display/spi.h"
 #include <FreeRTOS.h>
-#include <app_gpiote.h>
 #include <hal/nrf_rtc.h>
 #include <legacy/nrf_drv_clock.h>
 #include <libraries/delay/nrf_delay.h>
